@@ -53,7 +53,7 @@
                                         <td>{{ $cliente->email }}</td>
                                         <td>{{ $cliente->genero === 'M' ? 'Masculino' : 'Femenino' }}</td>
                                         <td>
-                                            @if($cliente->activo)
+                                            @if($cliente->estado)
                                                 <span class="badge bg-success">Activo</span>
                                             @else
                                                 <span class="badge bg-danger">Inactivo</span>

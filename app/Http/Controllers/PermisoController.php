@@ -8,77 +8,62 @@ use Illuminate\Http\Request;
 use App\Http\Requests\PermisoRequest;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
-
+use App\Models\Rol;
 class PermisoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index(Request $request): View
-    {
-        $permisos = Permiso::paginate();
+{
+    // Paginar resultados y cargar relaciones
+    $permisos = Permiso::with('roles')->paginate(10);
+    $roles = Rol::with('permisos')->paginate(10);
 
-        return view('permiso.index', compact('permisos'))
-            ->with('i', ($request->input('page', 1) - 1) * $permisos->perPage());
+    return view('admin.roles-permisos.index', compact('roles', 'permisos'));
+}
+
+    public function store(Request $request): RedirectResponse
+    {
+        $request->validate([
+            'nombre' => 'required|unique:permisos,nombre',
+            'descripcion' => 'nullable'
+        ]);
+
+        try {
+            Permiso::create($request->all());
+            return Redirect::route('roles.index')
+                ->with('success', 'Permiso creado exitosamente');
+        } catch (\Exception $e) {
+            return Redirect::route('roles.index')
+                ->with('error', 'Error al crear el permiso');
+        }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create(): View
+    public function update(Request $request, Permiso $permiso): RedirectResponse
     {
-        $permiso = new Permiso();
+        $request->validate([
+            'nombre' => 'required|unique:permisos,nombre,' . $permiso->id,
+            'descripcion' => 'nullable'
+        ]);
 
-        return view('permiso.create', compact('permiso'));
+        try {
+            $permiso->update($request->all());
+            return Redirect::route('roles.index')
+                ->with('success', 'Permiso actualizado exitosamente');
+        } catch (\Exception $e) {
+            return Redirect::route('roles.index')
+                ->with('error', 'Error al actualizar el permiso');
+        }
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(PermisoRequest $request): RedirectResponse
+    public function destroy(Permiso $permiso): RedirectResponse
     {
-        Permiso::create($request->validated());
-
-        return Redirect::route('permisos.index')
-            ->with('success', 'Permiso created successfully.');
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show($id): View
-    {
-        $permiso = Permiso::find($id);
-
-        return view('permiso.show', compact('permiso'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit($id): View
-    {
-        $permiso = Permiso::find($id);
-
-        return view('permiso.edit', compact('permiso'));
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(PermisoRequest $request, Permiso $permiso): RedirectResponse
-    {
-        $permiso->update($request->validated());
-
-        return Redirect::route('permisos.index')
-            ->with('success', 'Permiso updated successfully');
-    }
-
-    public function destroy($id): RedirectResponse
-    {
-        Permiso::find($id)->delete();
-
-        return Redirect::route('permisos.index')
-            ->with('success', 'Permiso deleted successfully');
+        try {
+            $permiso->roles()->detach();
+            $permiso->delete();
+            return Redirect::route('roles.index')
+                ->with('success', 'Permiso eliminado exitosamente');
+        } catch (\Exception $e) {
+            return Redirect::route('roles.index')
+                ->with('error', 'No se puede eliminar el permiso porque está en uso');
+        }
     }
 }

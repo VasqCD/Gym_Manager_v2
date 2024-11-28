@@ -23,20 +23,22 @@ class Permiso extends Model
     
     protected $perPage = 10;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = ['nombre', 'descripcion'];
 
+    /**
+     * Obtiene los roles asociados al permiso
+     */
+    public function roles()
+    {
+        return $this->belongsToMany(Rol::class, 'rolporpermisos', 'permiso_id', 'rol_id')
+                    ->withTimestamps();
+    }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * Obtiene las asignaciones de roles y permisos
      */
     public function rolporpermisos()
     {
-        return $this->hasMany(\App\Models\Rolporpermiso::class, 'id', 'permiso_id');
+        return $this->hasMany(Rolporpermiso::class, 'permiso_id');
     }
-    
 }

@@ -22,7 +22,7 @@ use App\Traits\RegistraBitacora;
  * @property $telefono_emergencia
  * @property $condiciones_medicas
  * @property $fecha_registro
- * @property $activo
+ * @property $estado
  * @property $created_at
  * @property $updated_at
  * @property $deleted_at
@@ -33,6 +33,7 @@ class Cliente extends Model
 {
     use SoftDeletes, RegistraBitacora;
     use HasFactory;
+    use RegistraBitacora;
     
     protected $perPage = 10;
 
@@ -48,7 +49,7 @@ class Cliente extends Model
         'telefono_emergencia',
         'condiciones_medicas',
         'fecha_registro',
-        'activo'
+        'estado'
     ];
 
     protected $dates = [
@@ -60,7 +61,7 @@ class Cliente extends Model
     ];
 
     protected $casts = [
-        'activo' => 'boolean',
+        'estado' => 'boolean',
         'fecha_nacimiento' => 'datetime',
         'fecha_registro' => 'datetime'
     ];

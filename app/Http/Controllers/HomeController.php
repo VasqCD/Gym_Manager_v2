@@ -19,7 +19,7 @@ class HomeController extends Controller
     public function index(): View
 {
     // Clientes activos
-    $clientesActivos = Cliente::where('activo', true)->count();
+    $clientesActivos = Cliente::where('estado', true)->count();
 
     // Membresías activas usando join
     $membresiasActivas = DB::table('pagos')
@@ -37,11 +37,11 @@ class HomeController extends Controller
     $membresiasStats = DB::table('membresias')
         ->leftJoin('pagodetalls', 'membresias.id', '=', 'pagodetalls.membresia_id')
         ->leftJoin('pagos', 'pagodetalls.pago_id', '=', 'pagos.id')
-        ->select('membresias.tipo', 
-            DB::raw('COUNT(DISTINCT CASE 
-                WHEN DATEDIFF(NOW(), pagos.fecha_pago) <= membresias.duracion 
-                THEN pagos.id 
-                ELSE NULL 
+        ->select('membresias.tipo',
+            DB::raw('COUNT(DISTINCT CASE
+                WHEN DATEDIFF(NOW(), pagos.fecha_pago) <= membresias.duracion
+                THEN pagos.id
+                ELSE NULL
                 END) as total_activos'))
         ->groupBy('membresias.id', 'membresias.tipo')
         ->get();

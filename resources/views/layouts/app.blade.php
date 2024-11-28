@@ -14,7 +14,7 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
+
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -38,27 +38,32 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         @auth
-                        <!--Dashboard-->
+                        <!-- Dashboard -->
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('home') }}">
-                                <i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                                <i class="fas fa-tachometer-alt"></i> Dashboard
+                            </a>
                         </li>
 
                         @if(auth()->user()->hasPermiso('gestionar-roles'))
                         <!-- Menú de Administración -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                                <i class="fas fa-cog"></i> Administración
+                                <i class="fas fa-cogs"></i> Administración
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('rols.index') }}">
-                                        <i class="fas fa-user-tag"></i> Roles</a></li>
-                                <li><a class="dropdown-item" href="{{ route('permisos.index') }}">
-                                        <i class="fas fa-key"></i> Permisos</a></li>
-                                <li><a class="dropdown-item" href="{{ route('rolporpermisos.index') }}">
-                                        <i class="fas fa-users-cog"></i> Roles y Permisos</a></li>
-                                <li><a class="dropdown-item" href="{{ route('users.index') }}">
-                                        <i class="fas fa-users"></i> Usuarios</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('roles.index') }}">
+                                        <i class="fas fa-users-cog"></i> Roles y Permisos
+                                    </a>
+                                </li>
+                                @if(auth()->user()->hasPermiso('gestionar-usuarios'))
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('users.index') }}">
+                                        <i class="fas fa-users"></i> Usuarios
+                                    </a>
+                                </li>
+                                @endif
                             </ul>
                         </li>
                         @endif
@@ -71,11 +76,17 @@
                             </a>
                             <ul class="dropdown-menu">
                                 @if(auth()->user()->hasPermiso('crear-clientes'))
-                                <li><a class="dropdown-item" href="{{ route('clientes.create') }}">
-                                        <i class="fas fa-user-plus"></i> Nuevo Cliente</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('clientes.create') }}">
+                                        <i class="fas fa-user-plus"></i> Nuevo Cliente
+                                    </a>
+                                </li>
                                 @endif
-                                <li><a class="dropdown-item" href="{{ route('clientes.index') }}">
-                                        <i class="fas fa-list"></i> Ver Clientes</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('clientes.index') }}">
+                                        <i class="fas fa-list"></i> Lista de Clientes
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         @endif
