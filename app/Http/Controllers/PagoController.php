@@ -51,28 +51,34 @@ class PagoController extends Controller
             'membresia_id' => 'required|exists:membresias,id',
             'cantidad' => 'required|integer|min:1',
             'subtotal' => 'required|numeric|min:0',
+            'descuento' => 'nullable|numeric|min:0|max:100',
             'total' => 'required|numeric|min:0'
         ]);
 
         try {
             DB::beginTransaction();
 
-            // Crear el pago
             $pago = Pago::create([
                 'cliente_id' => $request->cliente_id,
                 'fecha_pago' => now(),
                 'total' => $request->total
             ]);
 
-            // Crear el detalle
+            $subtotal = $request->subtotal;
+            $descuento = $request->aplicar_descuento ?
+                ($subtotal * $request->descuento / 100) : 0;
+            $subtotalConDescuento = $subtotal - $descuento;
+            $impuesto = $subtotalConDescuento * 0.15;
+
             $pago->detalles()->create([
                 'membresia_id' => $request->membresia_id,
                 'cantidad' => $request->cantidad,
-                'subtotal' => $request->subtotal
+                'subtotal' => $subtotal,
+                'descuento' => $descuento,
+                'impuesto' => $impuesto
             ]);
 
             DB::commit();
-
             return redirect()->route('pagos.index')
                 ->with('success', 'Pago creado exitosamente.');
         } catch (\Exception $e) {
@@ -82,6 +88,7 @@ class PagoController extends Controller
                 ->withErrors(['error' => 'Error al crear el pago: ' . $e->getMessage()]);
         }
     }
+    
     /**
      * Display the specified resource.
      */
@@ -111,7 +118,7 @@ class PagoController extends Controller
         $pago->update($request->validated());
 
         return Redirect::route('pagos.index')
-            ->with('success', 'Pago updated successfully');
+            ->with('success', 'Pago actualizado correctamente');
     }
 
     public function destroy($id): RedirectResponse
@@ -119,6 +126,6 @@ class PagoController extends Controller
         Pago::find($id)->delete();
 
         return Redirect::route('pagos.index')
-            ->with('success', 'Pago deleted successfully');
+            ->with('success', 'El pago a sido eliminado correctamente');
     }
 }

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use App\Traits\RegistraBitacora;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class Pago
@@ -23,7 +24,7 @@ use Carbon\Carbon;
  */
 class Pago extends Model
 {
-    use RegistraBitacora;
+    use SoftDeletes, RegistraBitacora;
 
     protected $perPage = 10;
 

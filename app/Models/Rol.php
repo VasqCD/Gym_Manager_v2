@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Traits\RegistraBitacora;
+use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Rol
  *
@@ -19,7 +20,8 @@ use App\Traits\RegistraBitacora;
  */
 class Rol extends Model
 {
-    use RegistraBitacora;
+    use SoftDeletes, RegistraBitacora;
+
     protected $perPage = 10;
     protected $table = 'rols';
     /**

@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Traits\RegistraBitacora;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 /**
  * Class Pagodetall
  *
@@ -22,8 +24,8 @@ use App\Traits\RegistraBitacora;
  */
 class Pagodetall extends Model
 {
-    use RegistraBitacora;
-    
+    use SoftDeletes, RegistraBitacora;
+
     protected $perPage = 10;
 
     /**
@@ -35,7 +37,9 @@ class Pagodetall extends Model
         'pago_id',
         'membresia_id',
         'cantidad',
-        'subtotal'
+        'subtotal',
+        'impuesto',
+        'descuento'
     ];
 
     /**

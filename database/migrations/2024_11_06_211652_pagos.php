@@ -15,7 +15,7 @@ return new class extends Migration
             $table->engine = "InnoDB";
             $table->bigIncrements('id');
             $table->unsignedBigInteger('cliente_id');
-            $table->date('fecha_pago');
+            $table->timestamps('fecha_pago');
             $table->decimal('total', 10, 2);
     
            

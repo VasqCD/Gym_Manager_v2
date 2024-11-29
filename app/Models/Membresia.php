@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Traits\RegistraBitacora;
+use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Membresia
  *
@@ -21,7 +22,7 @@ use App\Traits\RegistraBitacora;
  */
 class Membresia extends Model
 {
-    use RegistraBitacora;
+    use SoftDeletes, RegistraBitacora;
     
     protected $perPage = 10;
 

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Traits\RegistraBitacora;
+use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Permiso
  *
@@ -19,7 +20,7 @@ use App\Traits\RegistraBitacora;
  */
 class Permiso extends Model
 {
-    use RegistraBitacora;
+    use SoftDeletes, RegistraBitacora;
     
     protected $perPage = 10;
 

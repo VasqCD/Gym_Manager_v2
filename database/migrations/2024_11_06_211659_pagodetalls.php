@@ -18,6 +18,8 @@ return new class extends Migration
             $table->unsignedBigInteger('membresia_id');
             $table->integer('cantidad');
             $table->decimal('subtotal', 10, 2);
+            $table->decimal('impuesto', 5, 2)->default(0);  // agregar la columna impuesto
+            $table->decimal('descuento', 5, 2)->default(0);  // agregar la columna descuento
     
             $table->foreign('pago_id')->references('id')->on('pagos')->onDelete('cascade');
             $table->foreign('membresia_id')->references('id')->on('membresias')->onDelete('cascade');

@@ -59,6 +59,8 @@ Route::middleware(['auth'])->group(function () {
         Route::post('clientes', [App\Http\Controllers\ClienteController::class, 'store'])->name('clientes.store');
     });
 
+    
+
     Route::middleware(['check.permiso:editar-clientes'])->group(function () {
         Route::get('clientes/{cliente}/edit', [App\Http\Controllers\ClienteController::class, 'edit'])->name('clientes.edit');
         Route::match(['put', 'patch'], 'clientes/{cliente}', [App\Http\Controllers\ClienteController::class, 'update'])->name('clientes.update');
