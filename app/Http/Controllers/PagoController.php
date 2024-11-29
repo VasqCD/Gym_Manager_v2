@@ -58,18 +58,21 @@ class PagoController extends Controller
         try {
             DB::beginTransaction();
 
+            // Crear el pago
             $pago = Pago::create([
                 'cliente_id' => $request->cliente_id,
                 'fecha_pago' => now(),
                 'total' => $request->total
             ]);
 
+            // Calcular los montos
             $subtotal = $request->subtotal;
             $descuento = $request->aplicar_descuento ?
                 ($subtotal * $request->descuento / 100) : 0;
             $subtotalConDescuento = $subtotal - $descuento;
             $impuesto = $subtotalConDescuento * 0.15;
 
+            // Crear el detalle del pago
             $pago->detalles()->create([
                 'membresia_id' => $request->membresia_id,
                 'cantidad' => $request->cantidad,
@@ -78,9 +81,13 @@ class PagoController extends Controller
                 'impuesto' => $impuesto
             ]);
 
+            // Activar el estado del cliente
+            $cliente = Cliente::findOrFail($request->cliente_id);
+            $cliente->update(['estado' => true]);
+
             DB::commit();
             return redirect()->route('pagos.index')
-                ->with('success', 'Pago creado exitosamente.');
+                ->with('success', 'Pago creado exitosamente y cliente activado.');
         } catch (\Exception $e) {
             DB::rollBack();
             return redirect()->back()
@@ -88,7 +95,7 @@ class PagoController extends Controller
                 ->withErrors(['error' => 'Error al crear el pago: ' . $e->getMessage()]);
         }
     }
-    
+
     /**
      * Display the specified resource.
      */
