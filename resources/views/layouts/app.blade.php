@@ -95,15 +95,15 @@
                         @if(auth()->user()->hasPermiso('ver-membresias'))
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                                <i class="fas fa-id-card"></i> Membresías
+                                <i class="fas fa-id-card"></i> Tip. Membresías
                             </a>
                             <ul class="dropdown-menu">
                                 @if(auth()->user()->hasPermiso('crear-membresias'))
                                 <li><a class="dropdown-item" href="{{ route('membresias.create') }}">
-                                        <i class="fas fa-plus"></i> Nueva Membresía</a></li>
+                                        <i class="fas fa-plus"></i> Nuevo Tip. Membresía</a></li>
                                 @endif
                                 <li><a class="dropdown-item" href="{{ route('membresias.index') }}">
-                                        <i class="fas fa-list"></i> Ver Membresías</a></li>
+                                        <i class="fas fa-list"></i> Ver Tipos de Membresías</a></li>
                             </ul>
                         </li>
                         @endif

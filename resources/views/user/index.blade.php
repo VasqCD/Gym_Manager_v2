@@ -49,16 +49,19 @@
                                         <td>{{ $user->rol->nombre ?? 'Sin rol' }}</td>
                                         <td>
                                             <form action="{{ route('users.destroy', $user->id) }}" method="POST">
-                                                
+                                                @if (auth()->user()->hasPermiso('editar-usuario'))
                                                 <a class="btn btn-sm btn-success" href="{{ route('users.edit', $user->id) }}">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
+                                                @endif
                                                 @csrf
                                                 @method('DELETE')
+                                                @if(auth()->user()->hasPermiso('eliminar-usuario'))
                                                 <button type="submit" class="btn btn-danger btn-sm" 
                                                         onclick="return confirm('¿Está seguro de eliminar este usuario?')">
                                                     <i class="fa fa-trash"></i>
                                                 </button>
+                                                @endif
                                             </form>
                                         </td>
                                     </tr>
