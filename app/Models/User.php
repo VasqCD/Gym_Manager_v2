@@ -63,18 +63,21 @@ class User extends Authenticatable
      */
     public function hasPermiso($permisoNombre): bool
     {
+        // Verificar que el usuario tenga un rol asignado
         if (!$this->rol) {
             return false;
         }
 
-        if ($this->rol && $this->rol->nombre === 'Administrador') {
-            return true;
+        // Verificar que el permiso exista
+        $permiso = \App\Models\Permiso::where('nombre', $permisoNombre)->first();
+        if (!$permiso) {
+            return false;
         }
 
-        return $this->rol->rolporpermisos()
-            ->whereHas('permiso', function ($query) use ($permisoNombre) {
-                $query->where('nombre', $permisoNombre);
-            })->exists();
+        // Verificar si el rol tiene el permiso asignado
+        return $this->rol->permisos()
+            ->where('permisos.nombre', $permisoNombre)
+            ->exists();
     }
 
     /**

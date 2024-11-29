@@ -74,8 +74,8 @@ Pagos
                                                 <i class="fa fa-eye"></i>
                                             </a>
 
-                                            <!-- Botones Editar y Eliminar solo para usuarios con gestionar-pagos -->
-                                            @if(auth()->user()->hasPermiso('gestionar-pagos'))
+                                            
+                                            @if(auth()->user()->hasPermiso('editar-pagos'))
                                             <a class="btn btn-sm btn-success" href="{{ route('pagos.edit', $pago->id) }}">
                                                 <i class="fa fa-edit"></i>
                                             </a>

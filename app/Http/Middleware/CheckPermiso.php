@@ -10,7 +10,7 @@ use App\Models\User;
 
 class CheckPermiso
 {
-    
+
     /**
      * Handle an incoming request.
      *
@@ -20,17 +20,24 @@ class CheckPermiso
      * @return mixed
      */
     public function handle(Request $request, Closure $next, string $permiso)
-{
-    // Asignar a $user para mayor claridad
-    /** @var User $user */
-    $user = Auth::user();
+    {
+        $user = Auth::user();
 
-    // Verificar permisos de usuario
-    if (!$user || !$user->hasPermiso($permiso)) {
-        abort(403, 'No tienes permiso para acceder a esta sección.');
+        if (!$user) {
+            abort(401, 'No autenticado');
+        }
+
+        // Verificar que el permiso exista
+        $existePermiso = \App\Models\Permiso::where('nombre', $permiso)->exists();
+        if (!$existePermiso) {
+            abort(404, 'Permiso no encontrado');
+        }
+
+        // Verificar si el usuario tiene el permiso
+        if (!$user->hasPermiso($permiso)) {
+            abort(403, 'No tienes permiso para acceder a esta sección');
+        }
+
+        return $next($request);
     }
-
-    return $next($request);
 }
-}
-
