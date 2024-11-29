@@ -159,6 +159,14 @@
                                     <i class="fas fa-user-edit me-2"></i> {{ __('Mi Perfil') }}
                                 </a>
 
+                                @if (auth()->user()->hasPermiso('ver-empresa'))
+                                <!-- Información de la Empresa -->
+                                <a class="dropdown-item" href="{{ route('empresa.index') }}">
+                                    <i class="fas fa-building me-2"></i> {{ __('Información de Empresa') }}
+                                </a>
+
+                                @endif
+
                                 <!-- Cambiar Contraseña -->
                                 <a class="dropdown-item" href="{{ route('profile.edit') }}">
                                     <i class="fas fa-key me-2"></i> {{ __('Cambiar Contraseña') }}

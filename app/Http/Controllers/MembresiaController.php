@@ -28,19 +28,30 @@ class MembresiaController extends Controller
     public function create(): View
     {
         $membresia = new Membresia();
-
         return view('membresia.create', compact('membresia'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(MembresiaRequest $request): RedirectResponse
+    public function store(Request $request): RedirectResponse
     {
-        Membresia::create($request->validated());
+        $request->validate([
+            'tipo' => 'required|string|max:255|unique:membresias',
+            'descripcion' => 'required|string',
+            'costo' => 'required|numeric|min:0',
+            'duracion' => 'required|integer|min:1'
+        ]);
 
-        return Redirect::route('membresias.index')
-            ->with('success', 'Membresia created successfully.');
+        try {
+            Membresia::create($request->all());
+            return redirect()->route('membresias.index')
+                ->with('success', 'Membresía creada exitosamente.');
+        } catch (\Exception $e) {
+            return redirect()->back()
+                ->with('error', 'Error al crear la membresía.')
+                ->withInput();
+        }
     }
 
     /**

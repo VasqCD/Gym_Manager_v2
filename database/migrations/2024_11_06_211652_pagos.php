@@ -15,12 +15,12 @@ return new class extends Migration
             $table->engine = "InnoDB";
             $table->bigIncrements('id');
             $table->unsignedBigInteger('cliente_id');
-            $table->timestamps('fecha_pago');
+            $table->timestamp('fecha_pago');
             $table->decimal('total', 10, 2);
-    
-           
+
+
             $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
-    
+
             $table->timestamps();
         });
     }
