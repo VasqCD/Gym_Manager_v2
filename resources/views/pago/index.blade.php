@@ -46,7 +46,13 @@ Pagos
                                 @foreach ($pagos as $pago)
                                 <tr>
                                     <td>{{ ++$i }}</td>
-                                    <td>{{ $pago->cliente->nombre_completo }}</td>
+                                    <td>
+                                        @if($pago->cliente)
+                                        {{ $pago->cliente->nombre_completo }}
+                                        @else
+                                        <span class="text-muted">Cliente eliminado</span>
+                                        @endif
+                                    </td>
                                     <td>
                                         @foreach($pago->detalles as $detalle)
                                         {{ $detalle->membresia->tipo }}

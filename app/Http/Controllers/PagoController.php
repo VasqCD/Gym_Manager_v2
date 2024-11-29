@@ -20,7 +20,9 @@ class PagoController extends Controller
      */
     public function index(Request $request): View
     {
-        $pagos = Pago::with(['cliente', 'detalles.membresia'])
+        $pagos = Pago::with(['cliente' => function ($query) {
+            $query->withTrashed();
+        }, 'detalles.membresia'])
             ->orderBy('fecha_pago', 'desc')
             ->paginate();
 

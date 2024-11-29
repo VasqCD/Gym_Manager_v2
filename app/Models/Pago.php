@@ -36,7 +36,8 @@ class Pago extends Model
      */
     public function cliente()
     {
-        return $this->belongsTo(\App\Models\Cliente::class, 'cliente_id', 'id');
+        return $this->belongsTo(\App\Models\Cliente::class, 'cliente_id', 'id')
+            ->withTrashed();
     }
 
     /**
