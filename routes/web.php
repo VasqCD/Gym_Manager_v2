@@ -23,7 +23,9 @@ Route::middleware(['auth'])->group(function () {
     // Rutas de administración (roles y permisos)
     Route::middleware(['check.permiso:gestionar-roles'])->group(function () {
         Route::get('roles-permisos', [App\Http\Controllers\RolController::class, 'index'])->name('roles.index');
-        Route::resource('roles', App\Http\Controllers\RolController::class)->except(['create', 'edit', 'show', 'index']);
+        Route::post('roles', [App\Http\Controllers\RolController::class, 'store'])->name('roles.store');
+        Route::patch('roles/{rol}', [App\Http\Controllers\RolController::class, 'update'])->name('roles.update');
+        Route::delete('roles/{rol}', [App\Http\Controllers\RolController::class, 'destroy'])->name('roles.destroy');
         Route::resource('permisos', App\Http\Controllers\PermisoController::class)->except(['create', 'edit', 'show', 'index']);
     });
 
