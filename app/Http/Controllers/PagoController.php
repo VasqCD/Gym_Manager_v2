@@ -48,50 +48,42 @@ class PagoController extends Controller
     {
         $request->validate([
             'cliente_id' => 'required|exists:clientes,id',
-            'membresia_id' => 'required|exists:membresias,id',
-            'cantidad' => 'required|integer|min:1',
-            'subtotal' => 'required|numeric|min:0',
-            'descuento' => 'nullable|numeric|min:0|max:100',
+            'metodo_pago' => 'required|in:efectivo,tarjeta,transferencia',
+            'observaciones' => 'nullable|string|max:500',
             'total' => 'required|numeric|min:0'
         ]);
 
         try {
             DB::beginTransaction();
 
-            // Crear el pago
+            // Crear registro en tabla pagos
             $pago = Pago::create([
                 'cliente_id' => $request->cliente_id,
                 'fecha_pago' => now(),
-                'total' => $request->total
+                'total' => $request->total,
+                'metodo_pago' => $request->metodo_pago,
+                'observaciones' => $request->observaciones
             ]);
 
-            // Calcular los montos
-            $subtotal = $request->subtotal;
-            $descuento = $request->aplicar_descuento ?
-                ($subtotal * $request->descuento / 100) : 0;
-            $subtotalConDescuento = $subtotal - $descuento;
-            $impuesto = $subtotalConDescuento * 0.15;
-
-            // Crear el detalle del pago
+            // Crear registro en tabla pagodetall
             $pago->detalles()->create([
                 'membresia_id' => $request->membresia_id,
                 'cantidad' => $request->cantidad,
-                'subtotal' => $subtotal,
-                'descuento' => $descuento,
-                'impuesto' => $impuesto
+                'subtotal' => $request->subtotal,
+                'descuento' => $request->descuento ?? 0,
+                'impuesto' => $request->impuesto
             ]);
 
-            // Activar el estado del cliente
-            $cliente = Cliente::findOrFail($request->cliente_id);
-            $cliente->update(['estado' => true]);
+            // Activar cliente
+            Cliente::findOrFail($request->cliente_id)
+                ->update(['estado' => true]);
 
             DB::commit();
             return redirect()->route('pagos.index')
-                ->with('success', 'Pago creado exitosamente y cliente activado.');
+                ->with('success', 'Pago creado exitosamente.');
         } catch (\Exception $e) {
             DB::rollBack();
-            return redirect()->back()
-                ->withInput()
+            return back()->withInput()
                 ->withErrors(['error' => 'Error al crear el pago: ' . $e->getMessage()]);
         }
     }
@@ -108,24 +100,65 @@ class PagoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
-    {
-        $pago = Pago::with(['cliente', 'detalles.membresia'])->findOrFail($id);
-        $clientes = Cliente::all();
-        $membresias = Membresia::all();
+    public function edit($id): View
+{
+    // Cargar pago con sus relaciones
+    $pago = Pago::with(['cliente', 'detalles.membresia'])->findOrFail($id);
+    
+    // Obtener listas para los selects
+    $clientes = Cliente::all();
+    $membresias = Membresia::all();
+    
+    // Obtener el detalle del pago para acceder fácilmente en la vista
+    $detalle = $pago->detalles->first();
 
-        return view('pago.edit', compact('pago', 'clientes', 'membresias'));
-    }
+    // Pasar datos a la vista
+    return view('pago.edit', compact('pago', 'clientes', 'membresias', 'detalle'));
+}
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(PagoRequest $request, Pago $pago): RedirectResponse
+    public function update(Request $request, Pago $pago): RedirectResponse
     {
-        $pago->update($request->validated());
+        $request->validate([
+            'cliente_id' => 'required|exists:clientes,id',
+            'metodo_pago' => 'required|in:efectivo,tarjeta,transferencia',
+            'observaciones' => 'nullable|string|max:500',
+            'total' => 'required|numeric|min:0'
+        ]);
 
-        return Redirect::route('pagos.index')
-            ->with('success', 'Pago actualizado correctamente');
+        try {
+            DB::beginTransaction();
+
+            // Actualizar tabla pagos
+            $pago->update([
+                'cliente_id' => $request->cliente_id,
+                'total' => $request->total,
+                'metodo_pago' => $request->metodo_pago,
+                'observaciones' => $request->observaciones
+            ]);
+
+            // Actualizar tabla pagodetall
+            $detalle = $pago->detalles->first();
+            if ($detalle) {
+                $detalle->update([
+                    'membresia_id' => $request->membresia_id,
+                    'cantidad' => $request->cantidad,
+                    'subtotal' => $request->subtotal,
+                    'descuento' => $request->descuento ?? 0,
+                    'impuesto' => $request->impuesto
+                ]);
+            }
+
+            DB::commit();
+            return redirect()->route('pagos.index')
+                ->with('success', 'Pago actualizado exitosamente.');
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return back()->withInput()
+                ->withErrors(['error' => 'Error al actualizar el pago: ' . $e->getMessage()]);
+        }
     }
 
     public function destroy($id): RedirectResponse
