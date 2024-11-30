@@ -45,7 +45,7 @@ Route::middleware(['auth'])->group(function () {
     });
     Route::middleware(['check.permiso:editar-clientes'])->group(function () {
         Route::get('clientes/{cliente}/edit', [App\Http\Controllers\ClienteController::class, 'edit'])->name('clientes.edit');
-        Route::put('clientes/{cliente}', [App\Http\Controllers\ClienteController::class, 'update'])->name('clientes.update');
+        Route::match(['put', 'patch'], 'clientes/{cliente}', [App\Http\Controllers\ClienteController::class, 'update'])->name('clientes.update');
     });
     Route::middleware(['check.permiso:eliminar-clientes'])->group(function () {
         Route::delete('clientes/{cliente}', [App\Http\Controllers\ClienteController::class, 'destroy'])->name('clientes.destroy');
@@ -84,7 +84,7 @@ Route::middleware(['auth'])->group(function () {
     });
     Route::middleware(['check.permiso:editar-pagos'])->group(function () {
         Route::get('pagos/{pago}/edit', [App\Http\Controllers\PagoController::class, 'edit'])->name('pagos.edit');
-        Route::put('pagos/{pago}', [App\Http\Controllers\PagoController::class, 'update'])->name('pagos.update');
+        Route::match(['put', 'patch'], 'pagos/{pago}', [App\Http\Controllers\PagoController::class, 'update'])->name('pagos.update');
     });
     Route::middleware(['check.permiso:eliminar-pagos'])->group(function () {
         Route::delete('pagos/{pago}', [App\Http\Controllers\PagoController::class, 'destroy'])->name('pagos.destroy');
@@ -101,7 +101,7 @@ Route::middleware(['auth'])->group(function () {
     });
     Route::middleware(['check.permiso:editar-empleados'])->group(function () {
         Route::get('empleados/{empleado}/edit', [App\Http\Controllers\EmpleadoController::class, 'edit'])->name('empleados.edit');
-        Route::put('empleados/{empleado}', [App\Http\Controllers\EmpleadoController::class, 'update'])->name('empleados.update');
+        Route::match(['put', 'patch'], 'empleados/{empleado}', [App\Http\Controllers\EmpleadoController::class, 'update'])->name('empleados.update');
     });
     Route::middleware(['check.permiso:eliminar-empleados'])->group(function () {
         Route::delete('empleados/{empleado}', [App\Http\Controllers\EmpleadoController::class, 'destroy'])->name('empleados.destroy');
