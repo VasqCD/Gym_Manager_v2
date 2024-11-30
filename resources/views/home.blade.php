@@ -11,7 +11,7 @@
                 <div class="card-body">
                     <div class="row align-items-center">
                         <div class="col">
-                        <div class="text-uppercase fw-bold text-secondary mb-1">Bienvenido a Gym Manager</div>
+                            <div class="text-uppercase fw-bold text-secondary mb-1">Bienvenido a Gym Manager</div>
                             <h1 class="h3 mb-0 text-gray-800"> {{ auth()->user()->name }}</h1>
                         </div>
                         <div class="col-auto">
@@ -23,9 +23,9 @@
         </div>
 
         <!-- Clientes Registrados -->
-         <!--Validar si el usuario es administrador o gerente para mostrar clientes registrados-->
+        <!--Validar que el usuario tenga permiso de ver-clientes-->
 
-        
+        @if (auth()->user()->hasPermiso('ver-clientes'))
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-start border-primary border-4 shadow h-100">
                 <div class="card-body">
@@ -41,45 +41,51 @@
                 </div>
             </div>
         </div>
+        @endif
 
         <!-- Membresías Activas -->
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-start border-success border-4 shadow h-100">
-                <div class="card-body">
-                    <div class="row align-items-center">
-                        <div class="col">
-                            <div class="text-uppercase fw-bold text-success mb-1">Membresías Activas</div>
-                            <div class="h4 mb-0 fw-bold">{{ $membresiasActivas }}</div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-id-card fa-2x text-gray-300"></i>
+            @if (auth()->user()->hasPermiso('ver-membresias'))
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-start border-success border-4 shadow h-100">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <div class="text-uppercase fw-bold text-success mb-1">Membresías Activas</div>
+                                <div class="h4 mb-0 fw-bold">{{ $membresiasActivas }}</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-id-card fa-2x text-gray-300"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            @endif
 
-        <!-- Ingresos del Mes -->
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-start border-info border-4 shadow h-100">
-                <div class="card-body">
-                    <div class="row align-items-center">
-                        <div class="col">
-                            <div class="text-uppercase fw-bold text-info mb-1">Ingresos del Mes</div>
-                            <div class="h4 mb-0 fw-bold">L. {{ number_format($ingresosMes, 2) }}</div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+            <!-- Ingresos del Mes -->
+                @if (auth()->user()->hasPermiso('ver-ingresos'))
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-start border-info border-4 shadow h-100">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <div class="text-uppercase fw-bold text-info mb-1">Ingresos del Mes</div>
+                                    <div class="h4 mb-0 fw-bold">L. {{ number_format($ingresosMes, 2) }}</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
     </div>
+    @endif
 
     <!-- Gráficos -->
     <div class="row">
         <!-- Gráfico de Membresías -->
+        @if (auth()->user()->hasPermiso('ver-membresias'))
         <div class="col-xl-6">
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
@@ -90,8 +96,10 @@
                 </div>
             </div>
         </div>
+        @endif
 
         <!-- Gráfico de Ingresos -->
+        @if (auth()->user()->hasPermiso('ver-ingresos'))
         <div class="col-xl-6">
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
@@ -104,6 +112,7 @@
         </div>
     </div>
 </div>
+@endif
 
 @push('scripts')
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
