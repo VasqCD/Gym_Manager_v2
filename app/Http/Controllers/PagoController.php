@@ -13,6 +13,7 @@ use App\Http\Requests\PagoRequest;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use Barryvdh\DomPDF\Facade\Pdf;
+use App\Models\InformacionEmpresa;
 
 class PagoController extends Controller
 {
@@ -102,20 +103,20 @@ class PagoController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit($id): View
-{
-    // Cargar pago con sus relaciones
-    $pago = Pago::with(['cliente', 'detalles.membresia'])->findOrFail($id);
-    
-    // Obtener listas para los selects
-    $clientes = Cliente::all();
-    $membresias = Membresia::all();
-    
-    // Obtener el detalle del pago para acceder fácilmente en la vista
-    $detalle = $pago->detalles->first();
+    {
+        // Cargar pago con sus relaciones
+        $pago = Pago::with(['cliente', 'detalles.membresia'])->findOrFail($id);
 
-    // Pasar datos a la vista
-    return view('pago.edit', compact('pago', 'clientes', 'membresias', 'detalle'));
-}
+        // Obtener listas para los selects
+        $clientes = Cliente::all();
+        $membresias = Membresia::all();
+
+        // Obtener el detalle del pago para acceder fácilmente en la vista
+        $detalle = $pago->detalles->first();
+
+        // Pasar datos a la vista
+        return view('pago.edit', compact('pago', 'clientes', 'membresias', 'detalle'));
+    }
 
     /**
      * Update the specified resource in storage.
@@ -171,11 +172,11 @@ class PagoController extends Controller
     }
 
     public function generarFactura($id)
-{
-    $pago = Pago::with(['cliente', 'detalles.membresia'])->findOrFail($id);
-    $pdf = PDF::loadView('pago.factura', compact('pago'));
-    
-    return $pdf->stream("factura-{$pago->id}.pdf");
-}
-}
+    {
+        $pago = Pago::with(['cliente', 'detalles.membresia'])->findOrFail($id);
+        $empresa = InformacionEmpresa::first();
+        $pdf = PDF::loadView('pago.factura', compact('pago', 'empresa'));
 
+        return $pdf->stream("factura-{$pago->id}.pdf");
+    }
+}
