@@ -37,22 +37,13 @@
                             @enderror
                         </div>
 
-                        <div class="form-group mb-3">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" name="remember" id="remember">
-                                <label class="form-check-label" for="remember">Recordarme</label>
-                            </div>
-                        </div>
+                       
 
                         <div class="d-grid gap-2">
                             <button type="submit" class="btn btn-primary">
                                 <i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión
                             </button>
-                            @if (Route::has('password.request'))
-                            <a class="btn btn-link" href="{{ route('password.request') }}">
-                                ¿Olvidaste tu contraseña?
-                            </a>
-                            @endif
+                            
                         </div>
                     </form>
                 </div>
