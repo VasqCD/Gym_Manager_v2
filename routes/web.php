@@ -81,6 +81,7 @@ Route::middleware(['auth'])->group(function () {
     Route::middleware(['check.permiso:ver-pagos'])->group(function () {
         Route::get('pagos', [App\Http\Controllers\PagoController::class, 'index'])->name('pagos.index');
         Route::get('pagos/{pago}', [App\Http\Controllers\PagoController::class, 'show'])->name('pagos.show');
+        Route::get('pagos/{pago}/factura', [App\Http\Controllers\PagoController::class, 'generarFactura'])->name('pagos.factura');
     });
     Route::middleware(['check.permiso:editar-pagos'])->group(function () {
         Route::get('pagos/{pago}/edit', [App\Http\Controllers\PagoController::class, 'edit'])->name('pagos.edit');

@@ -69,12 +69,14 @@ Pagos
                                     </td>
                                     <td>
                                         <form action="{{ route('pagos.destroy', $pago->id) }}" method="POST">
-                                            <!-- Botón Ver siempre visible para usuarios con ver-pagos -->
+                                            <a class="btn btn-sm btn-info" href="{{ route('pagos.factura', $pago->id) }}" target="_blank">
+                                                <i class="fa fa-file-pdf"></i>
+                                            </a>
                                             <a class="btn btn-sm btn-primary" href="{{ route('pagos.show', $pago->id) }}">
                                                 <i class="fa fa-eye"></i>
                                             </a>
 
-                                            
+
                                             @if(auth()->user()->hasPermiso('editar-pagos'))
                                             <a class="btn btn-sm btn-success" href="{{ route('pagos.edit', $pago->id) }}">
                                                 <i class="fa fa-edit"></i>

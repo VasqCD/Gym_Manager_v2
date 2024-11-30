@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\PagoRequest;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class PagoController extends Controller
 {
@@ -168,4 +169,13 @@ class PagoController extends Controller
         return Redirect::route('pagos.index')
             ->with('success', 'El pago a sido eliminado correctamente');
     }
+
+    public function generarFactura($id)
+{
+    $pago = Pago::with(['cliente', 'detalles.membresia'])->findOrFail($id);
+    $pdf = PDF::loadView('pago.factura', compact('pago'));
+    
+    return $pdf->stream("factura-{$pago->id}.pdf");
 }
+}
+

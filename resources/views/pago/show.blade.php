@@ -100,10 +100,12 @@ Detalle de Pago
                         </div>
                     </div>
 
-                    <!-- Opciones Adicionales -->
                     <div class="row mt-4">
                         <div class="col-12">
                             <div class="d-flex justify-content-end">
+                                <a href="{{ route('pagos.factura', $pago->id) }}" class="btn btn-info me-2" target="_blank">
+                                    <i class="fa fa-file-pdf"></i> Generar Factura
+                                </a>
                                 <a href="{{ route('pagos.edit', $pago->id) }}" class="btn btn-success me-2">
                                     <i class="fa fa-edit"></i> Editar Pago
                                 </a>
