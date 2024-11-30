@@ -23,9 +23,12 @@
                         <span>
                             <i class="fas fa-users-cog"></i> Roles
                         </span>
+
+                        @if (auth()->user()->hasPermiso('crear-rol'))
                         <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#createRolModal">
                             <i class="fas fa-plus"></i> Nuevo Rol
                         </button>
+                        @endif
                     </div>
                 </div>
                 <div class="card-body">
@@ -53,6 +56,7 @@
                                         <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#showRolModal{{ $rol->id }}">
                                             <i class="fas fa-eye"></i>
                                         </button>
+                                        @if (auth()->user()->hasPermiso('editar-rol'))
                                         <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editRolModal{{ $rol->id }}">
                                             <i class="fas fa-edit"></i>
                                         </button>
@@ -63,6 +67,7 @@
                                                 <i class="fas fa-trash"></i>
                                             </button>
                                         </form>
+                                        @endif
                                     </td>
                                 </tr>
                             @endforeach
@@ -105,6 +110,7 @@
                                         <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#showPermisoModal{{ $permiso->id }}">
                                             <i class="fas fa-eye"></i>
                                         </button>
+                                        @if (auth()->user()->hasPermiso('gestion-permisos'))
                                         <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editPermisoModal{{ $permiso->id }}">
                                             <i class="fas fa-edit"></i>
                                         </button>
@@ -115,6 +121,7 @@
                                                 <i class="fas fa-trash"></i>
                                             </button>
                                         </form>
+                                        @endif
                                     </td>
                                 </tr>
                             @endforeach
