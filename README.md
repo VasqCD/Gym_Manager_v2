@@ -90,6 +90,13 @@ php artisan serve
 - Asignación de permisos por rol
 - Validación automática de permisos
 
+### Tecnologías Utilizadas
+- Laravel Framework 11.x
+- Base de datos MySQL/MariaDB
+- Bootstrap 5
+- Font Awesome Icons
+- ApexCharts para gráficos estadísticos
+
 ## Usuarios por Defecto
 ```bash
 SuperAdmin:  superadmin@gymflow.com / SuperAdmin2024*
