@@ -59,6 +59,38 @@ php artisan serve
 - Sistema de roles y permisos
 - Registro de asistencia
 
+### Control de Pagos
+- Generación de facturas
+- Múltiples métodos de pago (efectivo, tarjeta, transferencia)
+- Cálculo automático de impuestos y descuentos
+- Historial de transacciones
+
+### Gestión Administrativa
+- Registro y control de empleados
+- Información de la empresa configurable
+- Control de horarios y turnos
+- Gestión de salarios
+
+### Reportes y Estadísticas
+- Dashboard con métricas clave
+- Ingresos mensuales
+- Membresías activas por tipo
+- Número de clientes activos
+
+### Seguridad y Auditoría
+- Bitácora detallada de cambios en el sistema
+- Registro de acciones por usuario
+- Control de IP de acceso
+- Respaldo de información
+
+## Usuarios por Defecto
+```bash
+SuperAdmin:  superadmin@gymflow.com / SuperAdmin2024*
+Admin:       admin@gymflow.com / Admin2024*
+Gerente:     gerente@gymflow.com / Gerente2024*
+Recepción:   recepcion@gymflow.com / Recepcion2024*
+Entrenador:  entrenador@gymflow.com / Entrenador2024*
+
 ## Licencia
 
 Este proyecto está licenciado bajo la [Licencia MIT](https://opensource.org/licenses/MIT).
