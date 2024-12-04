@@ -12,11 +12,20 @@ use App\Models\Rolporpermiso;
 use Illuminate\Http\RedirectResponse;
 
 
-
+/**
+ * Controlador para la gestión de usuarios
+ * 
+ * Esta clase maneja las operaciones CRUD relacionadas con los usuarios
+ * del sistema y su asignación de roles
+ * 
+ * @package App\Http\Controllers
+ */
 class UserController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Muestra el listado de usuarios con sus roles asociados
+     *
+     * @return View Vista con el listado de usuarios y roles paginado
      */
     public function index()
     {
@@ -26,7 +35,9 @@ class UserController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Muestra el formulario para crear un nuevo usuario
+     *
+     * @return View Vista con el formulario de creación
      */
     public function create()
     {
@@ -34,8 +45,12 @@ class UserController extends Controller
         return view('user.create', compact('roles'));
     }
 
-    /**
-     * Store a newly created resource in storage.
+   /**
+     * Almacena un nuevo usuario en la base de datos
+     *
+     * @param Request $request Datos del formulario de creación
+     * @return RedirectResponse Redirección con mensaje de éxito o error
+     * @throws \Illuminate\Validation\ValidationException Si los datos no pasan la validación
      */
     public function store(Request $request)
     {
@@ -58,15 +73,21 @@ class UserController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Muestra los datos de un usuario
+     *
+     * @param string $id ID del usuario a mostrar
+     * @return View Vista con los datos del usuario
      */
     public function show(string $id)
     {
-        //
+        /** @var User $user */
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Muestra el formulario para editar un usuario
+     *
+     * @param User $user Usuario a editar
+     * @return View Vista con el formulario de edición
      */
     public function edit(User $user)
     {
@@ -75,7 +96,11 @@ class UserController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Actualiza los datos de un usuario
+     *
+     * @param Request $request Datos del formulario de edición
+     * @param User $user Usuario a actualizar
+     * @return RedirectResponse Redirección con mensaje de éxito o error
      */
     public function update(Request $request, User $user)
     {
@@ -98,7 +123,10 @@ class UserController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Elimina un usuario de la base de datos
+     *
+     * @param User $user Usuario a eliminar
+     * @return RedirectResponse Redirección con mensaje de éxito
      */
     public function destroy(User $user)
     {

@@ -5,9 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\Cliente;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use App\Http\Requests\ClienteRequest;
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+
+/**
+ * Controlador para la gestión de clientes
+ * 
+ * Esta clase maneja todas las operaciones CRUD relacionadas con los clientes
+ * del sistema, incluyendo listado, creación, actualización y eliminación
+ * 
+ * @package App\Http\Controllers
+ */
 
 class ClienteController extends Controller
 {
@@ -19,7 +26,12 @@ class ClienteController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Muestra el formulario para crear un nuevo cliente
+     * 
+     * Prepara y muestra la vista con el formulario vacío para registrar
+     * un nuevo cliente en el sistema
+     *
+     * @return \Illuminate\View\View Vista con el formulario de creación
      */
     public function create(): View
     {
@@ -28,7 +40,14 @@ class ClienteController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Almacena un nuevo cliente en la base de datos
+     * 
+     * Valida y procesa los datos recibidos del formulario para crear
+     * un nuevo registro de cliente en el sistema
+     *
+     * @param \Illuminate\Http\Request $request Datos del formulario de creación
+     * @return \Illuminate\Http\RedirectResponse Redirección con mensaje de éxito o error
+     * @throws \Illuminate\Validation\ValidationException Si los datos no pasan la validación
      */
     public function store(Request $request): RedirectResponse
     {
@@ -70,6 +89,12 @@ class ClienteController extends Controller
 
     /**
      * Display the specified resource.
+     * 
+     * Muestra los detalles de un cliente específico
+     *
+     * @param int $id Identificador del cliente a consultar
+     * @return \Illuminate\View\View Vista con los detalles del cliente
+     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException Cuando no se encuentra el cliente
      */
     public function show($id): View
     {
@@ -79,6 +104,12 @@ class ClienteController extends Controller
 
     /**
      * Show the form for editing the specified resource.
+     * 
+     * Muestra el formulario para editar un cliente existente
+     *
+     * @param int $id Identificador del cliente a editar
+     * @return \Illuminate\View\View Vista con el formulario de edición
+     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException Cuando no se encuentra el cliente
      */
     public function edit($id): View
     {
@@ -87,7 +118,13 @@ class ClienteController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Actualiza los datos de un cliente específico en la base de datos
+     *
+     * @param \Illuminate\Http\Request $request Datos del formulario de actualización
+     * @param int $id Identificador único del cliente
+     * @return \Illuminate\Http\RedirectResponse Redirección con mensaje de éxito o error
+     * @throws \Illuminate\Validation\ValidationException Si los datos no pasan la validación
+     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException Si no se encuentra el cliente
      */
     public function update(Request $request, $id): RedirectResponse
     {
@@ -112,7 +149,11 @@ class ClienteController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Elimina un cliente específico del sistema
+     *
+     * @param int $id Identificador único del cliente a eliminar
+     * @return \Illuminate\Http\RedirectResponse Redirección con mensaje de éxito
+     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException Si no se encuentra el cliente
      */
     public function destroy($id): RedirectResponse
     {

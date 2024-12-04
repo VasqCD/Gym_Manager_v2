@@ -15,10 +15,24 @@ use Illuminate\View\View;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\InformacionEmpresa;
 
+/**
+ * Controlador para la gestión de pagos
+ * 
+ * Esta clase maneja todas las operaciones relacionadas con los pagos
+ * de membresías, incluyendo su registro, consulta y generación de comprobantes
+ * 
+ * @package App\Http\Controllers
+ */
 class PagoController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Muestra el listado de pagos realizados
+     * 
+     * Obtiene los pagos con sus relaciones (cliente y detalles de membresía)
+     * ordenados por fecha de pago de forma descendente
+     *
+     * @param Request $request Objeto con los datos de la petición HTTP
+     * @return View Vista con el listado de pagos paginado
      */
     public function index(Request $request): View
     {
@@ -33,7 +47,9 @@ class PagoController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Muestra el formulario para registrar un nuevo pago
+     *
+     * @return View Vista con el formulario de creación
      */
     public function create(): View
     {
@@ -44,7 +60,10 @@ class PagoController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Almacena un nuevo pago en la base de datos
+     *
+     * @param Request $request Objeto con los datos de la petición HTTP
+     * @return RedirectResponse Redirección a la lista de pagos con un mensaje de éxito
      */
     public function store(Request $request): RedirectResponse
     {
@@ -91,7 +110,10 @@ class PagoController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Muestra los detalles de un pago específico
+     *
+     * @param int $id Identificador del pago a consultar
+     * @return View Vista con los detalles del pago
      */
     public function show($id): View
     {
@@ -100,7 +122,10 @@ class PagoController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Muestra el formulario para editar un pago
+     *
+     * @param int $id Identificador del pago a editar
+     * @return View Vista con el formulario de edición
      */
     public function edit($id): View
     {
@@ -119,7 +144,11 @@ class PagoController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Actualiza un pago en la base de datos
+     *
+     * @param Request $request Objeto con los datos de la petición HTTP
+     * @param Pago $pago Objeto con los datos del pago a actualizar
+     * @return RedirectResponse Redirección a la lista de pagos con un mensaje de éxito
      */
     public function update(Request $request, Pago $pago): RedirectResponse
     {
@@ -163,6 +192,12 @@ class PagoController extends Controller
         }
     }
 
+    /**
+     * Elimina un pago de la base de datos
+     *
+     * @param int $id Identificador del pago a eliminar
+     * @return RedirectResponse Redirección a la lista de pagos con un mensaje de éxito
+     */
     public function destroy($id): RedirectResponse
     {
         Pago::find($id)->delete();
@@ -171,6 +206,12 @@ class PagoController extends Controller
             ->with('success', 'El pago a sido eliminado correctamente');
     }
 
+    /**
+     * Genera un comprobante de pago en formato PDF
+     *
+     * @param int $id Identificador del pago a facturar
+     * @return mixed Comprobante de pago en formato PDF
+     */
     public function generarFactura($id)
     {
         $pago = Pago::with(['cliente', 'detalles.membresia'])->findOrFail($id);

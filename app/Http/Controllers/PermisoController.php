@@ -9,8 +9,25 @@ use App\Http\Requests\PermisoRequest;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use App\Models\Rol;
+/**
+ * Controlador para la gestión de permisos del sistema
+ * 
+ * Esta clase maneja las operaciones relacionadas con los permisos
+ * y su asignación a roles dentro del sistema de autorización
+ * 
+ * @package App\Http\Controllers
+ */
 class PermisoController extends Controller
 {
+    /**
+     * Muestra el listado de permisos y roles
+     *
+     * Obtiene y muestra los permisos con sus roles asociados
+     * y los roles con sus permisos en una vista paginada
+     *
+     * @param Request $request Objeto con los datos de la petición HTTP
+     * @return View Vista con el listado de permisos y roles
+     */
     public function index(Request $request): View
 {
     // Paginar resultados y cargar relaciones
@@ -20,6 +37,16 @@ class PermisoController extends Controller
     return view('admin.roles-permisos.index', compact('roles', 'permisos'));
 }
 
+    /**
+     * Almacena un nuevo permiso en la base de datos
+     *
+     * Valida los datos de la petición y crea un nuevo permiso
+     * en la base de datos, luego redirige a la vista de roles
+     * con un mensaje de éxito o error
+     *
+     * @param PermisoRequest $request Objeto con los datos de la petición HTTP
+     * @return RedirectResponse Redirección a la vista de roles
+     */
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
@@ -37,6 +64,17 @@ class PermisoController extends Controller
         }
     }
 
+    /**
+     * Actualiza un permiso en la base de datos
+     *
+     * Valida los datos de la petición y actualiza un permiso
+     * en la base de datos, luego redirige a la vista de roles
+     * con un mensaje de éxito o error
+     *
+     * @param PermisoRequest $request Objeto con los datos de la petición HTTP
+     * @param Permiso $permiso Objeto del permiso a actualizar
+     * @return RedirectResponse Redirección a la vista de roles
+     */
     public function update(Request $request, Permiso $permiso): RedirectResponse
     {
         $request->validate([
@@ -54,6 +92,15 @@ class PermisoController extends Controller
         }
     }
 
+    /**
+     * Elimina un permiso de la base de datos
+     *
+     * Elimina un permiso de la base de datos y redirige a la vista
+     * de roles con un mensaje de éxito o error
+     *
+     * @param Permiso $permiso Objeto del permiso a eliminar
+     * @return RedirectResponse Redirección a la vista de roles
+     */
     public function destroy(Permiso $permiso): RedirectResponse
     {
         try {

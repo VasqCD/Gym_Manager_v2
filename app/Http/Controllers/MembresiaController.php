@@ -9,10 +9,21 @@ use App\Http\Requests\MembresiaRequest;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
+/**
+ * Controlador para la gestión de membresías
+ * 
+ * Esta clase maneja todas las operaciones relacionadas con las membresías
+ * del gimnasio, incluyendo su creación, modificación y consulta
+ * 
+ * @package App\Http\Controllers
+ */
 class MembresiaController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Muestra el listado de membresías disponibles
+     *
+     * @param Request $request Objeto con los datos de la petición HTTP
+     * @return View Vista con el listado de membresías paginado
      */
     public function index(Request $request): View
     {
@@ -23,7 +34,9 @@ class MembresiaController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Muestra el formulario para crear una nueva membresía
+     *
+     * @return View Vista con el formulario de creación
      */
     public function create(): View
     {
@@ -32,7 +45,11 @@ class MembresiaController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Almacena una nueva membresía en la base de datos
+     *
+     * @param Request $request Datos del formulario de creación
+     * @return RedirectResponse Redirección con mensaje de éxito o error
+     * @throws \Illuminate\Validation\ValidationException Si los datos no pasan la validación
      */
     public function store(Request $request): RedirectResponse
     {
@@ -55,7 +72,10 @@ class MembresiaController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Muestra los detalles de una membresía específica
+     *
+     * @param int $id Identificador de la membresía a consultar
+     * @return View Vista con los detalles de la membresía
      */
     public function show($id): View
     {
@@ -65,7 +85,10 @@ class MembresiaController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Muestra el formulario para editar una membresía existente
+     *
+     * @param int $id Identificador de la membresía a editar
+     * @return View Vista con el formulario de edición
      */
     public function edit($id): View
     {
@@ -75,7 +98,11 @@ class MembresiaController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Actualiza los datos de una membresía específica en la base de datos
+     *
+     * @param MembresiaRequest $request Datos del formulario de actualización
+     * @param Membresia $membresia Membresía a actualizar
+     * @return RedirectResponse Redirección con mensaje de éxito o error
      */
     public function update(MembresiaRequest $request, Membresia $membresia): RedirectResponse
     {
@@ -85,6 +112,12 @@ class MembresiaController extends Controller
             ->with('success', 'Membresia updated successfully');
     }
 
+    /**
+     * Elimina una membresía específica de la base de datos
+     *
+     * @param int $id Identificador de la membresía a eliminar
+     * @return RedirectResponse Redirección con mensaje de éxito
+     */
     public function destroy($id): RedirectResponse
     {
         Membresia::find($id)->delete();

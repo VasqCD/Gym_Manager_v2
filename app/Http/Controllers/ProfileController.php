@@ -8,8 +8,21 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
 
+/**
+ * Controlador para la gestión del perfil de usuario
+ * 
+ * Esta clase maneja las operaciones relacionadas con la visualización
+ * y actualización del perfil del usuario autenticado
+ * 
+ * @package App\Http\Controllers
+ */
 class ProfileController extends Controller
 {
+    /**
+     * Muestra el formulario de edición del perfil
+     * 
+     * @return View Vista con el formulario de edición del perfil
+     */
     public function edit(): View
     {
         return view('profile.edit', [
@@ -17,6 +30,12 @@ class ProfileController extends Controller
         ]);
     }
 
+    /**
+     * Actualiza los datos del perfil del usuario
+     * 
+     * @param Request $request Objeto con los datos de la petición HTTP
+     * @return RedirectResponse Redirección con mensaje de éxito o error
+     */
     public function update(Request $request): RedirectResponse
     {
         $request->validate([
@@ -31,6 +50,12 @@ class ProfileController extends Controller
         return redirect()->route('profile.edit')->with('success', 'Perfil actualizado exitosamente.');
     }
 
+    /**
+     * Actualiza la contraseña del usuario
+     * 
+     * @param Request $request Objeto con los datos de la petición HTTP
+     * @return RedirectResponse Redirección con mensaje de éxito o error
+     */
     public function updatePassword(Request $request): RedirectResponse
     {
         $request->validate([

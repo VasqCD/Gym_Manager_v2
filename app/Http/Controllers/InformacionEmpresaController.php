@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class InformacionEmpresaController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Muestra la información de la empresa
      */
     public function index()
     {
@@ -18,7 +18,7 @@ class InformacionEmpresaController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Muestra el formulario para crear un nuevo recurso.
      */
     public function create()
     {
@@ -26,7 +26,7 @@ class InformacionEmpresaController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Almacena un nuevo recurso en la base de datos.
      */
     public function store(Request $request)
     {
@@ -34,7 +34,7 @@ class InformacionEmpresaController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Muestra el recurso especificado.
      */
     public function show(string $id)
     {
@@ -42,7 +42,7 @@ class InformacionEmpresaController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Muestra el formulario para editar el recurso especificado.
      */
     public function edit(string $id)
     {
@@ -57,7 +57,7 @@ class InformacionEmpresaController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Actualiza los datos de la empresa en la base de datos
      */
     public function update(Request $request)
     {
@@ -103,7 +103,7 @@ class InformacionEmpresaController extends Controller
 
 
     /**
-     * Remove the specified resource from storage.
+     * Elimina el recurso especificado de la base de datos.
      */
     public function destroy(string $id)
     {

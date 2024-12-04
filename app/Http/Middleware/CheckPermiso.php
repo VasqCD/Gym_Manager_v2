@@ -7,17 +7,30 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
-
+/**
+ * Middleware para verificación de permisos
+ *
+ * Esta clase implementa la verificación de permisos específicos
+ * para las rutas protegidas del sistema
+ *
+ * @package App\Http\Middleware
+ */
 class CheckPermiso
 {
 
     /**
-     * Handle an incoming request.
+     * Maneja la petición entrante verificando los permisos
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @param  string  $permiso
-     * @return mixed
+     * Verifica si el usuario autenticado tiene el permiso requerido
+     * para acceder al recurso solicitado
+     *
+     * @param Request $request Petición HTTP entrante
+     * @param Closure $next Siguiente middleware en la cadena
+     * @param string $permiso Nombre del permiso requerido
+     * @return mixed Respuesta HTTP
+     * @throws \Illuminate\Auth\AuthenticationException Si el usuario no está autenticado
+     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException Si el permiso no existe
+     * @throws \Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException Si el usuario no tiene el permiso
      */
     public function handle(Request $request, Closure $next, string $permiso)
     {
