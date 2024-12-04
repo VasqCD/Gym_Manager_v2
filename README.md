@@ -64,12 +64,13 @@ php artisan serve
 - Múltiples métodos de pago (efectivo, tarjeta, transferencia)
 - Cálculo automático de impuestos y descuentos
 - Historial de transacciones
+- Seguimiento de vigencia de membresías
 
 ### Gestión Administrativa
-- Registro y control de empleados
-- Información de la empresa configurable
-- Control de horarios y turnos
-- Gestión de salarios
+- Panel administrativo configurable
+- Perfil de empresa personalizable (logo, información fiscal, horarios)
+- Control de roles: SuperAdmin, Administrador, Gerente, Recepcionista y Entrenador
+- Gestión de empleados y sus datos laborales
 
 ### Reportes y Estadísticas
 - Dashboard con métricas clave
@@ -83,6 +84,12 @@ php artisan serve
 - Control de IP de acceso
 - Respaldo de información
 
+### Permisos Específicos
+- Gestión granular de accesos por módulo
+- Permisos para ver, crear, editar y eliminar
+- Asignación de permisos por rol
+- Validación automática de permisos
+
 ## Usuarios por Defecto
 ```bash
 SuperAdmin:  superadmin@gymflow.com / SuperAdmin2024*
@@ -90,6 +97,7 @@ Admin:       admin@gymflow.com / Admin2024*
 Gerente:     gerente@gymflow.com / Gerente2024*
 Recepción:   recepcion@gymflow.com / Recepcion2024*
 Entrenador:  entrenador@gymflow.com / Entrenador2024*
+```
 
 ## Licencia
 
