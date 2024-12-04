@@ -23,7 +23,7 @@ use App\Traits\RegistraBitacora;
  * @property $numero_seguro_social
  * @property $contacto_emergencia
  * @property $telefono_emergencia
- * @property $activo
+ * @property $estado
  * @property $created_at
  * @property $updated_at
  * @property $deleted_at
@@ -48,7 +48,7 @@ class Empleado extends Model
         'numero_seguro_social',
         'contacto_emergencia',
         'telefono_emergencia',
-        'activo'
+        'estado'
     ];
 
     protected $dates = [

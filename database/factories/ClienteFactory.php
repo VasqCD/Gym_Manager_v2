@@ -10,8 +10,8 @@ class ClienteFactory extends Factory
     {
         return [
             'nombre_completo' => $this->faker->name,
-            'dni' => $this->faker->numerify('#############'), // 8 dígitos
-            'telefono' => $this->faker->numerify('########'), // 8 dígitos
+            'dni' => $this->faker->numerify('#############'),
+            'telefono' => $this->faker->numerify('########'),
             'direccion' => $this->faker->address,
             'email' => $this->faker->unique()->safeEmail,
             'fecha_nacimiento' => $this->faker->date('Y-m-d', '-18 years'),
@@ -20,7 +20,7 @@ class ClienteFactory extends Factory
             'telefono_emergencia' => $this->faker->numerify('########'),
             'condiciones_medicas' => $this->faker->optional()->sentence,
             'fecha_registro' => now(),
-            'activo' => true
+            'estado' => false
         ];
     }
 }

@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('numero_seguro_social', 20)->nullable();
             $table->string('contacto_emergencia', 100)->nullable();
             $table->string('telefono_emergencia', 15)->nullable();
-            $table->boolean('activo')->default(true);
+            $table->boolean('estado')->default(true);
             $table->timestamps();
             $table->softDeletes(); // Para eliminación suave
         });

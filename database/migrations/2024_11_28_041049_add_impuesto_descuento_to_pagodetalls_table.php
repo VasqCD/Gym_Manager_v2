@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('pagodetalls', function (Blueprint $table) {
-            $table->decimal('impuesto', 5, 2)->default(0);  // agregar la columna impuesto
-            $table->decimal('descuento', 5, 2)->default(0);  // agregar la columna descuento
-        });
+        if (!Schema::hasColumn('pagodetalls', 'impuesto')) {
+            Schema::table('pagodetalls', function (Blueprint $table) {
+                $table->decimal('impuesto', 5, 2)->default(0);
+                $table->decimal('descuento', 5, 2)->default(0);
+            });
+        }
     }
 
     /**

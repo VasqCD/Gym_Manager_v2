@@ -69,7 +69,7 @@
                                                 </a>
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-danger btn-sm" 
+                                                <button type="submit" class="btn btn-danger btn-sm"
                                                         onclick="return confirm('¿Está seguro de eliminar este empleado?')">
                                                     <i class="fa fa-fw fa-trash"></i>
                                                 </button>
