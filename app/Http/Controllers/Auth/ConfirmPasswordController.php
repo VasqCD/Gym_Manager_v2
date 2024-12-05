@@ -12,25 +12,26 @@ class ConfirmPasswordController extends Controller
     | Confirm Password Controller
     |--------------------------------------------------------------------------
     |
-    | This controller is responsible for handling password confirmations and
-    | uses a simple trait to include the behavior. You're free to explore
-    | this trait and override any functions that require customization.
+    | Este controlador es responsable de manejar las confirmaciones de contraseña y
+    | utiliza un simple trait para incluir el comportamiento. Eres libre de explorar
+    | este trait y anular cualquier función que requiera personalización.
     |
     */
 
     use ConfirmsPasswords;
 
     /**
-     * Where to redirect users when the intended url fails.
-     *
+     * Donde redirigir a los usuarios cuando la url prevista falla.
+     * 
      * @var string
      */
     protected $redirectTo = '/home';
 
     /**
-     * Create a new controller instance.
-     *
+     * Crear una nueva instancia de controlador. en este caso, el middleware de autenticación.
+     * 
      * @return void
+     *
      */
     public function __construct()
     {

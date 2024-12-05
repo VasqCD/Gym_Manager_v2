@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title>Documentación del Sistema de Gym Manager Pro</title>
+    <parser>
+        <target>docs</target>
+        <default-package-name>App</default-package-name>
+        <encoding>utf-8</encoding>
+    </parser>
+    <transformer>
+        <target>docs</target>
+    </transformer>
+    <files>
+        <directory>app</directory>
+        <ignore>vendor/*</ignore>
+        <ignore>tests/*</ignore>
+        <ignore>storage/*</ignore>
+    </files>
+    <transformations>
+        <template name="clean"/>
+    </transformations>
+</phpdoc>

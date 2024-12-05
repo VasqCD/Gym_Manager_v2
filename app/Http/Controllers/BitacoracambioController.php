@@ -32,7 +32,7 @@ class BitacoracambioController extends Controller
 
     /**
      * Muestra los detalles de un registro específico de la bitácora
-     * 
+     *
      * @param int $id Identificador del registro a consultar
      * @return View Vista con los detalles del registro
      * @throws \Illuminate\Database\Eloquent\ModelNotFoundException Cuando no se encuentra el registro

@@ -123,3 +123,4 @@ class Pago extends Model
         return 'L. ' . number_format($this->total, 2);
     }
 }
+

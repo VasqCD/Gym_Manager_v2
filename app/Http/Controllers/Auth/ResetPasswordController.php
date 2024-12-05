@@ -5,23 +5,37 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
+/**
+ * Controlador para el restablecimiento de contraseñas
+ * 
+ * Esta clase maneja las solicitudes de restablecimiento de contraseña,
+ * incluyendo la validación del token, actualización de la contraseña
+ * y redirección del usuario. Utiliza el trait ResetsPasswords de
+ * Laravel para proporcionar la funcionalidad principal.
+ *
+ * @package App\Http\Controllers\Auth
+ */
 class ResetPasswordController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
-    | Password Reset Controller
+    | Controlador de Restablecimiento de Contraseña
     |--------------------------------------------------------------------------
     |
-    | This controller is responsible for handling password reset requests
-    | and uses a simple trait to include this behavior. You're free to
-    | explore this trait and override any methods you wish to tweak.
+    | Este controlador es responsable de manejar las solicitudes de
+    | restablecimiento de contraseña y utiliza un trait simple para
+    | incluir este comportamiento. Puede explorar este trait y 
+    | sobrescribir cualquier método que desee modificar.
     |
     */
 
     use ResetsPasswords;
 
     /**
-     * Where to redirect users after resetting their password.
+     * Ruta de redirección después del restablecimiento de contraseña
+     *
+     * Esta propiedad define la ruta a la que será redirigido el usuario
+     * después de restablecer exitosamente su contraseña.
      *
      * @var string
      */

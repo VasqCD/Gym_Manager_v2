@@ -8,26 +8,34 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Traits\RegistraBitacora;
 
 /**
- * Class Cliente
+ * Modelo para la gestión de clientes del gimnasio
  *
- * @property $id
- * @property $nombre_completo
- * @property $dni
- * @property $telefono
- * @property $direccion
- * @property $email
- * @property $fecha_nacimiento
- * @property $genero
- * @property $contacto_emergencia
- * @property $telefono_emergencia
- * @property $condiciones_medicas
- * @property $fecha_registro
- * @property $estado
- * @property $created_at
- * @property $updated_at
- * @property $deleted_at
+ * @property int $id Identificador único del cliente
+ * @property string $nombre_completo Nombre completo del cliente
+ * @property string $dni Documento de identidad del cliente
+ * @property string $telefono Número de teléfono del cliente
+ * @property string $direccion Dirección física del cliente
+ * @property string $email Correo electrónico del cliente
+ * @property \DateTime $fecha_nacimiento Fecha de nacimiento del cliente
+ * @property string $genero Género del cliente
+ * @property string $contacto_emergencia Nombre del contacto de emergencia
+ * @property string $telefono_emergencia Teléfono del contacto de emergencia
+ * @property string $condiciones_medicas Condiciones médicas relevantes
+ * @property \DateTime $fecha_registro Fecha de registro en el gimnasio
+ * @property boolean $estado Estado actual del cliente
+ * @property \DateTime $created_at Fecha de creación del registro
+ * @property \DateTime $updated_at Fecha de última actualización
+ * @property \DateTime|null $deleted_at Fecha de eliminación suave
  *
- * @property Pago[] $pagos
+ * @property-read \Illuminate\Database\Eloquent\Collection|Pago[] $pagos Relación con los pagos del cliente
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Cliente newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Cliente newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Cliente query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Cliente onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Cliente withTrashed()
+ *
+ * @package App\Models
  */
 class Cliente extends Model
 {
@@ -37,6 +45,13 @@ class Cliente extends Model
     
     protected $perPage = 10;
 
+    /**
+     * Los atributos que son asignables en masa. Esto significa que se pueden asignar a
+     * través de la creación o actualización en masa.
+     * fillable significa que se pueden asignar a través de la creación o actualización en masa.
+     *
+     * @var array<int, string>
+     */
     protected $fillable = [
         'nombre_completo',
         'dni',
@@ -52,6 +67,12 @@ class Cliente extends Model
         'estado'
     ];
 
+    /**
+     * Los atributos que deben ser convertidos a fechas
+     * Y los que deben ser convertidos a tipos de datos específicos o nativos
+     *
+     * @var array<string>
+     */
     protected $dates = [
         'fecha_nacimiento',
         'fecha_registro',
@@ -60,13 +81,22 @@ class Cliente extends Model
         'updated_at'
     ];
 
+    /**
+     * Los atributos que deben ser convertidos a tipos de datos específicos o nativos
+     *
+     * @var array<string>
+     */
     protected $casts = [
         'estado' => 'boolean',
         'fecha_nacimiento' => 'datetime',
         'fecha_registro' => 'datetime'
     ];
 
-    // Relación con pagos
+    /**
+     * La función pagos() establece una relación entre el modelo Cliente y el modelo Pago
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function pagos()
     {
         return $this->hasMany(Pago::class);

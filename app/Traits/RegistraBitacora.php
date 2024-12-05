@@ -6,8 +6,25 @@ namespace App\Traits;
 use App\Models\Bitacoracambio;
 use App\Models\User;
 
+/**
+ * Trait para el registro automático de cambios en la bitácora
+ *
+ * Este trait proporciona funcionalidad para registrar automáticamente
+ * los cambios realizados en los modelos (crear, actualizar, eliminar)
+ * en una tabla de bitácora.
+ *
+ * @package App\Traits
+ */
 trait RegistraBitacora
 {
+    /**
+     * Inicializa los observadores del modelo
+     *
+     * Registra los eventos created, updated y deleted para
+     * capturar automáticamente los cambios en el modelo.
+     *
+     * @return void
+     */
     protected static function bootRegistraBitacora()
     {
         // Registrar creación
@@ -26,6 +43,14 @@ trait RegistraBitacora
         });
     }
 
+    /**
+     * Registra un cambio en la bitácora
+     *
+     * @param string $accion Tipo de acción realizada (CREATE, UPDATE, DELETE)
+     * @param mixed $model Instancia del modelo que fue modificado
+     * @throws \Exception Si ocurre un error al registrar en la bitácora
+     * @return void
+     */
     protected static function registrarCambio($accion, $model)
     {
         try {

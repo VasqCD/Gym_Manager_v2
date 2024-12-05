@@ -5,30 +5,49 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\VerifiesEmails;
 
+/**
+ * Controlador para la verificación de correo electrónico
+ * 
+ * Esta clase maneja el proceso de verificación de correo electrónico
+ * para usuarios recién registrados. Permite verificar las cuentas y 
+ * reenviar correos de verificación cuando sea necesario. Utiliza el
+ * trait VerifiesEmails de Laravel para la funcionalidad principal.
+ *
+ * @package App\Http\Controllers\Auth
+ */
 class VerificationController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
-    | Email Verification Controller
+    | Controlador de Verificación de Email
     |--------------------------------------------------------------------------
     |
-    | This controller is responsible for handling email verification for any
-    | user that recently registered with the application. Emails may also
-    | be re-sent if the user didn't receive the original email message.
+    | Este controlador es responsable de manejar la verificación de email para
+    | cualquier usuario que se haya registrado recientemente en la aplicación.
+    | Los emails también pueden ser reenviados si el usuario no recibió el
+    | mensaje original.
     |
     */
 
     use VerifiesEmails;
 
     /**
-     * Where to redirect users after verification.
+     * Ruta de redirección después de la verificación
+     *
+     * Esta propiedad define la ruta a la que será redirigido el usuario
+     * después de verificar exitosamente su dirección de correo.
      *
      * @var string
      */
     protected $redirectTo = '/home';
 
     /**
-     * Create a new controller instance.
+     * Crea una nueva instancia del controlador
+     *
+     * El constructor aplica tres middlewares:
+     * - 'auth': Requiere que el usuario esté autenticado
+     * - 'signed': Verifica que la URL de verificación sea válida
+     * - 'throttle': Limita los intentos de verificación y reenvío
      *
      * @return void
      */

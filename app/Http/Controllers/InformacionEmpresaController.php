@@ -5,7 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\InformacionEmpresa;
 use Illuminate\Support\Facades\Storage;
-
+/**
+ * Controlador para la gestión de la información de la empresa
+ * 
+ * Esta clase maneja las operaciones CRUD y lógica de negocio
+ * relacionada con la información de la empresa
+ * 
+ * @package App\Http\Controllers
+ */
 class InformacionEmpresaController extends Controller
 {
     /**

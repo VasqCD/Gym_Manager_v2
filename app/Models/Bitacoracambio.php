@@ -5,22 +5,31 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Bitacoracambio
+ * Modelo para el registro de cambios en la bitácora del sistema
  *
- * @property $id
- * @property $usuario
- * @property $tabla
- * @property $accion
- * @property $created_at
- * @property $updated_at
+ * @property int $id Identificador único del registro
+ * @property string $usuario Usuario que realizó la acción
+ * @property string $tabla Tabla afectada por la acción
+ * @property string $accion Tipo de acción realizada (CREATE/UPDATE/DELETE)
+ * @property array $datos_antiguos Datos antes del cambio
+ * @property array $datos_nuevos Datos después del cambio
+ * @property string $ip Dirección IP desde donde se realizó la acción
+ * @property \DateTime $created_at Fecha de creación del registro
+ * @property \DateTime $updated_at Fecha de última actualización
  *
- * @package App
- * @mixin \Illuminate\Database\Eloquent\Builder
+ * @method static \Illuminate\Database\Eloquent\Builder|Bitacoracambio newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Bitacoracambio newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Bitacoracambio query()
+ *
+ * @method string getBadgeClass() Obtiene la clase CSS del badge según el tipo de acción
+ * @return string Clase CSS correspondiente (success/warning/danger/info)
+ *
+ * @package App\Models
  */
 class Bitacoracambio extends Model
 {
     /**
-     * The table associated with the model.
+     * La tabla asociada al modelo
      *
      * @var string
      */
@@ -32,7 +41,8 @@ class Bitacoracambio extends Model
     protected $perPage = 10;
 
     /**
-     * Los atributos que son asignables en masa.
+     * Los atributos que son asignables en masa. Esto significa que se pueden asignar a
+     * través de la creación o actualización en masa.
      *
      * @var array<int, string>
      */
@@ -46,9 +56,10 @@ class Bitacoracambio extends Model
     ];
 
     /**
-     * Los atributos que deben ser convertidos.
+     * Los atributos que deben ser convertidos a fechas
+     * Y los que deben ser convertidos a tipos de datos específicos o nativos
      *
-     * @var array
+     * @var array<string>
      */
     protected $casts = [
         'datos_antiguos' => 'array',
@@ -58,7 +69,7 @@ class Bitacoracambio extends Model
     ];
 
     /**
-     * Obtiene el tipo de badge según la acción
+     * Obtiene el tipo de badge según la acción (alertas)
      */
     public function getBadgeClass()
     {

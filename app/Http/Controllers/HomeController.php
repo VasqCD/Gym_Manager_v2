@@ -9,6 +9,14 @@ use App\Models\Pago;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\DB;
 
+/**
+ * Controlador para la página de inicio del sistema
+ *
+ * Esta clase maneja las operaciones y lógica de negocio relacionadas con la
+ * página de inicio del sistema, mostrando datos y estadísticas generales
+ *
+ * @package App\Http\Controllers
+ */
 class HomeController extends Controller
 {
     /**

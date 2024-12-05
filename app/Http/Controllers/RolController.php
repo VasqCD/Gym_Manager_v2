@@ -61,10 +61,20 @@ class RolController extends Controller
     }
 
     /**
-     * Muestra el formulario para editar un rol existente
-     *
-     * @param Rol $rol Rol a editar
-     * @return View Vista con el formulario de edición
+     * La funcion `update` en PHP maneja la actualización de una entidad de rol, incluyendo la verificación
+     * de cambios en nombre, descripción y permisos, y el registro de cualquier error que ocurra.
+     * 
+     * @param Request $request El parámetro `Request` en la función `update` representa la solicitud HTTP
+     * que se está realizando para actualizar un rol específico. Contiene todos los datos enviados en la
+     * solicitud, como los valores de entrada del formulario.
+     * @param Rol $rol El fragmento de código que proporcionaste es una función PHP que maneja la operación
+     * de actualización para una entidad "Rol". La función toma dos parámetros: un objeto Request y un objeto Rol.
+     * Aquí tienes un desglose de los parámetros:
+     * 
+     * @return RedirectResponse Se devuelve un RedirectResponse desde la función update. Si la operación de
+     * actualización es exitosa, redirige a la ruta 'roles.index' con un mensaje de éxito indicando que el rol
+     * se actualizó correctamente. Si ocurre un error durante el proceso de actualización, redirige a la ruta
+     * 'roles.index' con un mensaje de error detallando el problema encontrado durante la actualización.
      */
     public function update(Request $request, Rol $rol): RedirectResponse
     {

@@ -60,10 +60,14 @@ class PagoController extends Controller
     }
 
     /**
-     * Almacena un nuevo pago en la base de datos
-     *
-     * @param Request $request Objeto con los datos de la petición HTTP
-     * @return RedirectResponse Redirección a la lista de pagos con un mensaje de éxito
+     * La función `store` procesa una solicitud de pago, crea registros de pago y detalles de pago,
+     * activa un cliente y maneja cualquier error que pueda ocurrir.
+     * 
+     * @param Request request La función `store` que proporcionaste es responsable de almacenar un pago
+     * registro junto con sus detalles en la base de datos. Permíteme explicar el proceso paso a paso:
+     * 
+     * @return RedirectResponse Si el proceso de creación de pagos es exitoso, se devuelve una respuesta de redirección a
+     * la ruta 'pagos.index' con un mensaje de éxito 'Pago creado exitosamente.'
      */
     public function store(Request $request): RedirectResponse
     {
@@ -144,11 +148,19 @@ class PagoController extends Controller
     }
 
     /**
-     * Actualiza un pago en la base de datos
-     *
-     * @param Request $request Objeto con los datos de la petición HTTP
-     * @param Pago $pago Objeto con los datos del pago a actualizar
-     * @return RedirectResponse Redirección a la lista de pagos con un mensaje de éxito
+     * La función `update` en PHP actualiza el pago y los detalles del pago, manejando la validación y
+     * las transacciones de la base de datos.
+     * 
+     * @param Request request Es un objeto que contiene los datos enviados al servidor como parte
+     * de una solicitud HTTP. En este contexto, se está utilizando para recuperar y validar los datos de entrada
+     * para actualizar un registro de pago.
+     * @param Pago pago La función `update` que proporcionaste es responsable de actualizar un registro de pago
+     * junto con sus detalles en una base de datos. Permíteme explicar los parámetros utilizados en esta función:
+     * 
+     * @return RedirectResponse Se devuelve una RedirectResponse. Si la operación de actualización es
+     * exitosa, se redirigirá a la ruta 'pagos.index' con un mensaje de éxito. Si hay un
+     * error durante el proceso de actualización, se redirigirá a la página anterior con los datos de entrada y
+     * un mensaje de error que indique el problema encontrado al actualizar el pago.
      */
     public function update(Request $request, Pago $pago): RedirectResponse
     {

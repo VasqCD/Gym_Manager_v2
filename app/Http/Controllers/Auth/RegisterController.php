@@ -9,30 +9,46 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
+/**
+ * Controlador para el registro de nuevos usuarios
+ * 
+ * Esta clase maneja todo el proceso de registro de nuevos usuarios,
+ * incluyendo la validación de datos, creación de cuentas y 
+ * asignación de roles iniciales. Utiliza el trait RegistersUsers
+ * de Laravel para la funcionalidad base de registro.
+ *
+ * @package App\Http\Controllers\Auth
+ */
 class RegisterController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
-    | Register Controller
+    | Controlador de Registro
     |--------------------------------------------------------------------------
     |
-    | This controller handles the registration of new users as well as their
-    | validation and creation. By default this controller uses a trait to
-    | provide this functionality without requiring any additional code.
+    | Este controlador maneja el registro de nuevos usuarios así como su
+    | validación y creación. Por defecto, este controlador usa un trait
+    | para proporcionar esta funcionalidad sin requerir código adicional.
     |
     */
 
     use RegistersUsers;
 
     /**
-     * Where to redirect users after registration.
+     * Ruta de redirección después del registro exitoso
+     *
+     * Esta propiedad define la ruta a la que será redirigido el usuario
+     * después de completar el proceso de registro satisfactoriamente.
      *
      * @var string
      */
     protected $redirectTo = '/home';
 
     /**
-     * Create a new controller instance.
+     * Crea una nueva instancia del controlador
+     *
+     * El constructor aplica el middleware 'guest' para asegurar que
+     * solo los usuarios no autenticados puedan acceder al registro.
      *
      * @return void
      */
@@ -42,9 +58,9 @@ class RegisterController extends Controller
     }
 
     /**
-     * Get a validator for an incoming registration request.
+     * Obtiene un validador para la solicitud de registro
      *
-     * @param  array  $data
+     * @param  array  $data Datos a validar del formulario de registro
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
@@ -57,9 +73,9 @@ class RegisterController extends Controller
     }
 
     /**
-     * Create a new user instance after a valid registration.
+     * Crea una nueva instancia de usuario después de un registro válido
      *
-     * @param  array  $data
+     * @param  array  $data Datos validados del usuario
      * @return \App\Models\User
      */
     protected function create(array $data)
