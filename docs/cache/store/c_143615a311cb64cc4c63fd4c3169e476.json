@@ -1,0 +1,120 @@
+{
+    "name": "App\\Traits\\RegistraBitacora",
+    "line": 18,
+    "short_desc": "Trait para el registro autom\u00e1tico de cambios en la bit\u00e1cora",
+    "long_desc": "Este trait proporciona funcionalidad para registrar autom\u00e1ticamente\nlos cambios realizados en los modelos (crear, actualizar, eliminar)\nen una tabla de bit\u00e1cora.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Traits"
+            ]
+        ]
+    },
+    "namespace": "App\\Traits",
+    "file": "app\\Traits\\RegistraBitacora.php",
+    "relative_file": null,
+    "hash": "7c3190997c10e74a5dfb3c040aedaefe68d80823",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": true,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Bitacoracambio": "App\\Models\\Bitacoracambio",
+        "User": "App\\Models\\User"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "bootRegistraBitacora": {
+            "name": "bootRegistraBitacora",
+            "line": 28,
+            "short_desc": "Inicializa los observadores del modelo",
+            "long_desc": "Registra los eventos created, updated y deleted para\ncapturar autom\u00e1ticamente los cambios en el modelo.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 10,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "registrarCambio": {
+            "name": "registrarCambio",
+            "line": 54,
+            "short_desc": "Registra un cambio en la bit\u00e1cora",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 10,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\Exception",
+                    "Si ocurre un error al registrar en la bit\u00e1cora"
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "accion": {
+                    "name": "accion",
+                    "line": 54,
+                    "short_desc": "Tipo de acci\u00f3n realizada (CREATE, UPDATE, DELETE)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "model": {
+                    "name": "model",
+                    "line": 54,
+                    "short_desc": "Instancia del modelo que fue modificado",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

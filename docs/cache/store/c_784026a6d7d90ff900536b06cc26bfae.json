@@ -1,0 +1,209 @@
+{
+    "name": "App\\Http\\Controllers\\RolController",
+    "line": 23,
+    "short_desc": "Controlador para la gesti\u00f3n de roles",
+    "long_desc": "Esta clase maneja las operaciones CRUD relacionadas con los roles\ndel sistema y su relaci\u00f3n con los permisos",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Controllers"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Controllers",
+    "file": "app\\Http\\Controllers\\RolController.php",
+    "relative_file": null,
+    "hash": "f72003254b0ab4efc8c918878cab2410171ba9c0",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Rol": "App\\Models\\Rol",
+        "RedirectResponse": "Illuminate\\Http\\RedirectResponse",
+        "Request": "Illuminate\\Http\\Request",
+        "RolRequest": "App\\Http\\Requests\\RolRequest",
+        "Redirect": "Illuminate\\Support\\Facades\\Redirect",
+        "View": "Illuminate\\View\\View",
+        "Permiso": "App\\Models\\Permiso",
+        "Log": "Illuminate\\Support\\Facades\\Log",
+        "DB": "Illuminate\\Support\\Facades\\DB"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "index": {
+            "name": "index",
+            "line": 30,
+            "short_desc": "Muestra el listado de roles con sus permisos asociados",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Vista con el listado de roles y permisos paginado",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "store": {
+            "name": "store",
+            "line": 45,
+            "short_desc": "Almacena un nuevo rol en la base de datos",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Redirecci\u00f3n con mensaje de \u00e9xito o error",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\Illuminate\\Validation\\ValidationException",
+                    "Si los datos no pasan la validaci\u00f3n"
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 45,
+                    "short_desc": "Datos del formulario de creaci\u00f3n",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "update": {
+            "name": "update",
+            "line": 79,
+            "short_desc": "La funcion `update` en PHP maneja la actualizaci\u00f3n de una entidad de rol, incluyendo la verificaci\u00f3n\nde cambios en nombre, descripci\u00f3n y permisos, y el registro de cualquier error que ocurra.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Se devuelve un RedirectResponse desde la funci\u00f3n update. Si la operaci\u00f3n de\nactualizaci\u00f3n es exitosa, redirige a la ruta 'roles.index' con un mensaje de \u00e9xito indicando que el rol\nse actualiz\u00f3 correctamente. Si ocurre un error durante el proceso de actualizaci\u00f3n, redirige a la ruta\n'roles.index' con un mensaje de error detallando el problema encontrado durante la actualizaci\u00f3n.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 79,
+                    "short_desc": "El par\u00e1metro `Request` en la funci\u00f3n `update` representa la solicitud HTTP\nque se est\u00e1 realizando para actualizar un rol espec\u00edfico. Contiene todos los datos enviados en la\nsolicitud, como los valores de entrada del formulario.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "rol": {
+                    "name": "rol",
+                    "line": 79,
+                    "short_desc": "El fragmento de c\u00f3digo que proporcionaste es una funci\u00f3n PHP que maneja la operaci\u00f3n\nde actualizaci\u00f3n para una entidad \"Rol\". La funci\u00f3n toma dos par\u00e1metros: un objeto Request y un objeto Rol.\nAqu\u00ed tienes un desglose de los par\u00e1metros:",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Models\\Rol",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "destroy": {
+            "name": "destroy",
+            "line": 158,
+            "short_desc": "Elimina un rol de la base de datos",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Redirecci\u00f3n con mensaje de \u00e9xito o error",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "rol": {
+                    "name": "rol",
+                    "line": 158,
+                    "short_desc": "Rol a eliminar",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Models\\Rol",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

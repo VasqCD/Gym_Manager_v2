@@ -1,0 +1,122 @@
+{
+    "name": "App\\Http\\Controllers\\BitacoracambioController",
+    "line": 17,
+    "short_desc": "Controlador para gestionar las operaciones relacionadas con la bit\u00e1cora de cambios",
+    "long_desc": "Esta clase maneja las funcionalidades de visualizaci\u00f3n y consulta de los registros\nde la bit\u00e1cora de cambios en el sistema",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Controllers"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Controllers",
+    "file": "app\\Http\\Controllers\\BitacoracambioController.php",
+    "relative_file": null,
+    "hash": "152c07c5a80b2f3e3e37e7bdb33738c92f223a90",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Bitacoracambio": "App\\Models\\Bitacoracambio",
+        "Request": "Illuminate\\Http\\Request",
+        "View": "Illuminate\\View\\View"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "index": {
+            "name": "index",
+            "line": 25,
+            "short_desc": "Muestra el listado de la bit\u00e1cora de cambios",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Vista con el listado de registros paginados",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 25,
+                    "short_desc": "Objeto con los datos de la petici\u00f3n HTTP",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "show": {
+            "name": "show",
+            "line": 40,
+            "short_desc": "Muestra los detalles de un registro espec\u00edfico de la bit\u00e1cora",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Vista con los detalles del registro",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\Illuminate\\Database\\Eloquent\\ModelNotFoundException",
+                    "Cuando no se encuentra el registro"
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 40,
+                    "short_desc": "Identificador del registro a consultar",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

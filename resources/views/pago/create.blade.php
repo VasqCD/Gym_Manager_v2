@@ -42,7 +42,7 @@
                                                     <i class="fas fa-user"></i> Cliente <span class="text-danger">*</span>
                                                 </label>
                                                 <button type="button" class="btn btn-outline-primary btn-sm" 
-                                                        data-bs-toggle="modal" data-bs-target="#clienteModal">
+                                                        data-bs-toggle="modal" data-bs-target="#creaClienteModal">
                                                     <i class="fas fa-user-plus"></i> Nuevo Cliente
                                                 </button>
                                             </div>
@@ -178,6 +178,8 @@
         </div>
     </div>
 </section>
+// modal de creacion cliente
+@include('pago.modals.create-cliente')
 
 @push('scripts')
 <script>
@@ -204,4 +206,6 @@ function calcularTotal() {
 document.addEventListener('DOMContentLoaded', calcularTotal);
 </script>
 @endpush
+
+
 @endsection

@@ -1,0 +1,356 @@
+{
+    "name": "App\\Models\\Rol",
+    "line": 21,
+    "short_desc": "Class Rol",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "property": [
+            [
+                [],
+                "id",
+                ""
+            ],
+            [
+                [],
+                "nombre",
+                ""
+            ],
+            [
+                [],
+                "descripcion",
+                ""
+            ],
+            [
+                [],
+                "created_at",
+                ""
+            ],
+            [
+                [],
+                "updated_at",
+                ""
+            ],
+            [
+                [
+                    [
+                        "\\App\\Models\\Rolporpermiso",
+                        true
+                    ]
+                ],
+                "rolporpermisos",
+                ""
+            ]
+        ],
+        "package": [
+            [
+                "App"
+            ]
+        ],
+        "mixin": [
+            [
+                "\\Illuminate\\Database\\Eloquent\\Builder"
+            ]
+        ]
+    },
+    "namespace": "App\\Models",
+    "file": "app\\Models\\Rol.php",
+    "relative_file": null,
+    "hash": "4294dfc84de237e76cec51b739494145aa193f40",
+    "parent": "Illuminate\\Database\\Eloquent\\Model",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Model": "Illuminate\\Database\\Eloquent\\Model",
+        "RegistraBitacora": "App\\Traits\\RegistraBitacora",
+        "SoftDeletes": "Illuminate\\Database\\Eloquent\\SoftDeletes"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": {
+        "Illuminate\\Database\\Eloquent\\SoftDeletes": "Illuminate\\Database\\Eloquent\\SoftDeletes",
+        "App\\Traits\\RegistraBitacora": "App\\Traits\\RegistraBitacora"
+    },
+    "properties": {
+        "perPage": {
+            "name": "perPage",
+            "line": 25,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_LNumber",
+                "attributes": {
+                    "startLine": 25,
+                    "endLine": 25,
+                    "rawValue": "10",
+                    "kind": 10
+                },
+                "value": 10
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "table": {
+            "name": "table",
+            "line": 26,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_String",
+                "attributes": {
+                    "startLine": 26,
+                    "endLine": 26,
+                    "kind": 1,
+                    "rawValue": "'rols'"
+                },
+                "value": "rols"
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "fillable": {
+            "name": "fillable",
+            "line": 32,
+            "short_desc": "The attributes that are mass assignable.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "App\\Models\\array<int,string>",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 32,
+                    "endLine": 32,
+                    "kind": 2
+                },
+                "items": [
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 32,
+                            "endLine": 32
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 32,
+                                "endLine": 32,
+                                "kind": 1,
+                                "rawValue": "'nombre'"
+                            },
+                            "value": "nombre"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 32,
+                            "endLine": 32
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 32,
+                                "endLine": 32,
+                                "kind": 1,
+                                "rawValue": "'descripcion'"
+                            },
+                            "value": "descripcion"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    }
+                ]
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "id": {
+            "name": "id",
+            "line": 21,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "nombre": {
+            "name": "nombre",
+            "line": 21,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "descripcion": {
+            "name": "descripcion",
+            "line": 21,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "created_at": {
+            "name": "created_at",
+            "line": 21,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "updated_at": {
+            "name": "updated_at",
+            "line": 21,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "rolporpermisos": {
+            "name": "rolporpermisos",
+            "line": 21,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\App\\Models\\Rolporpermiso",
+                    true
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        }
+    },
+    "methods": {
+        "rolporpermisos": {
+            "name": "rolporpermisos",
+            "line": 37,
+            "short_desc": "Obtiene los permisos del rol a trav\u00e9s de la tabla pivote",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "permisos": {
+            "name": "permisos",
+            "line": 45,
+            "short_desc": "Obtiene los permisos asociados al rol",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "hasPermiso": {
+            "name": "hasPermiso",
+            "line": 53,
+            "short_desc": "Verifica si el rol tiene un permiso espec\u00edfico",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "permisoNombre": {
+                    "name": "permisoNombre",
+                    "line": 53,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

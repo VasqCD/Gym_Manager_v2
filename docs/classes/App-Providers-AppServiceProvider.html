@@ -89,6 +89,18 @@
                 <a href="packages/App-Http.html" class="">Http</a>
                 
             </li>
+                    <li>
+                <a href="packages/App-Models.html" class="">Models</a>
+                
+            </li>
+                    <li>
+                <a href="packages/App-Providers.html" class="">Providers</a>
+                
+            </li>
+                    <li>
+                <a href="packages/App-Traits.html" class="">Traits</a>
+                
+            </li>
             </ul>
 
                         </section>
@@ -125,6 +137,7 @@
             in package
             <ul class="phpdocumentor-breadcrumbs">
                                     <li class="phpdocumentor-breadcrumb"><a href="packages/App.html">App</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/App-Providers.html">Providers</a></li>
                             </ul>
         </div>
     
@@ -139,12 +152,17 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Providers/AppServiceProvider.php"><a href="files/app-providers-appserviceprovider.html"><abbr title="app/Providers/AppServiceProvider.php">AppServiceProvider.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8</span>
+    <span class="phpdocumentor-element-found-in__line">17</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Proveedor de servicios principal de la aplicación</p>
 
+
+    <section class="phpdocumentor-description"><p>Esta clase es el proveedor de servicios principal donde se registran
+y configuran los servicios base de la aplicación. También se encarga
+de la configuración inicial de componentes como el paginador.</p>
+</section>
 
 
 
@@ -178,14 +196,14 @@
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Bootstrap any application services.</dd>
+<dd>Inicializa los servicios de la aplicación</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Providers-AppServiceProvider.html#method_register">register()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Register any application services.</dd>
+<dd>Registra los servicios de la aplicación</dd>
 
     </dl>
 
@@ -215,11 +233,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Providers/AppServiceProvider.php"><a href="files/app-providers-appserviceprovider.html"><abbr title="app/Providers/AppServiceProvider.php">AppServiceProvider.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">21</span>
+    <span class="phpdocumentor-element-found-in__line">42</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Bootstrap any application services.</p>
+        <p class="phpdocumentor-summary">Inicializa los servicios de la aplicación</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -228,7 +246,11 @@
     <div class="phpdocumentor-label-line">
         </div>
     
-    
+        <section class="phpdocumentor-description"><p>Este método se ejecuta después de que todos los servicios han sido registrados.
+Aquí se configuran componentes como el paginador y otras funcionalidades
+que requieren que todos los servicios estén disponibles.</p>
+</section>
+
     
     
 
@@ -250,11 +272,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Providers/AppServiceProvider.php"><a href="files/app-providers-appserviceprovider.html"><abbr title="app/Providers/AppServiceProvider.php">AppServiceProvider.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">28</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Register any application services.</p>
+        <p class="phpdocumentor-summary">Registra los servicios de la aplicación</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -263,7 +285,11 @@
     <div class="phpdocumentor-label-line">
         </div>
     
-    
+        <section class="phpdocumentor-description"><p>Este método se ejecuta durante la fase de registro del bootstrapping.
+Aquí se deben registrar los bindings del contenedor, resolvers de
+interfaces y otras configuraciones de servicios.</p>
+</section>
+
     
     
 

@@ -1,0 +1,87 @@
+{
+    "name": "App\\Http\\Controllers\\Auth\\VerificationController",
+    "line": 18,
+    "short_desc": "Controlador para la verificaci\u00f3n de correo electr\u00f3nico",
+    "long_desc": "Esta clase maneja el proceso de verificaci\u00f3n de correo electr\u00f3nico\npara usuarios reci\u00e9n registrados. Permite verificar las cuentas y\nreenviar correos de verificaci\u00f3n cuando sea necesario. Utiliza el\ntrait VerifiesEmails de Laravel para la funcionalidad principal.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Controllers\\Auth"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Controllers\\Auth",
+    "file": "app\\Http\\Controllers\\Auth\\VerificationController.php",
+    "relative_file": null,
+    "hash": "312ed32d4730d84b07208241bab7135c2f5c54d6",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Controller": "App\\Http\\Controllers\\Controller",
+        "VerifiesEmails": "Illuminate\\Foundation\\Auth\\VerifiesEmails"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": {
+        "Illuminate\\Foundation\\Auth\\VerifiesEmails": "Illuminate\\Foundation\\Auth\\VerifiesEmails"
+    },
+    "properties": {
+        "redirectTo": {
+            "name": "redirectTo",
+            "line": 42,
+            "short_desc": "Ruta de redirecci\u00f3n despu\u00e9s de la verificaci\u00f3n",
+            "long_desc": "Esta propiedad define la ruta a la que ser\u00e1 redirigido el usuario\ndespu\u00e9s de verificar exitosamente su direcci\u00f3n de correo.",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_String",
+                "attributes": {
+                    "startLine": 42,
+                    "endLine": 42,
+                    "kind": 1,
+                    "rawValue": "'\/home'"
+                },
+                "value": "\/home"
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        }
+    },
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 54,
+            "short_desc": "Crea una nueva instancia del controlador",
+            "long_desc": "El constructor aplica tres middlewares:\n- 'auth': Requiere que el usuario est\u00e9 autenticado\n- 'signed': Verifica que la URL de verificaci\u00f3n sea v\u00e1lida\n- 'throttle': Limita los intentos de verificaci\u00f3n y reenv\u00edo",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

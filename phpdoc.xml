@@ -16,6 +16,6 @@
         <ignore>storage/*</ignore>
     </files>
     <transformations>
-        <template name="clean"/>
+        <template name="default"/>
     </transformations>
 </phpdoc>

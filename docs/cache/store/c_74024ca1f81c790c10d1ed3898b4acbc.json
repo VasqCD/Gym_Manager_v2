@@ -1,0 +1,222 @@
+{
+    "name": "App\\Http\\Controllers\\PermisoController",
+    "line": 20,
+    "short_desc": "Controlador para la gesti\u00f3n de permisos del sistema",
+    "long_desc": "Esta clase maneja las operaciones relacionadas con los permisos\ny su asignaci\u00f3n a roles dentro del sistema de autorizaci\u00f3n",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Controllers"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Controllers",
+    "file": "app\\Http\\Controllers\\PermisoController.php",
+    "relative_file": null,
+    "hash": "f4f02acf51ef33eec76a9d2cec8baf894f804113",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Permiso": "App\\Models\\Permiso",
+        "RedirectResponse": "Illuminate\\Http\\RedirectResponse",
+        "Request": "Illuminate\\Http\\Request",
+        "PermisoRequest": "App\\Http\\Requests\\PermisoRequest",
+        "Redirect": "Illuminate\\Support\\Facades\\Redirect",
+        "View": "Illuminate\\View\\View",
+        "Rol": "App\\Models\\Rol"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "index": {
+            "name": "index",
+            "line": 31,
+            "short_desc": "Muestra el listado de permisos y roles",
+            "long_desc": "Obtiene y muestra los permisos con sus roles asociados\ny los roles con sus permisos en una vista paginada",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Vista con el listado de permisos y roles",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 31,
+                    "short_desc": "Objeto con los datos de la petici\u00f3n HTTP",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "store": {
+            "name": "store",
+            "line": 50,
+            "short_desc": "Almacena un nuevo permiso en la base de datos",
+            "long_desc": "Valida los datos de la petici\u00f3n y crea un nuevo permiso\nen la base de datos, luego redirige a la vista de roles\ncon un mensaje de \u00e9xito o error",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Redirecci\u00f3n a la vista de roles",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 50,
+                    "short_desc": "Objeto con los datos de la petici\u00f3n HTTP",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "update": {
+            "name": "update",
+            "line": 78,
+            "short_desc": "Actualiza un permiso en la base de datos",
+            "long_desc": "Valida los datos de la petici\u00f3n y actualiza un permiso\nen la base de datos, luego redirige a la vista de roles\ncon un mensaje de \u00e9xito o error",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Redirecci\u00f3n a la vista de roles",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 78,
+                    "short_desc": "Objeto con los datos de la petici\u00f3n HTTP",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "permiso": {
+                    "name": "permiso",
+                    "line": 78,
+                    "short_desc": "Objeto del permiso a actualizar",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Models\\Permiso",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "destroy": {
+            "name": "destroy",
+            "line": 104,
+            "short_desc": "Elimina un permiso de la base de datos",
+            "long_desc": "Elimina un permiso de la base de datos y redirige a la vista\nde roles con un mensaje de \u00e9xito o error",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Redirecci\u00f3n a la vista de roles",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "permiso": {
+                    "name": "permiso",
+                    "line": 104,
+                    "short_desc": "Objeto del permiso a eliminar",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Models\\Permiso",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

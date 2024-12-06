@@ -89,6 +89,18 @@
                 <a href="packages/App-Http.html" class="">Http</a>
                 
             </li>
+                    <li>
+                <a href="packages/App-Models.html" class="">Models</a>
+                
+            </li>
+                    <li>
+                <a href="packages/App-Providers.html" class="">Providers</a>
+                
+            </li>
+                    <li>
+                <a href="packages/App-Traits.html" class="">Traits</a>
+                
+            </li>
             </ul>
 
                         </section>
@@ -227,14 +239,16 @@ de membresías, incluyendo su registro, consulta y generación de comprobantes</
     <span>
                                 &nbsp;: <abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr>    </span>
 </dt>
-<dd>Almacena un nuevo pago en la base de datos</dd>
+<dd>La función `store` procesa una solicitud de pago, crea registros de pago y detalles de pago,
+activa un cliente y maneja cualquier error que pueda ocurrir.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-PagoController.html#method_update">update()</a>
     <span>
                                 &nbsp;: <abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr>    </span>
 </dt>
-<dd>Actualiza un pago en la base de datos</dd>
+<dd>La función `update` en PHP actualiza el pago y los detalles del pago, manejando la validación y
+las transacciones de la base de datos.</dd>
 
     </dl>
 
@@ -307,7 +321,7 @@ de membresías, incluyendo su registro, consulta y generación de comprobantes</
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/PagoController.php"><a href="files/app-http-controllers-pagocontroller.html"><abbr title="app/Http/Controllers/PagoController.php">PagoController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">201</span>
+    <span class="phpdocumentor-element-found-in__line">213</span>
 
     </aside>
 
@@ -362,7 +376,7 @@ de membresías, incluyendo su registro, consulta y generación de comprobantes</
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/PagoController.php"><a href="files/app-http-controllers-pagocontroller.html"><abbr title="app/Http/Controllers/PagoController.php">PagoController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">130</span>
+    <span class="phpdocumentor-element-found-in__line">134</span>
 
     </aside>
 
@@ -417,7 +431,7 @@ de membresías, incluyendo su registro, consulta y generación de comprobantes</
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/PagoController.php"><a href="files/app-http-controllers-pagocontroller.html"><abbr title="app/Http/Controllers/PagoController.php">PagoController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">215</span>
+    <span class="phpdocumentor-element-found-in__line">227</span>
 
     </aside>
 
@@ -530,7 +544,7 @@ ordenados por fecha de pago de forma descendente</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/PagoController.php"><a href="files/app-http-controllers-pagocontroller.html"><abbr title="app/Http/Controllers/PagoController.php">PagoController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">118</span>
+    <span class="phpdocumentor-element-found-in__line">122</span>
 
     </aside>
 
@@ -585,11 +599,12 @@ ordenados por fecha de pago de forma descendente</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/PagoController.php"><a href="files/app-http-controllers-pagocontroller.html"><abbr title="app/Http/Controllers/PagoController.php">PagoController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">68</span>
+    <span class="phpdocumentor-element-found-in__line">72</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Almacena un nuevo pago en la base de datos</p>
+        <p class="phpdocumentor-summary">La función `store` procesa una solicitud de pago, crea registros de pago y detalles de pago,
+activa un cliente y maneja cualquier error que pueda ocurrir.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -606,9 +621,7 @@ ordenados por fecha de pago de forma descendente</p>
                 : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Illuminate\Http\Request">Request</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Objeto con los datos de la petición HTTP</p>
-</section>
-
+                
             </dd>
             </dl>
 
@@ -620,7 +633,8 @@ ordenados por fecha de pago de forma descendente</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr></span>
                     &mdash;
-                <section class="phpdocumentor-description"><p>Redirección a la lista de pagos con un mensaje de éxito</p>
+                <section class="phpdocumentor-description"><p>Si el proceso de creación de pagos es exitoso, se devuelve una respuesta de redirección a
+la ruta 'pagos.index' con un mensaje de éxito 'Pago creado exitosamente.'</p>
 </section>
 
             </section>
@@ -640,11 +654,12 @@ ordenados por fecha de pago de forma descendente</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/PagoController.php"><a href="files/app-http-controllers-pagocontroller.html"><abbr title="app/Http/Controllers/PagoController.php">PagoController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">153</span>
+    <span class="phpdocumentor-element-found-in__line">165</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Actualiza un pago en la base de datos</p>
+        <p class="phpdocumentor-summary">La función `update` en PHP actualiza el pago y los detalles del pago, manejando la validación y
+las transacciones de la base de datos.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -661,18 +676,14 @@ ordenados por fecha de pago de forma descendente</p>
                 : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Illuminate\Http\Request">Request</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Objeto con los datos de la petición HTTP</p>
-</section>
-
+                
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$pago</span>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Models-Pago.html"><abbr title="\App\Models\Pago">Pago</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Objeto con los datos del pago a actualizar</p>
-</section>
-
+                
             </dd>
             </dl>
 
@@ -684,7 +695,10 @@ ordenados por fecha de pago de forma descendente</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr></span>
                     &mdash;
-                <section class="phpdocumentor-description"><p>Redirección a la lista de pagos con un mensaje de éxito</p>
+                <section class="phpdocumentor-description"><p>Se devuelve una RedirectResponse. Si la operación de actualización es
+exitosa, se redirigirá a la ruta 'pagos.index' con un mensaje de éxito. Si hay un
+error durante el proceso de actualización, se redirigirá a la página anterior con los datos de entrada y
+un mensaje de error que indique el problema encontrado al actualizar el pago.</p>
 </section>
 
             </section>

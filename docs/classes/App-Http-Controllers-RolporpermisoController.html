@@ -89,6 +89,18 @@
                 <a href="packages/App-Http.html" class="">Http</a>
                 
             </li>
+                    <li>
+                <a href="packages/App-Models.html" class="">Models</a>
+                
+            </li>
+                    <li>
+                <a href="packages/App-Providers.html" class="">Providers</a>
+                
+            </li>
+                    <li>
+                <a href="packages/App-Traits.html" class="">Traits</a>
+                
+            </li>
             </ul>
 
                         </section>
@@ -126,6 +138,8 @@
             in package
             <ul class="phpdocumentor-breadcrumbs">
                                     <li class="phpdocumentor-breadcrumb"><a href="packages/App.html">App</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/App-Http.html">Http</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/App-Http-Controllers.html">Controllers</a></li>
                             </ul>
         </div>
     
@@ -140,12 +154,16 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/RolporpermisoController.php"><a href="files/app-http-controllers-rolporpermisocontroller.html"><abbr title="app/Http/Controllers/RolporpermisoController.php">RolporpermisoController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Controlador para la gestión de los roles por permisos de usuario en la aplicación</p>
 
+
+    <section class="phpdocumentor-description"><p>Esta clase maneja las operaciones CRUD y lógica de negocio
+relacionada con los roles por permisos de usuario</p>
+</section>
 
 
 
@@ -179,7 +197,7 @@
     <span>
                                 &nbsp;: <abbr title="\Illuminate\View\View">View</abbr>    </span>
 </dt>
-<dd>Show the form for creating a new resource.</dd>
+<dd>La función `create` recupera todos los roles y permisos y devuelve una vista con los datos.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-RolporpermisoController.html#method_destroy">destroy()</a>
@@ -192,34 +210,37 @@
     <span>
                                 &nbsp;: <abbr title="\Illuminate\View\View">View</abbr>    </span>
 </dt>
-<dd>Show the form for editing the specified resource.</dd>
+<dd>La función `edit` recupera un modelo Rolporpermiso específico por su ID y luego devuelve una vista
+con los datos recuperados.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-RolporpermisoController.html#method_index">index()</a>
     <span>
                                 &nbsp;: <abbr title="\Illuminate\View\View">View</abbr>    </span>
 </dt>
+<dd>La función index obtiene y pagina los datos de Rolporpermiso con manejo de errores y logging.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-RolporpermisoController.html#method_show">show()</a>
     <span>
                                 &nbsp;: <abbr title="\Illuminate\View\View">View</abbr>    </span>
 </dt>
-<dd>Display the specified resource.</dd>
+<dd>La función `show` recupera un modelo Rolporpermiso específico por su ID y luego devuelve una vista
+con los datos recuperados.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-RolporpermisoController.html#method_store">store()</a>
     <span>
                                 &nbsp;: <abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr>    </span>
 </dt>
-<dd>Store a newly created resource in storage.</dd>
+<dd>La función `store` almacena un nuevo recurso en la base de datos.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-RolporpermisoController.html#method_update">update()</a>
     <span>
                                 &nbsp;: <abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr>    </span>
 </dt>
-<dd>Update the specified resource in storage.</dd>
+<dd>La función `update` actualiza los datos de un recurso en la base de datos.</dd>
 
     </dl>
 
@@ -249,11 +270,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/RolporpermisoController.php"><a href="files/app-http-controllers-rolporpermisocontroller.html"><abbr title="app/Http/Controllers/RolporpermisoController.php">RolporpermisoController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">34</span>
+    <span class="phpdocumentor-element-found-in__line">60</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Show the form for creating a new resource.</p>
+        <p class="phpdocumentor-summary">La función `create` recupera todos los roles y permisos y devuelve una vista con los datos.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -271,6 +292,11 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\View\View">View</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Se devuelve una vista llamada 'rolporpermiso.create' con las variables <code class="prettyprint">roles</code> y
+<code class="prettyprint">permisos</code> pasadas a ella utilizando la función compact.</p>
+</section>
+
             </section>
 
 </article>
@@ -288,7 +314,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/RolporpermisoController.php"><a href="files/app-http-controllers-rolporpermisocontroller.html"><abbr title="app/Http/Controllers/RolporpermisoController.php">RolporpermisoController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">100</span>
+    <span class="phpdocumentor-element-found-in__line">169</span>
 
     </aside>
 
@@ -336,11 +362,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/RolporpermisoController.php"><a href="files/app-http-controllers-rolporpermisocontroller.html"><abbr title="app/Http/Controllers/RolporpermisoController.php">RolporpermisoController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">80</span>
+    <span class="phpdocumentor-element-found-in__line">136</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Show the form for editing the specified resource.</p>
+        <p class="phpdocumentor-summary">La función `edit` recupera un modelo Rolporpermiso específico por su ID y luego devuelve una vista
+con los datos recuperados.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -368,6 +395,11 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\View\View">View</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Se devuelve una vista de la función <code class="prettyprint">edit</code>. La vista que se devuelve es
+'rolporpermiso.edit' y se pasa a ella los datos de la variable utilizando la función</p>
+</section>
+
             </section>
 
 </article>
@@ -385,11 +417,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/RolporpermisoController.php"><a href="files/app-http-controllers-rolporpermisocontroller.html"><abbr title="app/Http/Controllers/RolporpermisoController.php">RolporpermisoController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">39</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">La función index obtiene y pagina los datos de Rolporpermiso con manejo de errores y logging.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">index</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Illuminate\Http\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\View\View">View</abbr></span></code>
@@ -416,6 +449,14 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\View\View">View</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>La función <code class="prettyprint">index</code> devuelve una vista llamada 'rolporpermiso.index' con los datos
+de la variable <code class="prettyprint">rolporpermisos</code> pasados como compact. Además, calcula el desplazamiento de la paginación
+basado en el número de página actual de la entrada de la solicitud. Si ocurre una excepción durante
+el proceso, registra el mensaje de error y redirige a la ruta 'rolporpermiso.index' con un
+mensaje de error</p>
+</section>
+
             </section>
 
 </article>
@@ -433,11 +474,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/RolporpermisoController.php"><a href="files/app-http-controllers-rolporpermisocontroller.html"><abbr title="app/Http/Controllers/RolporpermisoController.php">RolporpermisoController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">70</span>
+    <span class="phpdocumentor-element-found-in__line">117</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Display the specified resource.</p>
+        <p class="phpdocumentor-summary">La función `show` recupera un modelo Rolporpermiso específico por su ID y luego devuelve una vista
+con los datos recuperados.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -465,6 +507,13 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\View\View">View</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Se devuelve una vista de la función <code class="prettyprint">show</code>. La vista que se devuelve es
+'rolporpermiso.show' y se pasa a ella los datos de la variable utilizando la función</p>
+<p>The function &quot;show&quot; retrieves a specific Rolporpermiso model by its ID and then returns a view
+with the retrieved data.</p>
+</section>
+
             </section>
 
 </article>
@@ -482,11 +531,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/RolporpermisoController.php"><a href="files/app-http-controllers-rolporpermisocontroller.html"><abbr title="app/Http/Controllers/RolporpermisoController.php">RolporpermisoController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">45</span>
+    <span class="phpdocumentor-element-found-in__line">79</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Store a newly created resource in storage.</p>
+        <p class="phpdocumentor-summary">La función `store` almacena un nuevo recurso en la base de datos.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -514,6 +563,12 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>La función <code class="prettyprint">store</code> redirige a la ruta 'rolporpermisos.index' con un mensaje
+de éxito si el permiso se asigna correctamente al rol. Si el permiso ya está asignado al rol, se
+redirige a la ruta anterior con un mensaje de error.</p>
+</section>
+
             </section>
 
 </article>
@@ -531,11 +586,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/RolporpermisoController.php"><a href="files/app-http-controllers-rolporpermisocontroller.html"><abbr title="app/Http/Controllers/RolporpermisoController.php">RolporpermisoController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">92</span>
+    <span class="phpdocumentor-element-found-in__line">161</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Update the specified resource in storage.</p>
+        <p class="phpdocumentor-summary">La función `update` actualiza los datos de un recurso en la base de datos.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -570,6 +625,12 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>La función <code class="prettyprint">update</code> redirige a la ruta 'rolporpermisos.index' con un mensaje
+de éxito si el rol por permiso se actualiza correctamente. Si ocurre un error durante el proceso, se
+redirige a la ruta anterior con un mensaje de error.</p>
+</section>
+
             </section>
 
 </article>

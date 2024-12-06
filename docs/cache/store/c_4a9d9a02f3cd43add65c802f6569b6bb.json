@@ -1,0 +1,1262 @@
+{
+    "name": "App\\Models\\Cliente",
+    "line": 40,
+    "short_desc": "Modelo para la gesti\u00f3n de clientes del gimnasio",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "property": [
+            [
+                [
+                    [
+                        "int",
+                        false
+                    ]
+                ],
+                "id",
+                "Identificador \u00fanico del cliente"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "nombre_completo",
+                "Nombre completo del cliente"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "dni",
+                "Documento de identidad del cliente"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "telefono",
+                "N\u00famero de tel\u00e9fono del cliente"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "direccion",
+                "Direcci\u00f3n f\u00edsica del cliente"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "email",
+                "Correo electr\u00f3nico del cliente"
+            ],
+            [
+                [
+                    [
+                        "\\DateTime",
+                        false
+                    ]
+                ],
+                "fecha_nacimiento",
+                "Fecha de nacimiento del cliente"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "genero",
+                "G\u00e9nero del cliente"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "contacto_emergencia",
+                "Nombre del contacto de emergencia"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "telefono_emergencia",
+                "Tel\u00e9fono del contacto de emergencia"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "condiciones_medicas",
+                "Condiciones m\u00e9dicas relevantes"
+            ],
+            [
+                [
+                    [
+                        "\\DateTime",
+                        false
+                    ]
+                ],
+                "fecha_registro",
+                "Fecha de registro en el gimnasio"
+            ],
+            [
+                [
+                    [
+                        "bool",
+                        false
+                    ]
+                ],
+                "estado",
+                "Estado actual del cliente"
+            ],
+            [
+                [
+                    [
+                        "\\DateTime",
+                        false
+                    ]
+                ],
+                "created_at",
+                "Fecha de creaci\u00f3n del registro"
+            ],
+            [
+                [
+                    [
+                        "\\DateTime",
+                        false
+                    ]
+                ],
+                "updated_at",
+                "Fecha de \u00faltima actualizaci\u00f3n"
+            ],
+            [
+                [
+                    [
+                        "\\DateTime",
+                        false
+                    ],
+                    [
+                        "null",
+                        false
+                    ]
+                ],
+                "deleted_at",
+                "Fecha de eliminaci\u00f3n suave"
+            ]
+        ],
+        "property-read": [
+            [
+                [
+                    [
+                        "\\Illuminate\\Database\\Eloquent\\Collection",
+                        false
+                    ],
+                    [
+                        "\\App\\Models\\Pago",
+                        true
+                    ]
+                ],
+                "pagos",
+                "Relaci\u00f3n con los pagos del cliente"
+            ]
+        ],
+        "method": [
+            [
+                "static",
+                "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Cliente",
+                "newModelQuery()"
+            ],
+            [
+                "static",
+                "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Cliente",
+                "newQuery()"
+            ],
+            [
+                "static",
+                "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Cliente",
+                "query()"
+            ],
+            [
+                "static",
+                "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Cliente",
+                "onlyTrashed()"
+            ],
+            [
+                "static",
+                "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Cliente",
+                "withTrashed()"
+            ]
+        ],
+        "package": [
+            [
+                "App\\Models"
+            ]
+        ]
+    },
+    "namespace": "App\\Models",
+    "file": "app\\Models\\Cliente.php",
+    "relative_file": null,
+    "hash": "bc7bac8ebc2215cf7114ce7b71a9ec5f8db0b0a4",
+    "parent": "Illuminate\\Database\\Eloquent\\Model",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "HasFactory": "Illuminate\\Database\\Eloquent\\Factories\\HasFactory",
+        "Model": "Illuminate\\Database\\Eloquent\\Model",
+        "SoftDeletes": "Illuminate\\Database\\Eloquent\\SoftDeletes",
+        "RegistraBitacora": "App\\Traits\\RegistraBitacora"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": {
+        "Illuminate\\Database\\Eloquent\\SoftDeletes": "Illuminate\\Database\\Eloquent\\SoftDeletes",
+        "App\\Traits\\RegistraBitacora": "App\\Traits\\RegistraBitacora",
+        "Illuminate\\Database\\Eloquent\\Factories\\HasFactory": "Illuminate\\Database\\Eloquent\\Factories\\HasFactory"
+    },
+    "properties": {
+        "perPage": {
+            "name": "perPage",
+            "line": 46,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_LNumber",
+                "attributes": {
+                    "startLine": 46,
+                    "endLine": 46,
+                    "rawValue": "10",
+                    "kind": 10
+                },
+                "value": 10
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "fillable": {
+            "name": "fillable",
+            "line": 55,
+            "short_desc": "Los atributos que son asignables en masa. Esto significa que se pueden asignar a\ntrav\u00e9s de la creaci\u00f3n o actualizaci\u00f3n en masa.",
+            "long_desc": "fillable significa que se pueden asignar a trav\u00e9s de la creaci\u00f3n o actualizaci\u00f3n en masa.",
+            "hint": [
+                [
+                    "App\\Models\\array<int,string>",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 55,
+                    "endLine": 68,
+                    "kind": 2
+                },
+                "items": [
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 56,
+                            "endLine": 56
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 56,
+                                "endLine": 56,
+                                "kind": 1,
+                                "rawValue": "'nombre_completo'"
+                            },
+                            "value": "nombre_completo"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 57,
+                            "endLine": 57
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 57,
+                                "endLine": 57,
+                                "kind": 1,
+                                "rawValue": "'dni'"
+                            },
+                            "value": "dni"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 58,
+                            "endLine": 58
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 58,
+                                "endLine": 58,
+                                "kind": 1,
+                                "rawValue": "'telefono'"
+                            },
+                            "value": "telefono"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 59,
+                            "endLine": 59
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 59,
+                                "endLine": 59,
+                                "kind": 1,
+                                "rawValue": "'direccion'"
+                            },
+                            "value": "direccion"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 60,
+                            "endLine": 60
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 60,
+                                "endLine": 60,
+                                "kind": 1,
+                                "rawValue": "'email'"
+                            },
+                            "value": "email"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 61,
+                            "endLine": 61
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 61,
+                                "endLine": 61,
+                                "kind": 1,
+                                "rawValue": "'fecha_nacimiento'"
+                            },
+                            "value": "fecha_nacimiento"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 62,
+                            "endLine": 62
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 62,
+                                "endLine": 62,
+                                "kind": 1,
+                                "rawValue": "'genero'"
+                            },
+                            "value": "genero"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 63,
+                            "endLine": 63
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 63,
+                                "endLine": 63,
+                                "kind": 1,
+                                "rawValue": "'contacto_emergencia'"
+                            },
+                            "value": "contacto_emergencia"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 64,
+                            "endLine": 64
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 64,
+                                "endLine": 64,
+                                "kind": 1,
+                                "rawValue": "'telefono_emergencia'"
+                            },
+                            "value": "telefono_emergencia"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 65,
+                            "endLine": 65
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 65,
+                                "endLine": 65,
+                                "kind": 1,
+                                "rawValue": "'condiciones_medicas'"
+                            },
+                            "value": "condiciones_medicas"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 66,
+                            "endLine": 66
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 66,
+                                "endLine": 66,
+                                "kind": 1,
+                                "rawValue": "'fecha_registro'"
+                            },
+                            "value": "fecha_registro"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 67,
+                            "endLine": 67
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 67,
+                                "endLine": 67,
+                                "kind": 1,
+                                "rawValue": "'estado'"
+                            },
+                            "value": "estado"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    }
+                ]
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "dates": {
+            "name": "dates",
+            "line": 76,
+            "short_desc": "Los atributos que deben ser convertidos a fechas\nY los que deben ser convertidos a tipos de datos espec\u00edficos o nativos",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    true
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 76,
+                    "endLine": 82,
+                    "kind": 2
+                },
+                "items": [
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 77,
+                            "endLine": 77
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 77,
+                                "endLine": 77,
+                                "kind": 1,
+                                "rawValue": "'fecha_nacimiento'"
+                            },
+                            "value": "fecha_nacimiento"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 78,
+                            "endLine": 78
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 78,
+                                "endLine": 78,
+                                "kind": 1,
+                                "rawValue": "'fecha_registro'"
+                            },
+                            "value": "fecha_registro"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 79,
+                            "endLine": 79
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 79,
+                                "endLine": 79,
+                                "kind": 1,
+                                "rawValue": "'deleted_at'"
+                            },
+                            "value": "deleted_at"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 80,
+                            "endLine": 80
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 80,
+                                "endLine": 80,
+                                "kind": 1,
+                                "rawValue": "'created_at'"
+                            },
+                            "value": "created_at"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 81,
+                            "endLine": 81
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 81,
+                                "endLine": 81,
+                                "kind": 1,
+                                "rawValue": "'updated_at'"
+                            },
+                            "value": "updated_at"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    }
+                ]
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "casts": {
+            "name": "casts",
+            "line": 89,
+            "short_desc": "Los atributos que deben ser convertidos a tipos de datos espec\u00edficos o nativos",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    true
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 89,
+                    "endLine": 93,
+                    "kind": 2
+                },
+                "items": [
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 90,
+                            "endLine": 90
+                        },
+                        "key": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 90,
+                                "endLine": 90,
+                                "kind": 1,
+                                "rawValue": "'estado'"
+                            },
+                            "value": "estado"
+                        },
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 90,
+                                "endLine": 90,
+                                "kind": 1,
+                                "rawValue": "'boolean'"
+                            },
+                            "value": "boolean"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 91,
+                            "endLine": 91
+                        },
+                        "key": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 91,
+                                "endLine": 91,
+                                "kind": 1,
+                                "rawValue": "'fecha_nacimiento'"
+                            },
+                            "value": "fecha_nacimiento"
+                        },
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 91,
+                                "endLine": 91,
+                                "kind": 1,
+                                "rawValue": "'datetime'"
+                            },
+                            "value": "datetime"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 92,
+                            "endLine": 92
+                        },
+                        "key": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 92,
+                                "endLine": 92,
+                                "kind": 1,
+                                "rawValue": "'fecha_registro'"
+                            },
+                            "value": "fecha_registro"
+                        },
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 92,
+                                "endLine": 92,
+                                "kind": 1,
+                                "rawValue": "'datetime'"
+                            },
+                            "value": "datetime"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    }
+                ]
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "id": {
+            "name": "id",
+            "line": 40,
+            "short_desc": "Identificador \u00fanico del cliente",
+            "long_desc": null,
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "nombre_completo": {
+            "name": "nombre_completo",
+            "line": 40,
+            "short_desc": "Nombre completo del cliente",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "dni": {
+            "name": "dni",
+            "line": 40,
+            "short_desc": "Documento de identidad del cliente",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "telefono": {
+            "name": "telefono",
+            "line": 40,
+            "short_desc": "N\u00famero de tel\u00e9fono del cliente",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "direccion": {
+            "name": "direccion",
+            "line": 40,
+            "short_desc": "Direcci\u00f3n f\u00edsica del cliente",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "email": {
+            "name": "email",
+            "line": 40,
+            "short_desc": "Correo electr\u00f3nico del cliente",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "fecha_nacimiento": {
+            "name": "fecha_nacimiento",
+            "line": 40,
+            "short_desc": "Fecha de nacimiento del cliente",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\DateTime",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "genero": {
+            "name": "genero",
+            "line": 40,
+            "short_desc": "G\u00e9nero del cliente",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "contacto_emergencia": {
+            "name": "contacto_emergencia",
+            "line": 40,
+            "short_desc": "Nombre del contacto de emergencia",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "telefono_emergencia": {
+            "name": "telefono_emergencia",
+            "line": 40,
+            "short_desc": "Tel\u00e9fono del contacto de emergencia",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "condiciones_medicas": {
+            "name": "condiciones_medicas",
+            "line": 40,
+            "short_desc": "Condiciones m\u00e9dicas relevantes",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "fecha_registro": {
+            "name": "fecha_registro",
+            "line": 40,
+            "short_desc": "Fecha de registro en el gimnasio",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\DateTime",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "estado": {
+            "name": "estado",
+            "line": 40,
+            "short_desc": "Estado actual del cliente",
+            "long_desc": null,
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "created_at": {
+            "name": "created_at",
+            "line": 40,
+            "short_desc": "Fecha de creaci\u00f3n del registro",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\DateTime",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "updated_at": {
+            "name": "updated_at",
+            "line": 40,
+            "short_desc": "Fecha de \u00faltima actualizaci\u00f3n",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\DateTime",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "deleted_at": {
+            "name": "deleted_at",
+            "line": 40,
+            "short_desc": "Fecha de eliminaci\u00f3n suave",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\DateTime",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "pagos": {
+            "name": "pagos",
+            "line": 40,
+            "short_desc": "Relaci\u00f3n con los pagos del cliente",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Database\\Eloquent\\Collection",
+                    false
+                ],
+                [
+                    "\\App\\Models\\Pago",
+                    true
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": true,
+            "is_write_only": false,
+            "is_intersection_type": false
+        }
+    },
+    "methods": {
+        "pagos": {
+            "name": "pagos",
+            "line": 100,
+            "short_desc": "La funci\u00f3n pagos() establece una relaci\u00f3n entre el modelo Cliente y el modelo Pago",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\Database\\Eloquent\\Relations\\HasMany",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "newModelQuery": {
+            "name": "newModelQuery",
+            "line": 40,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Cliente",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": null,
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "newQuery": {
+            "name": "newQuery",
+            "line": 40,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Cliente",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": null,
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "query": {
+            "name": "query",
+            "line": 40,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Cliente",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": null,
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "onlyTrashed": {
+            "name": "onlyTrashed",
+            "line": 40,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Cliente",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": null,
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "withTrashed": {
+            "name": "withTrashed",
+            "line": 40,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Cliente",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": null,
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

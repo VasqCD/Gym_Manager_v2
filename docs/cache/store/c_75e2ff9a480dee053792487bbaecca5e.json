@@ -1,0 +1,76 @@
+{
+    "name": "App\\Providers\\AppServiceProvider",
+    "line": 17,
+    "short_desc": "Proveedor de servicios principal de la aplicaci\u00f3n",
+    "long_desc": "Esta clase es el proveedor de servicios principal donde se registran\ny configuran los servicios base de la aplicaci\u00f3n. Tambi\u00e9n se encarga\nde la configuraci\u00f3n inicial de componentes como el paginador.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Providers"
+            ]
+        ]
+    },
+    "namespace": "App\\Providers",
+    "file": "app\\Providers\\AppServiceProvider.php",
+    "relative_file": null,
+    "hash": "a7a964ce7b4edcf98dd89e27e9e47d0377a6a0e1",
+    "parent": "Illuminate\\Support\\ServiceProvider",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "ServiceProvider": "Illuminate\\Support\\ServiceProvider",
+        "Paginator": "Illuminate\\Pagination\\Paginator"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "register": {
+            "name": "register",
+            "line": 28,
+            "short_desc": "Registra los servicios de la aplicaci\u00f3n",
+            "long_desc": "Este m\u00e9todo se ejecuta durante la fase de registro del bootstrapping.\nAqu\u00ed se deben registrar los bindings del contenedor, resolvers de\ninterfaces y otras configuraciones de servicios.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "boot": {
+            "name": "boot",
+            "line": 42,
+            "short_desc": "Inicializa los servicios de la aplicaci\u00f3n",
+            "long_desc": "Este m\u00e9todo se ejecuta despu\u00e9s de que todos los servicios han sido registrados.\nAqu\u00ed se configuran componentes como el paginador y otras funcionalidades\nque requieren que todos los servicios est\u00e9n disponibles.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

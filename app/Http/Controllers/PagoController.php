@@ -222,7 +222,7 @@ class PagoController extends Controller
      * Genera un comprobante de pago en formato PDF
      *
      * @param int $id Identificador del pago a facturar
-     * @return mixed Comprobante de pago en formato PDF
+     * @return un archivo Comprobante de pago en formato PDF
      */
     public function generarFactura($id)
     {

@@ -1,0 +1,1279 @@
+{
+    "name": "App\\Models\\Empleado",
+    "line": 39,
+    "short_desc": "Modelo para la gesti\u00f3n de empleados del gimnasio",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "property": [
+            [
+                [
+                    [
+                        "int",
+                        false
+                    ]
+                ],
+                "id",
+                "Identificador \u00fanico del empleado"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "nombre_completo",
+                "Nombre completo del empleado"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "dni",
+                "Documento de identidad del empleado"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "telefono",
+                "N\u00famero de tel\u00e9fono del empleado"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "direccion",
+                "Direcci\u00f3n f\u00edsica del empleado"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "email",
+                "Correo electr\u00f3nico del empleado"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "cargo",
+                "Cargo o puesto del empleado"
+            ],
+            [
+                [
+                    [
+                        "float",
+                        false
+                    ]
+                ],
+                "salario",
+                "Salario del empleado"
+            ],
+            [
+                [
+                    [
+                        "\\DateTime",
+                        false
+                    ]
+                ],
+                "fecha_contratacion",
+                "Fecha de contrataci\u00f3n del empleado"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "horario_trabajo",
+                "Horario de trabajo asignado"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "tipo_contrato",
+                "Tipo de contrato laboral"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "numero_seguro_social",
+                "N\u00famero de seguro social"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "contacto_emergencia",
+                "Nombre del contacto de emergencia"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "telefono_emergencia",
+                "Tel\u00e9fono del contacto de emergencia"
+            ],
+            [
+                [
+                    [
+                        "bool",
+                        false
+                    ]
+                ],
+                "estado",
+                "Estado actual del empleado (activo\/inactivo)"
+            ],
+            [
+                [
+                    [
+                        "\\DateTime",
+                        false
+                    ]
+                ],
+                "created_at",
+                "Fecha de creaci\u00f3n del registro"
+            ],
+            [
+                [
+                    [
+                        "\\DateTime",
+                        false
+                    ]
+                ],
+                "updated_at",
+                "Fecha de \u00faltima actualizaci\u00f3n"
+            ],
+            [
+                [
+                    [
+                        "\\DateTime",
+                        false
+                    ],
+                    [
+                        "null",
+                        false
+                    ]
+                ],
+                "deleted_at",
+                "Fecha de eliminaci\u00f3n suave"
+            ]
+        ],
+        "method": [
+            [
+                "static",
+                "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Empleado",
+                "newModelQuery()"
+            ],
+            [
+                "static",
+                "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Empleado",
+                "newQuery()"
+            ],
+            [
+                "static",
+                "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Empleado",
+                "query()"
+            ],
+            [
+                "static",
+                "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Empleado",
+                "onlyTrashed()"
+            ],
+            [
+                "static",
+                "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Empleado",
+                "withTrashed()"
+            ]
+        ],
+        "package": [
+            [
+                "App\\Models"
+            ]
+        ]
+    },
+    "namespace": "App\\Models",
+    "file": "app\\Models\\Empleado.php",
+    "relative_file": null,
+    "hash": "991fb47c5e297358d6408ef18c4e106f47522dc7",
+    "parent": "Illuminate\\Database\\Eloquent\\Model",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Model": "Illuminate\\Database\\Eloquent\\Model",
+        "SoftDeletes": "Illuminate\\Database\\Eloquent\\SoftDeletes",
+        "RegistraBitacora": "App\\Traits\\RegistraBitacora"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": {
+        "Illuminate\\Database\\Eloquent\\SoftDeletes": "Illuminate\\Database\\Eloquent\\SoftDeletes",
+        "App\\Traits\\RegistraBitacora": "App\\Traits\\RegistraBitacora"
+    },
+    "properties": {
+        "perPage": {
+            "name": "perPage",
+            "line": 43,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_LNumber",
+                "attributes": {
+                    "startLine": 43,
+                    "endLine": 43,
+                    "rawValue": "10",
+                    "kind": 10
+                },
+                "value": 10
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "fillable": {
+            "name": "fillable",
+            "line": 51,
+            "short_desc": "Los atributos que son asignables en masa. Esto significa que se pueden asignar a\ntrav\u00e9s de la creaci\u00f3n o actualizaci\u00f3n en masa.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "App\\Models\\array<int,string>",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 51,
+                    "endLine": 66,
+                    "kind": 2
+                },
+                "items": [
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 52,
+                            "endLine": 52
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 52,
+                                "endLine": 52,
+                                "kind": 1,
+                                "rawValue": "'nombre_completo'"
+                            },
+                            "value": "nombre_completo"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 53,
+                            "endLine": 53
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 53,
+                                "endLine": 53,
+                                "kind": 1,
+                                "rawValue": "'dni'"
+                            },
+                            "value": "dni"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 54,
+                            "endLine": 54
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 54,
+                                "endLine": 54,
+                                "kind": 1,
+                                "rawValue": "'telefono'"
+                            },
+                            "value": "telefono"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 55,
+                            "endLine": 55
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 55,
+                                "endLine": 55,
+                                "kind": 1,
+                                "rawValue": "'direccion'"
+                            },
+                            "value": "direccion"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 56,
+                            "endLine": 56
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 56,
+                                "endLine": 56,
+                                "kind": 1,
+                                "rawValue": "'email'"
+                            },
+                            "value": "email"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 57,
+                            "endLine": 57
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 57,
+                                "endLine": 57,
+                                "kind": 1,
+                                "rawValue": "'cargo'"
+                            },
+                            "value": "cargo"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 58,
+                            "endLine": 58
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 58,
+                                "endLine": 58,
+                                "kind": 1,
+                                "rawValue": "'salario'"
+                            },
+                            "value": "salario"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 59,
+                            "endLine": 59
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 59,
+                                "endLine": 59,
+                                "kind": 1,
+                                "rawValue": "'fecha_contratacion'"
+                            },
+                            "value": "fecha_contratacion"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 60,
+                            "endLine": 60
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 60,
+                                "endLine": 60,
+                                "kind": 1,
+                                "rawValue": "'horario_trabajo'"
+                            },
+                            "value": "horario_trabajo"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 61,
+                            "endLine": 61
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 61,
+                                "endLine": 61,
+                                "kind": 1,
+                                "rawValue": "'tipo_contrato'"
+                            },
+                            "value": "tipo_contrato"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 62,
+                            "endLine": 62
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 62,
+                                "endLine": 62,
+                                "kind": 1,
+                                "rawValue": "'numero_seguro_social'"
+                            },
+                            "value": "numero_seguro_social"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 63,
+                            "endLine": 63
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 63,
+                                "endLine": 63,
+                                "kind": 1,
+                                "rawValue": "'contacto_emergencia'"
+                            },
+                            "value": "contacto_emergencia"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 64,
+                            "endLine": 64
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 64,
+                                "endLine": 64,
+                                "kind": 1,
+                                "rawValue": "'telefono_emergencia'"
+                            },
+                            "value": "telefono_emergencia"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 65,
+                            "endLine": 65
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 65,
+                                "endLine": 65,
+                                "kind": 1,
+                                "rawValue": "'estado'"
+                            },
+                            "value": "estado"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    }
+                ]
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "dates": {
+            "name": "dates",
+            "line": 74,
+            "short_desc": "Los atributos que deben ser convertidos a fechas\nY los que deben ser convertidos a tipos de datos espec\u00edficos o nativos",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    true
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 74,
+                    "endLine": 79,
+                    "kind": 2
+                },
+                "items": [
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 75,
+                            "endLine": 75
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 75,
+                                "endLine": 75,
+                                "kind": 1,
+                                "rawValue": "'fecha_contratacion'"
+                            },
+                            "value": "fecha_contratacion"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 76,
+                            "endLine": 76
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 76,
+                                "endLine": 76,
+                                "kind": 1,
+                                "rawValue": "'deleted_at'"
+                            },
+                            "value": "deleted_at"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 77,
+                            "endLine": 77
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 77,
+                                "endLine": 77,
+                                "kind": 1,
+                                "rawValue": "'created_at'"
+                            },
+                            "value": "created_at"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 78,
+                            "endLine": 78
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 78,
+                                "endLine": 78,
+                                "kind": 1,
+                                "rawValue": "'updated_at'"
+                            },
+                            "value": "updated_at"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    }
+                ]
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "casts": {
+            "name": "casts",
+            "line": 86,
+            "short_desc": "Los atributos que deben ser convertidos a tipos de datos espec\u00edficos o nativos",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    true
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 86,
+                    "endLine": 90,
+                    "kind": 2
+                },
+                "items": [
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 87,
+                            "endLine": 87
+                        },
+                        "key": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 87,
+                                "endLine": 87,
+                                "kind": 1,
+                                "rawValue": "'fecha_contratacion'"
+                            },
+                            "value": "fecha_contratacion"
+                        },
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 87,
+                                "endLine": 87,
+                                "kind": 1,
+                                "rawValue": "'datetime'"
+                            },
+                            "value": "datetime"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 88,
+                            "endLine": 88
+                        },
+                        "key": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 88,
+                                "endLine": 88,
+                                "kind": 1,
+                                "rawValue": "'salario'"
+                            },
+                            "value": "salario"
+                        },
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 88,
+                                "endLine": 88,
+                                "kind": 1,
+                                "rawValue": "'decimal:2'"
+                            },
+                            "value": "decimal:2"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 89,
+                            "endLine": 89
+                        },
+                        "key": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 89,
+                                "endLine": 89,
+                                "kind": 1,
+                                "rawValue": "'activo'"
+                            },
+                            "value": "activo"
+                        },
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 89,
+                                "endLine": 89,
+                                "kind": 1,
+                                "rawValue": "'boolean'"
+                            },
+                            "value": "boolean"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    }
+                ]
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "id": {
+            "name": "id",
+            "line": 39,
+            "short_desc": "Identificador \u00fanico del empleado",
+            "long_desc": null,
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "nombre_completo": {
+            "name": "nombre_completo",
+            "line": 39,
+            "short_desc": "Nombre completo del empleado",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "dni": {
+            "name": "dni",
+            "line": 39,
+            "short_desc": "Documento de identidad del empleado",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "telefono": {
+            "name": "telefono",
+            "line": 39,
+            "short_desc": "N\u00famero de tel\u00e9fono del empleado",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "direccion": {
+            "name": "direccion",
+            "line": 39,
+            "short_desc": "Direcci\u00f3n f\u00edsica del empleado",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "email": {
+            "name": "email",
+            "line": 39,
+            "short_desc": "Correo electr\u00f3nico del empleado",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "cargo": {
+            "name": "cargo",
+            "line": 39,
+            "short_desc": "Cargo o puesto del empleado",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "salario": {
+            "name": "salario",
+            "line": 39,
+            "short_desc": "Salario del empleado",
+            "long_desc": null,
+            "hint": [
+                [
+                    "float",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "fecha_contratacion": {
+            "name": "fecha_contratacion",
+            "line": 39,
+            "short_desc": "Fecha de contrataci\u00f3n del empleado",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\DateTime",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "horario_trabajo": {
+            "name": "horario_trabajo",
+            "line": 39,
+            "short_desc": "Horario de trabajo asignado",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "tipo_contrato": {
+            "name": "tipo_contrato",
+            "line": 39,
+            "short_desc": "Tipo de contrato laboral",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "numero_seguro_social": {
+            "name": "numero_seguro_social",
+            "line": 39,
+            "short_desc": "N\u00famero de seguro social",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "contacto_emergencia": {
+            "name": "contacto_emergencia",
+            "line": 39,
+            "short_desc": "Nombre del contacto de emergencia",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "telefono_emergencia": {
+            "name": "telefono_emergencia",
+            "line": 39,
+            "short_desc": "Tel\u00e9fono del contacto de emergencia",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "estado": {
+            "name": "estado",
+            "line": 39,
+            "short_desc": "Estado actual del empleado (activo\/inactivo)",
+            "long_desc": null,
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "created_at": {
+            "name": "created_at",
+            "line": 39,
+            "short_desc": "Fecha de creaci\u00f3n del registro",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\DateTime",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "updated_at": {
+            "name": "updated_at",
+            "line": 39,
+            "short_desc": "Fecha de \u00faltima actualizaci\u00f3n",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\DateTime",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "deleted_at": {
+            "name": "deleted_at",
+            "line": 39,
+            "short_desc": "Fecha de eliminaci\u00f3n suave",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\DateTime",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        }
+    },
+    "methods": {
+        "newModelQuery": {
+            "name": "newModelQuery",
+            "line": 39,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Empleado",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": null,
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "newQuery": {
+            "name": "newQuery",
+            "line": 39,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Empleado",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": null,
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "query": {
+            "name": "query",
+            "line": 39,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Empleado",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": null,
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "onlyTrashed": {
+            "name": "onlyTrashed",
+            "line": 39,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Empleado",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": null,
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "withTrashed": {
+            "name": "withTrashed",
+            "line": 39,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Database\\Eloquent\\Builder|\\App\\Models\\Empleado",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 9,
+            "is_by_ref": null,
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

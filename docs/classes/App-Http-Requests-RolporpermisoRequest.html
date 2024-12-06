@@ -89,6 +89,18 @@
                 <a href="packages/App-Http.html" class="">Http</a>
                 
             </li>
+                    <li>
+                <a href="packages/App-Models.html" class="">Models</a>
+                
+            </li>
+                    <li>
+                <a href="packages/App-Providers.html" class="">Providers</a>
+                
+            </li>
+                    <li>
+                <a href="packages/App-Traits.html" class="">Traits</a>
+                
+            </li>
             </ul>
 
                         </section>
@@ -126,6 +138,8 @@
             in package
             <ul class="phpdocumentor-breadcrumbs">
                                     <li class="phpdocumentor-breadcrumb"><a href="packages/App.html">App</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/App-Http.html">Http</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/App-Http-Requests.html">Requests</a></li>
                             </ul>
         </div>
     
@@ -140,12 +154,17 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Requests/RolporpermisoRequest.php"><a href="files/app-http-requests-rolporpermisorequest.html"><abbr title="app/Http/Requests/RolporpermisoRequest.php">RolporpermisoRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Request personalizado para la validación de asignación de permisos a roles</p>
 
+
+    <section class="phpdocumentor-description"><p>Esta clase maneja la validación de datos para la asignación y
+actualización de permisos a roles específicos en el sistema,
+verificando que existan tanto el rol como el permiso.</p>
+</section>
 
 
 
@@ -179,14 +198,14 @@
     <span>
                                 &nbsp;: bool    </span>
 </dt>
-<dd>Determine if the user is authorized to make this request.</dd>
+<dd>Determina si el usuario está autorizado para realizar esta solicitud</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Requests-RolporpermisoRequest.html#method_rules">rules()</a>
     <span>
                                 &nbsp;: array&lt;string, <abbr title="\Illuminate\Contracts\Validation\ValidationRule">ValidationRule</abbr>|array&lt;string|int, mixed&gt;|string&gt;    </span>
 </dt>
-<dd>Get the validation rules that apply to the request.</dd>
+<dd>Obtiene las reglas de validación aplicables a la solicitud</dd>
 
     </dl>
 
@@ -216,11 +235,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Requests/RolporpermisoRequest.php"><a href="files/app-http-requests-rolporpermisorequest.html"><abbr title="app/Http/Requests/RolporpermisoRequest.php">RolporpermisoRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">26</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Determine if the user is authorized to make this request.</p>
+        <p class="phpdocumentor-summary">Determina si el usuario está autorizado para realizar esta solicitud</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -229,7 +248,10 @@
     <div class="phpdocumentor-label-line">
         </div>
     
-    
+        <section class="phpdocumentor-description"><p>Por defecto permite todas las solicitudes. Si se requiere una
+validación más específica, sobrescribir este método.</p>
+</section>
+
     
     
 
@@ -238,6 +260,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Siempre retorna true</p>
+</section>
+
             </section>
 
 </article>
@@ -255,11 +281,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Requests/RolporpermisoRequest.php"><a href="files/app-http-requests-rolporpermisorequest.html"><abbr title="app/Http/Requests/RolporpermisoRequest.php">RolporpermisoRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">22</span>
+    <span class="phpdocumentor-element-found-in__line">40</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Get the validation rules that apply to the request.</p>
+        <p class="phpdocumentor-summary">Obtiene las reglas de validación aplicables a la solicitud</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -268,7 +294,13 @@
     <div class="phpdocumentor-label-line">
         </div>
     
-    
+        <section class="phpdocumentor-description"><p>Define las reglas de validación para los campos de la relación:</p>
+<ul>
+<li>rol_id: identificador del rol (requerido)</li>
+<li>permiso_id: identificador del permiso (requerido)</li>
+</ul>
+</section>
+
     
     
 

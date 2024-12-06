@@ -3,87 +3,87 @@ Search.appendIndex(
                 {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\ConfirmPasswordController",
             "name": "ConfirmPasswordController",
-            "summary": "",
+            "summary": "Este\u0020controlador\u0020es\u0020la\u0020clase\u0020base\u0020de\u0020todos\u0020los\u0020controladores\u0020de\u0020la\u0020aplicaci\u00F3n\naportando\u0020funcionalidades\u0020comunes\u0020a\u0020todos\u0020ellos",
             "url": "classes/App-Http-Controllers-Auth-ConfirmPasswordController.html"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\ConfirmPasswordController\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "Create\u0020a\u0020new\u0020controller\u0020instance.",
+            "summary": "Crear\u0020una\u0020nueva\u0020instancia\u0020de\u0020controlador.\u0020en\u0020este\u0020caso,\u0020el\u0020middleware\u0020de\u0020autenticaci\u00F3n.",
             "url": "classes/App-Http-Controllers-Auth-ConfirmPasswordController.html#method___construct"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\ConfirmPasswordController\u003A\u003A\u0024redirectTo",
             "name": "redirectTo",
-            "summary": "Where\u0020to\u0020redirect\u0020users\u0020when\u0020the\u0020intended\u0020url\u0020fails.",
+            "summary": "Donde\u0020redirigir\u0020a\u0020los\u0020usuarios\u0020cuando\u0020la\u0020url\u0020prevista\u0020falla.",
             "url": "classes/App-Http-Controllers-Auth-ConfirmPasswordController.html#property_redirectTo"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\ForgotPasswordController",
             "name": "ForgotPasswordController",
-            "summary": "",
+            "summary": "Este\u0020controlador\u0020es\u0020la\u0020clase\u0020base\u0020de\u0020todos\u0020los\u0020controladores\u0020de\u0020la\u0020aplicaci\u00F3n\naportando\u0020funcionalidades\u0020comunes\u0020a\u0020todos\u0020ellos",
             "url": "classes/App-Http-Controllers-Auth-ForgotPasswordController.html"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\LoginController",
             "name": "LoginController",
-            "summary": "",
+            "summary": "Controlador\u0020que\u0020maneja\u0020la\u0020autenticaci\u00F3n\u0020de\u0020usuarios",
             "url": "classes/App-Http-Controllers-Auth-LoginController.html"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\LoginController\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "Create\u0020a\u0020new\u0020controller\u0020instance.",
+            "summary": "Crea\u0020una\u0020nueva\u0020instancia\u0020del\u0020controlador",
             "url": "classes/App-Http-Controllers-Auth-LoginController.html#method___construct"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\LoginController\u003A\u003A\u0024redirectTo",
             "name": "redirectTo",
-            "summary": "Where\u0020to\u0020redirect\u0020users\u0020after\u0020login.",
+            "summary": "Ruta\u0020de\u0020redirecci\u00F3n\u0020despu\u00E9s\u0020del\u0020inicio\u0020de\u0020sesi\u00F3n\u0020exitoso",
             "url": "classes/App-Http-Controllers-Auth-LoginController.html#property_redirectTo"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\RegisterController",
             "name": "RegisterController",
-            "summary": "",
+            "summary": "Controlador\u0020para\u0020el\u0020registro\u0020de\u0020nuevos\u0020usuarios",
             "url": "classes/App-Http-Controllers-Auth-RegisterController.html"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\RegisterController\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "Create\u0020a\u0020new\u0020controller\u0020instance.",
+            "summary": "Crea\u0020una\u0020nueva\u0020instancia\u0020del\u0020controlador",
             "url": "classes/App-Http-Controllers-Auth-RegisterController.html#method___construct"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\RegisterController\u003A\u003Avalidator\u0028\u0029",
             "name": "validator",
-            "summary": "Get\u0020a\u0020validator\u0020for\u0020an\u0020incoming\u0020registration\u0020request.",
+            "summary": "Obtiene\u0020un\u0020validador\u0020para\u0020la\u0020solicitud\u0020de\u0020registro",
             "url": "classes/App-Http-Controllers-Auth-RegisterController.html#method_validator"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\RegisterController\u003A\u003Acreate\u0028\u0029",
             "name": "create",
-            "summary": "Create\u0020a\u0020new\u0020user\u0020instance\u0020after\u0020a\u0020valid\u0020registration.",
+            "summary": "Crea\u0020una\u0020nueva\u0020instancia\u0020de\u0020usuario\u0020despu\u00E9s\u0020de\u0020un\u0020registro\u0020v\u00E1lido",
             "url": "classes/App-Http-Controllers-Auth-RegisterController.html#method_create"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\RegisterController\u003A\u003A\u0024redirectTo",
             "name": "redirectTo",
-            "summary": "Where\u0020to\u0020redirect\u0020users\u0020after\u0020registration.",
+            "summary": "Ruta\u0020de\u0020redirecci\u00F3n\u0020despu\u00E9s\u0020del\u0020registro\u0020exitoso",
             "url": "classes/App-Http-Controllers-Auth-RegisterController.html#property_redirectTo"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\ResetPasswordController",
             "name": "ResetPasswordController",
-            "summary": "",
+            "summary": "Controlador\u0020para\u0020el\u0020restablecimiento\u0020de\u0020contrase\u00F1as",
             "url": "classes/App-Http-Controllers-Auth-ResetPasswordController.html"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\ResetPasswordController\u003A\u003A\u0024redirectTo",
             "name": "redirectTo",
-            "summary": "Where\u0020to\u0020redirect\u0020users\u0020after\u0020resetting\u0020their\u0020password.",
+            "summary": "Ruta\u0020de\u0020redirecci\u00F3n\u0020despu\u00E9s\u0020del\u0020restablecimiento\u0020de\u0020contrase\u00F1a",
             "url": "classes/App-Http-Controllers-Auth-ResetPasswordController.html#property_redirectTo"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\VerificationController",
             "name": "VerificationController",
-            "summary": "",
+            "summary": "Controlador\u0020para\u0020la\u0020verificaci\u00F3n\u0020de\u0020correo\u0020electr\u00F3nico",
             "url": "classes/App-Http-Controllers-Auth-VerificationController.html"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\VerificationController\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "Create\u0020a\u0020new\u0020controller\u0020instance.",
+            "summary": "Crea\u0020una\u0020nueva\u0020instancia\u0020del\u0020controlador",
             "url": "classes/App-Http-Controllers-Auth-VerificationController.html#method___construct"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\VerificationController\u003A\u003A\u0024redirectTo",
             "name": "redirectTo",
-            "summary": "Where\u0020to\u0020redirect\u0020users\u0020after\u0020verification.",
+            "summary": "Ruta\u0020de\u0020redirecci\u00F3n\u0020despu\u00E9s\u0020de\u0020la\u0020verificaci\u00F3n",
             "url": "classes/App-Http-Controllers-Auth-VerificationController.html#property_redirectTo"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\BitacoracambioController",
@@ -143,7 +143,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Controller",
             "name": "Controller",
-            "summary": "",
+            "summary": "Este\u0020controlador\u0020es\u0020la\u0020clase\u0020base\u0020de\u0020todos\u0020los\u0020controladores\u0020de\u0020la\u0020aplicaci\u00F3n\naportando\u0020funcionalidades\u0020comunes\u0020a\u0020todos\u0020ellos",
             "url": "classes/App-Http-Controllers-Controller.html"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\EmpleadoController",
@@ -188,7 +188,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\HomeController",
             "name": "HomeController",
-            "summary": "",
+            "summary": "Controlador\u0020para\u0020la\u0020p\u00E1gina\u0020de\u0020inicio\u0020del\u0020sistema",
             "url": "classes/App-Http-Controllers-HomeController.html"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\HomeController\u003A\u003A__construct\u0028\u0029",
@@ -203,7 +203,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\InformacionEmpresaController",
             "name": "InformacionEmpresaController",
-            "summary": "",
+            "summary": "Controlador\u0020para\u0020la\u0020gesti\u00F3n\u0020de\u0020la\u0020informaci\u00F3n\u0020de\u0020la\u0020empresa",
             "url": "classes/App-Http-Controllers-InformacionEmpresaController.html"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\InformacionEmpresaController\u003A\u003Aindex\u0028\u0029",
@@ -303,7 +303,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\PagoController\u003A\u003Astore\u0028\u0029",
             "name": "store",
-            "summary": "Almacena\u0020un\u0020nuevo\u0020pago\u0020en\u0020la\u0020base\u0020de\u0020datos",
+            "summary": "La\u0020funci\u00F3n\u0020\u0060store\u0060\u0020procesa\u0020una\u0020solicitud\u0020de\u0020pago,\u0020crea\u0020registros\u0020de\u0020pago\u0020y\u0020detalles\u0020de\u0020pago,\nactiva\u0020un\u0020cliente\u0020y\u0020maneja\u0020cualquier\u0020error\u0020que\u0020pueda\u0020ocurrir.",
             "url": "classes/App-Http-Controllers-PagoController.html#method_store"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\PagoController\u003A\u003Ashow\u0028\u0029",
@@ -318,7 +318,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\PagoController\u003A\u003Aupdate\u0028\u0029",
             "name": "update",
-            "summary": "Actualiza\u0020un\u0020pago\u0020en\u0020la\u0020base\u0020de\u0020datos",
+            "summary": "La\u0020funci\u00F3n\u0020\u0060update\u0060\u0020en\u0020PHP\u0020actualiza\u0020el\u0020pago\u0020y\u0020los\u0020detalles\u0020del\u0020pago,\u0020manejando\u0020la\u0020validaci\u00F3n\u0020y\nlas\u0020transacciones\u0020de\u0020la\u0020base\u0020de\u0020datos.",
             "url": "classes/App-Http-Controllers-PagoController.html#method_update"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\PagoController\u003A\u003Adestroy\u0028\u0029",
@@ -333,42 +333,42 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\PagodetallController",
             "name": "PagodetallController",
-            "summary": "",
+            "summary": "Este\u0020controlador\u0020es\u0020la\u0020clase\u0020base\u0020de\u0020todos\u0020los\u0020controladores\u0020de\u0020la\u0020aplicaci\u00F3n\naportando\u0020funcionalidades\u0020comunes\u0020a\u0020todos\u0020ellos",
             "url": "classes/App-Http-Controllers-PagodetallController.html"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\PagodetallController\u003A\u003Aindex\u0028\u0029",
             "name": "index",
-            "summary": "Display\u0020a\u0020listing\u0020of\u0020the\u0020resource.",
+            "summary": "La\u0020funci\u00F3n\u0020index\u0020muestra\u0020el\u0020listado\u0020de\u0020pagodetalls",
             "url": "classes/App-Http-Controllers-PagodetallController.html#method_index"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\PagodetallController\u003A\u003Acreate\u0028\u0029",
             "name": "create",
-            "summary": "Show\u0020the\u0020form\u0020for\u0020creating\u0020a\u0020new\u0020resource.",
+            "summary": "Muestra\u0020el\u0020formulario\u0020para\u0020registrar\u0020un\u0020nuevo\u0020pagodetall",
             "url": "classes/App-Http-Controllers-PagodetallController.html#method_create"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\PagodetallController\u003A\u003Astore\u0028\u0029",
             "name": "store",
-            "summary": "Store\u0020a\u0020newly\u0020created\u0020resource\u0020in\u0020storage.",
+            "summary": "La\u0020funci\u00F3n\u0020store\u0020almacena\u0020un\u0020nuevo\u0020pagodetall\u0020en\u0020la\u0020base\u0020de\u0020datos",
             "url": "classes/App-Http-Controllers-PagodetallController.html#method_store"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\PagodetallController\u003A\u003Ashow\u0028\u0029",
             "name": "show",
-            "summary": "Display\u0020the\u0020specified\u0020resource.",
+            "summary": "La\u0020funci\u00F3n\u0020show\u0020muestra\u0020el\u0020recurso\u0020especificado\u0020por\u0020id",
             "url": "classes/App-Http-Controllers-PagodetallController.html#method_show"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\PagodetallController\u003A\u003Aedit\u0028\u0029",
             "name": "edit",
-            "summary": "Show\u0020the\u0020form\u0020for\u0020editing\u0020the\u0020specified\u0020resource.",
+            "summary": "La\u0020funci\u00F3n\u0020edit\u0020muestra\u0020el\u0020formulario\u0020para\u0020editar\u0020el\u0020pagodetall\u0020especificado\u0020por\u0020id",
             "url": "classes/App-Http-Controllers-PagodetallController.html#method_edit"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\PagodetallController\u003A\u003Aupdate\u0028\u0029",
             "name": "update",
-            "summary": "Update\u0020the\u0020specified\u0020resource\u0020in\u0020storage.",
+            "summary": "La\u0020funci\u00F3n\u0020update\u0020actualiza\u0020los\u0020datos\u0020del\u0020pagodetall\u0020en\u0020la\u0020base\u0020de\u0020datos",
             "url": "classes/App-Http-Controllers-PagodetallController.html#method_update"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\PagodetallController\u003A\u003Adestroy\u0028\u0029",
             "name": "destroy",
-            "summary": "",
+            "summary": "La\u0020funci\u00F3n\u0020destroy\u0020elimina\u0020el\u0020pagodetall\u0020especificado\u0020por\u0020id",
             "url": "classes/App-Http-Controllers-PagodetallController.html#method_destroy"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\PermisoController",
@@ -433,7 +433,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\RolController\u003A\u003Aupdate\u0028\u0029",
             "name": "update",
-            "summary": "Muestra\u0020el\u0020formulario\u0020para\u0020editar\u0020un\u0020rol\u0020existente",
+            "summary": "La\u0020funcion\u0020\u0060update\u0060\u0020en\u0020PHP\u0020maneja\u0020la\u0020actualizaci\u00F3n\u0020de\u0020una\u0020entidad\u0020de\u0020rol,\u0020incluyendo\u0020la\u0020verificaci\u00F3n\nde\u0020cambios\u0020en\u0020nombre,\u0020descripci\u00F3n\u0020y\u0020permisos,\u0020y\u0020el\u0020registro\u0020de\u0020cualquier\u0020error\u0020que\u0020ocurra.",
             "url": "classes/App-Http-Controllers-RolController.html#method_update"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\RolController\u003A\u003Adestroy\u0028\u0029",
@@ -443,37 +443,37 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\RolporpermisoController",
             "name": "RolporpermisoController",
-            "summary": "",
+            "summary": "Controlador\u0020para\u0020la\u0020gesti\u00F3n\u0020de\u0020los\u0020roles\u0020por\u0020permisos\u0020de\u0020usuario\u0020en\u0020la\u0020aplicaci\u00F3n",
             "url": "classes/App-Http-Controllers-RolporpermisoController.html"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\RolporpermisoController\u003A\u003Aindex\u0028\u0029",
             "name": "index",
-            "summary": "",
+            "summary": "La\u0020funci\u00F3n\u0020index\u0020obtiene\u0020y\u0020pagina\u0020los\u0020datos\u0020de\u0020Rolporpermiso\u0020con\u0020manejo\u0020de\u0020errores\u0020y\u0020logging.",
             "url": "classes/App-Http-Controllers-RolporpermisoController.html#method_index"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\RolporpermisoController\u003A\u003Acreate\u0028\u0029",
             "name": "create",
-            "summary": "Show\u0020the\u0020form\u0020for\u0020creating\u0020a\u0020new\u0020resource.",
+            "summary": "La\u0020funci\u00F3n\u0020\u0060create\u0060\u0020recupera\u0020todos\u0020los\u0020roles\u0020y\u0020permisos\u0020y\u0020devuelve\u0020una\u0020vista\u0020con\u0020los\u0020datos.",
             "url": "classes/App-Http-Controllers-RolporpermisoController.html#method_create"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\RolporpermisoController\u003A\u003Astore\u0028\u0029",
             "name": "store",
-            "summary": "Store\u0020a\u0020newly\u0020created\u0020resource\u0020in\u0020storage.",
+            "summary": "La\u0020funci\u00F3n\u0020\u0060store\u0060\u0020almacena\u0020un\u0020nuevo\u0020recurso\u0020en\u0020la\u0020base\u0020de\u0020datos.",
             "url": "classes/App-Http-Controllers-RolporpermisoController.html#method_store"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\RolporpermisoController\u003A\u003Ashow\u0028\u0029",
             "name": "show",
-            "summary": "Display\u0020the\u0020specified\u0020resource.",
+            "summary": "La\u0020funci\u00F3n\u0020\u0060show\u0060\u0020recupera\u0020un\u0020modelo\u0020Rolporpermiso\u0020espec\u00EDfico\u0020por\u0020su\u0020ID\u0020y\u0020luego\u0020devuelve\u0020una\u0020vista\ncon\u0020los\u0020datos\u0020recuperados.",
             "url": "classes/App-Http-Controllers-RolporpermisoController.html#method_show"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\RolporpermisoController\u003A\u003Aedit\u0028\u0029",
             "name": "edit",
-            "summary": "Show\u0020the\u0020form\u0020for\u0020editing\u0020the\u0020specified\u0020resource.",
+            "summary": "La\u0020funci\u00F3n\u0020\u0060edit\u0060\u0020recupera\u0020un\u0020modelo\u0020Rolporpermiso\u0020espec\u00EDfico\u0020por\u0020su\u0020ID\u0020y\u0020luego\u0020devuelve\u0020una\u0020vista\ncon\u0020los\u0020datos\u0020recuperados.",
             "url": "classes/App-Http-Controllers-RolporpermisoController.html#method_edit"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\RolporpermisoController\u003A\u003Aupdate\u0028\u0029",
             "name": "update",
-            "summary": "Update\u0020the\u0020specified\u0020resource\u0020in\u0020storage.",
+            "summary": "La\u0020funci\u00F3n\u0020\u0060update\u0060\u0020actualiza\u0020los\u0020datos\u0020de\u0020un\u0020recurso\u0020en\u0020la\u0020base\u0020de\u0020datos.",
             "url": "classes/App-Http-Controllers-RolporpermisoController.html#method_update"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\RolporpermisoController\u003A\u003Adestroy\u0028\u0029",
@@ -543,152 +543,152 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Requests\\BitacoracambioRequest",
             "name": "BitacoracambioRequest",
-            "summary": "",
+            "summary": "Request\u0020personalizado\u0020para\u0020la\u0020validaci\u00F3n\u0020de\u0020bit\u00E1cora\u0020de\u0020cambios",
             "url": "classes/App-Http-Requests-BitacoracambioRequest.html"
         },                {
             "fqsen": "\\App\\Http\\Requests\\BitacoracambioRequest\u003A\u003Aauthorize\u0028\u0029",
             "name": "authorize",
-            "summary": "Determine\u0020if\u0020the\u0020user\u0020is\u0020authorized\u0020to\u0020make\u0020this\u0020request.",
+            "summary": "Determina\u0020si\u0020el\u0020usuario\u0020est\u00E1\u0020autorizado\u0020para\u0020realizar\u0020esta\u0020solicitud",
             "url": "classes/App-Http-Requests-BitacoracambioRequest.html#method_authorize"
         },                {
             "fqsen": "\\App\\Http\\Requests\\BitacoracambioRequest\u003A\u003Arules\u0028\u0029",
             "name": "rules",
-            "summary": "Get\u0020the\u0020validation\u0020rules\u0020that\u0020apply\u0020to\u0020the\u0020request.",
+            "summary": "Obtiene\u0020las\u0020reglas\u0020de\u0020validaci\u00F3n\u0020aplicables\u0020a\u0020la\u0020solicitud",
             "url": "classes/App-Http-Requests-BitacoracambioRequest.html#method_rules"
         },                {
             "fqsen": "\\App\\Http\\Requests\\ClienteRequest",
             "name": "ClienteRequest",
-            "summary": "",
+            "summary": "Request\u0020personalizado\u0020para\u0020la\u0020validaci\u00F3n\u0020de\u0020datos\u0020de\u0020cliente",
             "url": "classes/App-Http-Requests-ClienteRequest.html"
         },                {
             "fqsen": "\\App\\Http\\Requests\\ClienteRequest\u003A\u003Aauthorize\u0028\u0029",
             "name": "authorize",
-            "summary": "Determine\u0020if\u0020the\u0020user\u0020is\u0020authorized\u0020to\u0020make\u0020this\u0020request.",
+            "summary": "Determina\u0020si\u0020el\u0020usuario\u0020est\u00E1\u0020autorizado\u0020para\u0020realizar\u0020esta\u0020solicitud",
             "url": "classes/App-Http-Requests-ClienteRequest.html#method_authorize"
         },                {
             "fqsen": "\\App\\Http\\Requests\\ClienteRequest\u003A\u003Arules\u0028\u0029",
             "name": "rules",
-            "summary": "Get\u0020the\u0020validation\u0020rules\u0020that\u0020apply\u0020to\u0020the\u0020request.",
+            "summary": "Obtiene\u0020las\u0020reglas\u0020de\u0020validaci\u00F3n\u0020aplicables\u0020a\u0020la\u0020solicitud",
             "url": "classes/App-Http-Requests-ClienteRequest.html#method_rules"
         },                {
             "fqsen": "\\App\\Http\\Requests\\EmpleadoRequest",
             "name": "EmpleadoRequest",
-            "summary": "",
+            "summary": "Request\u0020personalizado\u0020para\u0020la\u0020validaci\u00F3n\u0020de\u0020datos\u0020de\u0020empleados",
             "url": "classes/App-Http-Requests-EmpleadoRequest.html"
         },                {
             "fqsen": "\\App\\Http\\Requests\\EmpleadoRequest\u003A\u003Aauthorize\u0028\u0029",
             "name": "authorize",
-            "summary": "Determine\u0020if\u0020the\u0020user\u0020is\u0020authorized\u0020to\u0020make\u0020this\u0020request.",
+            "summary": "Determina\u0020si\u0020el\u0020usuario\u0020est\u00E1\u0020autorizado\u0020para\u0020realizar\u0020esta\u0020solicitud",
             "url": "classes/App-Http-Requests-EmpleadoRequest.html#method_authorize"
         },                {
             "fqsen": "\\App\\Http\\Requests\\EmpleadoRequest\u003A\u003Arules\u0028\u0029",
             "name": "rules",
-            "summary": "Get\u0020the\u0020validation\u0020rules\u0020that\u0020apply\u0020to\u0020the\u0020request.",
+            "summary": "Obtiene\u0020las\u0020reglas\u0020de\u0020validaci\u00F3n\u0020aplicables\u0020a\u0020la\u0020solicitud",
             "url": "classes/App-Http-Requests-EmpleadoRequest.html#method_rules"
         },                {
             "fqsen": "\\App\\Http\\Requests\\MembresiaRequest",
             "name": "MembresiaRequest",
-            "summary": "",
+            "summary": "Request\u0020personalizado\u0020para\u0020la\u0020validaci\u00F3n\u0020de\u0020datos\u0020de\u0020membres\u00EDas",
             "url": "classes/App-Http-Requests-MembresiaRequest.html"
         },                {
             "fqsen": "\\App\\Http\\Requests\\MembresiaRequest\u003A\u003Aauthorize\u0028\u0029",
             "name": "authorize",
-            "summary": "Determine\u0020if\u0020the\u0020user\u0020is\u0020authorized\u0020to\u0020make\u0020this\u0020request.",
+            "summary": "Determina\u0020si\u0020el\u0020usuario\u0020est\u00E1\u0020autorizado\u0020para\u0020realizar\u0020esta\u0020solicitud",
             "url": "classes/App-Http-Requests-MembresiaRequest.html#method_authorize"
         },                {
             "fqsen": "\\App\\Http\\Requests\\MembresiaRequest\u003A\u003Arules\u0028\u0029",
             "name": "rules",
-            "summary": "Get\u0020the\u0020validation\u0020rules\u0020that\u0020apply\u0020to\u0020the\u0020request.",
+            "summary": "Obtiene\u0020las\u0020reglas\u0020de\u0020validaci\u00F3n\u0020aplicables\u0020a\u0020la\u0020solicitud",
             "url": "classes/App-Http-Requests-MembresiaRequest.html#method_rules"
         },                {
             "fqsen": "\\App\\Http\\Requests\\PagodetallRequest",
             "name": "PagodetallRequest",
-            "summary": "",
+            "summary": "Request\u0020personalizado\u0020para\u0020la\u0020validaci\u00F3n\u0020de\u0020detalles\u0020de\u0020pago",
             "url": "classes/App-Http-Requests-PagodetallRequest.html"
         },                {
             "fqsen": "\\App\\Http\\Requests\\PagodetallRequest\u003A\u003Aauthorize\u0028\u0029",
             "name": "authorize",
-            "summary": "Determine\u0020if\u0020the\u0020user\u0020is\u0020authorized\u0020to\u0020make\u0020this\u0020request.",
+            "summary": "Determina\u0020si\u0020el\u0020usuario\u0020est\u00E1\u0020autorizado\u0020para\u0020realizar\u0020esta\u0020solicitud",
             "url": "classes/App-Http-Requests-PagodetallRequest.html#method_authorize"
         },                {
             "fqsen": "\\App\\Http\\Requests\\PagodetallRequest\u003A\u003Arules\u0028\u0029",
             "name": "rules",
-            "summary": "Get\u0020the\u0020validation\u0020rules\u0020that\u0020apply\u0020to\u0020the\u0020request.",
+            "summary": "Obtiene\u0020las\u0020reglas\u0020de\u0020validaci\u00F3n\u0020aplicables\u0020a\u0020la\u0020solicitud",
             "url": "classes/App-Http-Requests-PagodetallRequest.html#method_rules"
         },                {
             "fqsen": "\\App\\Http\\Requests\\PagoRequest",
             "name": "PagoRequest",
-            "summary": "",
+            "summary": "Request\u0020personalizado\u0020para\u0020la\u0020validaci\u00F3n\u0020de\u0020pagos",
             "url": "classes/App-Http-Requests-PagoRequest.html"
         },                {
             "fqsen": "\\App\\Http\\Requests\\PagoRequest\u003A\u003Aauthorize\u0028\u0029",
             "name": "authorize",
-            "summary": "Determine\u0020if\u0020the\u0020user\u0020is\u0020authorized\u0020to\u0020make\u0020this\u0020request.",
+            "summary": "Determina\u0020si\u0020el\u0020usuario\u0020est\u00E1\u0020autorizado\u0020para\u0020realizar\u0020esta\u0020solicitud",
             "url": "classes/App-Http-Requests-PagoRequest.html#method_authorize"
         },                {
             "fqsen": "\\App\\Http\\Requests\\PagoRequest\u003A\u003Arules\u0028\u0029",
             "name": "rules",
-            "summary": "Get\u0020the\u0020validation\u0020rules\u0020that\u0020apply\u0020to\u0020the\u0020request.",
+            "summary": "Obtiene\u0020las\u0020reglas\u0020de\u0020validaci\u00F3n\u0020aplicables\u0020a\u0020la\u0020solicitud",
             "url": "classes/App-Http-Requests-PagoRequest.html#method_rules"
         },                {
             "fqsen": "\\App\\Http\\Requests\\PermisoRequest",
             "name": "PermisoRequest",
-            "summary": "",
+            "summary": "Request\u0020personalizado\u0020para\u0020la\u0020validaci\u00F3n\u0020de\u0020permisos",
             "url": "classes/App-Http-Requests-PermisoRequest.html"
         },                {
             "fqsen": "\\App\\Http\\Requests\\PermisoRequest\u003A\u003Aauthorize\u0028\u0029",
             "name": "authorize",
-            "summary": "Determine\u0020if\u0020the\u0020user\u0020is\u0020authorized\u0020to\u0020make\u0020this\u0020request.",
+            "summary": "Determina\u0020si\u0020el\u0020usuario\u0020est\u00E1\u0020autorizado\u0020para\u0020realizar\u0020esta\u0020solicitud",
             "url": "classes/App-Http-Requests-PermisoRequest.html#method_authorize"
         },                {
             "fqsen": "\\App\\Http\\Requests\\PermisoRequest\u003A\u003Arules\u0028\u0029",
             "name": "rules",
-            "summary": "Get\u0020the\u0020validation\u0020rules\u0020that\u0020apply\u0020to\u0020the\u0020request.",
+            "summary": "Obtiene\u0020las\u0020reglas\u0020de\u0020validaci\u00F3n\u0020aplicables\u0020a\u0020la\u0020solicitud",
             "url": "classes/App-Http-Requests-PermisoRequest.html#method_rules"
         },                {
             "fqsen": "\\App\\Http\\Requests\\RolporpermisoRequest",
             "name": "RolporpermisoRequest",
-            "summary": "",
+            "summary": "Request\u0020personalizado\u0020para\u0020la\u0020validaci\u00F3n\u0020de\u0020asignaci\u00F3n\u0020de\u0020permisos\u0020a\u0020roles",
             "url": "classes/App-Http-Requests-RolporpermisoRequest.html"
         },                {
             "fqsen": "\\App\\Http\\Requests\\RolporpermisoRequest\u003A\u003Aauthorize\u0028\u0029",
             "name": "authorize",
-            "summary": "Determine\u0020if\u0020the\u0020user\u0020is\u0020authorized\u0020to\u0020make\u0020this\u0020request.",
+            "summary": "Determina\u0020si\u0020el\u0020usuario\u0020est\u00E1\u0020autorizado\u0020para\u0020realizar\u0020esta\u0020solicitud",
             "url": "classes/App-Http-Requests-RolporpermisoRequest.html#method_authorize"
         },                {
             "fqsen": "\\App\\Http\\Requests\\RolporpermisoRequest\u003A\u003Arules\u0028\u0029",
             "name": "rules",
-            "summary": "Get\u0020the\u0020validation\u0020rules\u0020that\u0020apply\u0020to\u0020the\u0020request.",
+            "summary": "Obtiene\u0020las\u0020reglas\u0020de\u0020validaci\u00F3n\u0020aplicables\u0020a\u0020la\u0020solicitud",
             "url": "classes/App-Http-Requests-RolporpermisoRequest.html#method_rules"
         },                {
             "fqsen": "\\App\\Http\\Requests\\RolRequest",
             "name": "RolRequest",
-            "summary": "",
+            "summary": "Request\u0020personalizado\u0020para\u0020la\u0020validaci\u00F3n\u0020de\u0020roles",
             "url": "classes/App-Http-Requests-RolRequest.html"
         },                {
             "fqsen": "\\App\\Http\\Requests\\RolRequest\u003A\u003Aauthorize\u0028\u0029",
             "name": "authorize",
-            "summary": "Determine\u0020if\u0020the\u0020user\u0020is\u0020authorized\u0020to\u0020make\u0020this\u0020request.",
+            "summary": "Determina\u0020si\u0020el\u0020usuario\u0020est\u00E1\u0020autorizado\u0020para\u0020realizar\u0020esta\u0020solicitud",
             "url": "classes/App-Http-Requests-RolRequest.html#method_authorize"
         },                {
             "fqsen": "\\App\\Http\\Requests\\RolRequest\u003A\u003Arules\u0028\u0029",
             "name": "rules",
-            "summary": "Get\u0020the\u0020validation\u0020rules\u0020that\u0020apply\u0020to\u0020the\u0020request.",
+            "summary": "Obtiene\u0020las\u0020reglas\u0020de\u0020validaci\u00F3n\u0020aplicables\u0020a\u0020la\u0020solicitud",
             "url": "classes/App-Http-Requests-RolRequest.html#method_rules"
         },                {
             "fqsen": "\\App\\Models\\Bitacoracambio",
             "name": "Bitacoracambio",
-            "summary": "Class\u0020Bitacoracambio",
+            "summary": "Modelo\u0020para\u0020el\u0020registro\u0020de\u0020cambios\u0020en\u0020la\u0020bit\u00E1cora\u0020del\u0020sistema",
             "url": "classes/App-Models-Bitacoracambio.html"
         },                {
             "fqsen": "\\App\\Models\\Bitacoracambio\u003A\u003AgetBadgeClass\u0028\u0029",
             "name": "getBadgeClass",
-            "summary": "Obtiene\u0020el\u0020tipo\u0020de\u0020badge\u0020seg\u00FAn\u0020la\u0020acci\u00F3n",
+            "summary": "Obtiene\u0020el\u0020tipo\u0020de\u0020badge\u0020seg\u00FAn\u0020la\u0020acci\u00F3n\u0020\u0028alertas\u0029",
             "url": "classes/App-Models-Bitacoracambio.html#method_getBadgeClass"
         },                {
             "fqsen": "\\App\\Models\\Bitacoracambio\u003A\u003A\u0024table",
             "name": "table",
-            "summary": "The\u0020table\u0020associated\u0020with\u0020the\u0020model.",
+            "summary": "La\u0020tabla\u0020asociada\u0020al\u0020modelo",
             "url": "classes/App-Models-Bitacoracambio.html#property_table"
         },                {
             "fqsen": "\\App\\Models\\Bitacoracambio\u003A\u003A\u0024perPage",
@@ -698,22 +698,22 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Models\\Bitacoracambio\u003A\u003A\u0024fillable",
             "name": "fillable",
-            "summary": "Los\u0020atributos\u0020que\u0020son\u0020asignables\u0020en\u0020masa.",
+            "summary": "Los\u0020atributos\u0020que\u0020son\u0020asignables\u0020en\u0020masa.\u0020Esto\u0020significa\u0020que\u0020se\u0020pueden\u0020asignar\u0020a\ntrav\u00E9s\u0020de\u0020la\u0020creaci\u00F3n\u0020o\u0020actualizaci\u00F3n\u0020en\u0020masa.",
             "url": "classes/App-Models-Bitacoracambio.html#property_fillable"
         },                {
             "fqsen": "\\App\\Models\\Bitacoracambio\u003A\u003A\u0024casts",
             "name": "casts",
-            "summary": "Los\u0020atributos\u0020que\u0020deben\u0020ser\u0020convertidos.",
+            "summary": "Los\u0020atributos\u0020que\u0020deben\u0020ser\u0020convertidos\u0020a\u0020fechas\nY\u0020los\u0020que\u0020deben\u0020ser\u0020convertidos\u0020a\u0020tipos\u0020de\u0020datos\u0020espec\u00EDficos\u0020o\u0020nativos",
             "url": "classes/App-Models-Bitacoracambio.html#property_casts"
         },                {
             "fqsen": "\\App\\Models\\Cliente",
             "name": "Cliente",
-            "summary": "Class\u0020Cliente",
+            "summary": "Modelo\u0020para\u0020la\u0020gesti\u00F3n\u0020de\u0020clientes\u0020del\u0020gimnasio",
             "url": "classes/App-Models-Cliente.html"
         },                {
             "fqsen": "\\App\\Models\\Cliente\u003A\u003Apagos\u0028\u0029",
             "name": "pagos",
-            "summary": "",
+            "summary": "La\u0020funci\u00F3n\u0020pagos\u0028\u0029\u0020establece\u0020una\u0020relaci\u00F3n\u0020entre\u0020el\u0020modelo\u0020Cliente\u0020y\u0020el\u0020modelo\u0020Pago",
             "url": "classes/App-Models-Cliente.html#method_pagos"
         },                {
             "fqsen": "\\App\\Models\\Cliente\u003A\u003A\u0024perPage",
@@ -723,22 +723,22 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Models\\Cliente\u003A\u003A\u0024fillable",
             "name": "fillable",
-            "summary": "",
+            "summary": "Los\u0020atributos\u0020que\u0020son\u0020asignables\u0020en\u0020masa.\u0020Esto\u0020significa\u0020que\u0020se\u0020pueden\u0020asignar\u0020a\ntrav\u00E9s\u0020de\u0020la\u0020creaci\u00F3n\u0020o\u0020actualizaci\u00F3n\u0020en\u0020masa.",
             "url": "classes/App-Models-Cliente.html#property_fillable"
         },                {
             "fqsen": "\\App\\Models\\Cliente\u003A\u003A\u0024dates",
             "name": "dates",
-            "summary": "",
+            "summary": "Los\u0020atributos\u0020que\u0020deben\u0020ser\u0020convertidos\u0020a\u0020fechas\nY\u0020los\u0020que\u0020deben\u0020ser\u0020convertidos\u0020a\u0020tipos\u0020de\u0020datos\u0020espec\u00EDficos\u0020o\u0020nativos",
             "url": "classes/App-Models-Cliente.html#property_dates"
         },                {
             "fqsen": "\\App\\Models\\Cliente\u003A\u003A\u0024casts",
             "name": "casts",
-            "summary": "",
+            "summary": "Los\u0020atributos\u0020que\u0020deben\u0020ser\u0020convertidos\u0020a\u0020tipos\u0020de\u0020datos\u0020espec\u00EDficos\u0020o\u0020nativos",
             "url": "classes/App-Models-Cliente.html#property_casts"
         },                {
             "fqsen": "\\App\\Models\\Empleado",
             "name": "Empleado",
-            "summary": "Class\u0020Empleado",
+            "summary": "Modelo\u0020para\u0020la\u0020gesti\u00F3n\u0020de\u0020empleados\u0020del\u0020gimnasio",
             "url": "classes/App-Models-Empleado.html"
         },                {
             "fqsen": "\\App\\Models\\Empleado\u003A\u003A\u0024perPage",
@@ -748,17 +748,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Models\\Empleado\u003A\u003A\u0024fillable",
             "name": "fillable",
-            "summary": "",
+            "summary": "Los\u0020atributos\u0020que\u0020son\u0020asignables\u0020en\u0020masa.\u0020Esto\u0020significa\u0020que\u0020se\u0020pueden\u0020asignar\u0020a\ntrav\u00E9s\u0020de\u0020la\u0020creaci\u00F3n\u0020o\u0020actualizaci\u00F3n\u0020en\u0020masa.",
             "url": "classes/App-Models-Empleado.html#property_fillable"
         },                {
             "fqsen": "\\App\\Models\\Empleado\u003A\u003A\u0024dates",
             "name": "dates",
-            "summary": "",
+            "summary": "Los\u0020atributos\u0020que\u0020deben\u0020ser\u0020convertidos\u0020a\u0020fechas\nY\u0020los\u0020que\u0020deben\u0020ser\u0020convertidos\u0020a\u0020tipos\u0020de\u0020datos\u0020espec\u00EDficos\u0020o\u0020nativos",
             "url": "classes/App-Models-Empleado.html#property_dates"
         },                {
             "fqsen": "\\App\\Models\\Empleado\u003A\u003A\u0024casts",
             "name": "casts",
-            "summary": "",
+            "summary": "Los\u0020atributos\u0020que\u0020deben\u0020ser\u0020convertidos\u0020a\u0020tipos\u0020de\u0020datos\u0020espec\u00EDficos\u0020o\u0020nativos",
             "url": "classes/App-Models-Empleado.html#property_casts"
         },                {
             "fqsen": "\\App\\Models\\InformacionEmpresa",
@@ -978,12 +978,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Models\\User",
             "name": "User",
-            "summary": "",
+            "summary": "Modelo\u0020para\u0020la\u0020gesti\u00F3n\u0020de\u0020usuarios\u0020del\u0020sistema",
             "url": "classes/App-Models-User.html"
         },                {
             "fqsen": "\\App\\Models\\User\u003A\u003Acasts\u0028\u0029",
             "name": "casts",
-            "summary": "Get\u0020the\u0020attributes\u0020that\u0020should\u0020be\u0020cast.",
+            "summary": "Los\u0020atributos\u0020que\u0020deben\u0020ser\u0020convertidos\u0020a\u0020tipos\u0020nativos",
             "url": "classes/App-Models-User.html#method_casts"
         },                {
             "fqsen": "\\App\\Models\\User\u003A\u003Arol\u0028\u0029",
@@ -993,52 +993,52 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Models\\User\u003A\u003AhasPermiso\u0028\u0029",
             "name": "hasPermiso",
-            "summary": "Verifica\u0020si\u0020el\u0020usuario\u0020tiene\u0020un\u0020permiso\u0020espec\u00EDfico",
+            "summary": "La\u0020funci\u00F3n\u0020\u0060hasPermiso\u0060\u0020verifica\u0020si\u0020un\u0020usuario\u0020tiene\u0020un\u0020permiso\u0020espec\u00EDfico\u0020asignado\u0020basado\u0020en\u0020su\nrol.",
             "url": "classes/App-Models-User.html#method_hasPermiso"
         },                {
             "fqsen": "\\App\\Models\\User\u003A\u003AhasRol\u0028\u0029",
             "name": "hasRol",
-            "summary": "Verifica\u0020si\u0020el\u0020usuario\u0020tiene\u0020un\u0020rol\u0020espec\u00EDfico",
+            "summary": "La\u0020funci\u00F3n\u0020\u0060hasRol\u0060\u0020verifica\u0020si\u0020un\u0020usuario\u0020tiene\u0020un\u0020rol\u0020espec\u00EDfico\u0020asignado.",
             "url": "classes/App-Models-User.html#method_hasRol"
         },                {
             "fqsen": "\\App\\Models\\User\u003A\u003A\u0024fillable",
             "name": "fillable",
-            "summary": "The\u0020attributes\u0020that\u0020are\u0020mass\u0020assignable.",
+            "summary": "Los\u0020atributos\u0020que\u0020son\u0020asignables\u0020masivamente",
             "url": "classes/App-Models-User.html#property_fillable"
         },                {
             "fqsen": "\\App\\Models\\User\u003A\u003A\u0024hidden",
             "name": "hidden",
-            "summary": "The\u0020attributes\u0020that\u0020should\u0020be\u0020hidden\u0020for\u0020serialization.",
+            "summary": "Los\u0020atributos\u0020que\u0020deben\u0020ocultarse\u0020en\u0020la\u0020serializaci\u00F3n",
             "url": "classes/App-Models-User.html#property_hidden"
         },                {
             "fqsen": "\\App\\Providers\\AppServiceProvider",
             "name": "AppServiceProvider",
-            "summary": "",
+            "summary": "Proveedor\u0020de\u0020servicios\u0020principal\u0020de\u0020la\u0020aplicaci\u00F3n",
             "url": "classes/App-Providers-AppServiceProvider.html"
         },                {
             "fqsen": "\\App\\Providers\\AppServiceProvider\u003A\u003Aregister\u0028\u0029",
             "name": "register",
-            "summary": "Register\u0020any\u0020application\u0020services.",
+            "summary": "Registra\u0020los\u0020servicios\u0020de\u0020la\u0020aplicaci\u00F3n",
             "url": "classes/App-Providers-AppServiceProvider.html#method_register"
         },                {
             "fqsen": "\\App\\Providers\\AppServiceProvider\u003A\u003Aboot\u0028\u0029",
             "name": "boot",
-            "summary": "Bootstrap\u0020any\u0020application\u0020services.",
+            "summary": "Inicializa\u0020los\u0020servicios\u0020de\u0020la\u0020aplicaci\u00F3n",
             "url": "classes/App-Providers-AppServiceProvider.html#method_boot"
         },                {
             "fqsen": "\\App\\Traits\\RegistraBitacora",
             "name": "RegistraBitacora",
-            "summary": "",
+            "summary": "Trait\u0020para\u0020el\u0020registro\u0020autom\u00E1tico\u0020de\u0020cambios\u0020en\u0020la\u0020bit\u00E1cora",
             "url": "classes/App-Traits-RegistraBitacora.html"
         },                {
             "fqsen": "\\App\\Traits\\RegistraBitacora\u003A\u003AbootRegistraBitacora\u0028\u0029",
             "name": "bootRegistraBitacora",
-            "summary": "",
+            "summary": "Inicializa\u0020los\u0020observadores\u0020del\u0020modelo",
             "url": "classes/App-Traits-RegistraBitacora.html#method_bootRegistraBitacora"
         },                {
             "fqsen": "\\App\\Traits\\RegistraBitacora\u003A\u003AregistrarCambio\u0028\u0029",
             "name": "registrarCambio",
-            "summary": "",
+            "summary": "Registra\u0020un\u0020cambio\u0020en\u0020la\u0020bit\u00E1cora",
             "url": "classes/App-Traits-RegistraBitacora.html#method_registrarCambio"
         },                {
             "fqsen": "\\",

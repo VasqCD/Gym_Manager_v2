@@ -1,0 +1,128 @@
+{
+    "name": "App\\Http\\Middleware\\CheckPermiso",
+    "line": 18,
+    "short_desc": "Middleware para verificaci\u00f3n de permisos",
+    "long_desc": "Esta clase implementa la verificaci\u00f3n de permisos espec\u00edficos\npara las rutas protegidas del sistema",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Middleware"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Middleware",
+    "file": "app\\Http\\Middleware\\CheckPermiso.php",
+    "relative_file": null,
+    "hash": "667800b9ca68a120fb921f7d7042c03ec1cb78bd",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Closure": "Closure",
+        "Request": "Illuminate\\Http\\Request",
+        "Auth": "Illuminate\\Support\\Facades\\Auth",
+        "User": "App\\Models\\User"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "handle": {
+            "name": "handle",
+            "line": 35,
+            "short_desc": "Maneja la petici\u00f3n entrante verificando los permisos",
+            "long_desc": "Verifica si el usuario autenticado tiene el permiso requerido\npara acceder al recurso solicitado",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Respuesta HTTP",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\Illuminate\\Auth\\AuthenticationException",
+                    "Si el usuario no est\u00e1 autenticado"
+                ],
+                [
+                    "\\Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+                    "Si el permiso no existe"
+                ],
+                [
+                    "\\Symfony\\Component\\HttpKernel\\Exception\\AccessDeniedHttpException",
+                    "Si el usuario no tiene el permiso"
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 35,
+                    "short_desc": "Petici\u00f3n HTTP entrante",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "next": {
+                    "name": "next",
+                    "line": 35,
+                    "short_desc": "Siguiente middleware en la cadena",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Closure",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "permiso": {
+                    "name": "permiso",
+                    "line": 35,
+                    "short_desc": "Nombre del permiso requerido",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

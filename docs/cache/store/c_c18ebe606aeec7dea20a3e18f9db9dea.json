@@ -1,0 +1,371 @@
+{
+    "name": "App\\Http\\Controllers\\PagoController",
+    "line": 26,
+    "short_desc": "Controlador para la gesti\u00f3n de pagos",
+    "long_desc": "Esta clase maneja todas las operaciones relacionadas con los pagos\nde membres\u00edas, incluyendo su registro, consulta y generaci\u00f3n de comprobantes",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Controllers"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Controllers",
+    "file": "app\\Http\\Controllers\\PagoController.php",
+    "relative_file": null,
+    "hash": "c5f19b5f9231a167110d79b818c3855dc08f2be9",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Pago": "App\\Models\\Pago",
+        "Pagodetall": "App\\Models\\Pagodetall",
+        "Cliente": "App\\Models\\Cliente",
+        "Membresia": "App\\Models\\Membresia",
+        "DB": "Illuminate\\Support\\Facades\\DB",
+        "RedirectResponse": "Illuminate\\Http\\RedirectResponse",
+        "Request": "Illuminate\\Http\\Request",
+        "PagoRequest": "App\\Http\\Requests\\PagoRequest",
+        "Redirect": "Illuminate\\Support\\Facades\\Redirect",
+        "View": "Illuminate\\View\\View",
+        "Pdf": "Barryvdh\\DomPDF\\Facade\\Pdf",
+        "InformacionEmpresa": "App\\Models\\InformacionEmpresa"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "index": {
+            "name": "index",
+            "line": 37,
+            "short_desc": "Muestra el listado de pagos realizados",
+            "long_desc": "Obtiene los pagos con sus relaciones (cliente y detalles de membres\u00eda)\nordenados por fecha de pago de forma descendente",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Vista con el listado de pagos paginado",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 37,
+                    "short_desc": "Objeto con los datos de la petici\u00f3n HTTP",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "create": {
+            "name": "create",
+            "line": 54,
+            "short_desc": "Muestra el formulario para registrar un nuevo pago",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Vista con el formulario de creaci\u00f3n",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "store": {
+            "name": "store",
+            "line": 72,
+            "short_desc": "La funci\u00f3n `store` procesa una solicitud de pago, crea registros de pago y detalles de pago,\nactiva un cliente y maneja cualquier error que pueda ocurrir.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Si el proceso de creaci\u00f3n de pagos es exitoso, se devuelve una respuesta de redirecci\u00f3n a\nla ruta 'pagos.index' con un mensaje de \u00e9xito 'Pago creado exitosamente.'",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 72,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "show": {
+            "name": "show",
+            "line": 122,
+            "short_desc": "Muestra los detalles de un pago espec\u00edfico",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Vista con los detalles del pago",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 122,
+                    "short_desc": "Identificador del pago a consultar",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "edit": {
+            "name": "edit",
+            "line": 134,
+            "short_desc": "Muestra el formulario para editar un pago",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Vista con el formulario de edici\u00f3n",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 134,
+                    "short_desc": "Identificador del pago a editar",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "update": {
+            "name": "update",
+            "line": 165,
+            "short_desc": "La funci\u00f3n `update` en PHP actualiza el pago y los detalles del pago, manejando la validaci\u00f3n y\nlas transacciones de la base de datos.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Se devuelve una RedirectResponse. Si la operaci\u00f3n de actualizaci\u00f3n es\nexitosa, se redirigir\u00e1 a la ruta 'pagos.index' con un mensaje de \u00e9xito. Si hay un\nerror durante el proceso de actualizaci\u00f3n, se redirigir\u00e1 a la p\u00e1gina anterior con los datos de entrada y\nun mensaje de error que indique el problema encontrado al actualizar el pago.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 165,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "pago": {
+                    "name": "pago",
+                    "line": 165,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Models\\Pago",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "destroy": {
+            "name": "destroy",
+            "line": 213,
+            "short_desc": "Elimina un pago de la base de datos",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Redirecci\u00f3n a la lista de pagos con un mensaje de \u00e9xito",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 213,
+                    "short_desc": "Identificador del pago a eliminar",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "generarFactura": {
+            "name": "generarFactura",
+            "line": 227,
+            "short_desc": "Genera un comprobante de pago en formato PDF",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Comprobante de pago en formato PDF",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 227,
+                    "short_desc": "Identificador del pago a facturar",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

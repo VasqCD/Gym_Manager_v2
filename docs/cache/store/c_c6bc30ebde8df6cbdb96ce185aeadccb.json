@@ -1,0 +1,87 @@
+{
+    "name": "App\\Http\\Controllers\\Auth\\LoginController",
+    "line": 18,
+    "short_desc": "Controlador que maneja la autenticaci\u00f3n de usuarios",
+    "long_desc": "Esta clase gestiona todo el proceso de inicio de sesi\u00f3n de usuarios,\nincluyendo la validaci\u00f3n de credenciales y redirecci\u00f3n post-login.\nUtiliza el trait AuthenticatesUsers de Laravel para proporcionar\nla funcionalidad principal de autenticaci\u00f3n.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Controllers\\Auth"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Controllers\\Auth",
+    "file": "app\\Http\\Controllers\\Auth\\LoginController.php",
+    "relative_file": null,
+    "hash": "046d273ef1f8f7f908c15427cb1df9906e34ffc3",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Controller": "App\\Http\\Controllers\\Controller",
+        "AuthenticatesUsers": "Illuminate\\Foundation\\Auth\\AuthenticatesUsers"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": {
+        "Illuminate\\Foundation\\Auth\\AuthenticatesUsers": "Illuminate\\Foundation\\Auth\\AuthenticatesUsers"
+    },
+    "properties": {
+        "redirectTo": {
+            "name": "redirectTo",
+            "line": 42,
+            "short_desc": "Ruta de redirecci\u00f3n despu\u00e9s del inicio de sesi\u00f3n exitoso",
+            "long_desc": "Esta propiedad define la ruta a la que ser\u00e1 redirigido el usuario\ndespu\u00e9s de iniciar sesi\u00f3n correctamente en la aplicaci\u00f3n.",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_String",
+                "attributes": {
+                    "startLine": 42,
+                    "endLine": 42,
+                    "kind": 1,
+                    "rawValue": "'\/home'"
+                },
+                "value": "\/home"
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        }
+    },
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 56,
+            "short_desc": "Crea una nueva instancia del controlador",
+            "long_desc": "El constructor aplica los middlewares necesarios para controlar el acceso:\n- El middleware 'guest' se aplica a todos los m\u00e9todos excepto 'logout'\n- Esto asegura que solo los usuarios no autenticados puedan acceder\n  a las rutas de login",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

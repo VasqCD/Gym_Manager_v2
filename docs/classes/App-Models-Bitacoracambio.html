@@ -89,6 +89,18 @@
                 <a href="packages/App-Http.html" class="">Http</a>
                 
             </li>
+                    <li>
+                <a href="packages/App-Models.html" class="">Models</a>
+                
+            </li>
+                    <li>
+                <a href="packages/App-Providers.html" class="">Providers</a>
+                
+            </li>
+                    <li>
+                <a href="packages/App-Traits.html" class="">Traits</a>
+                
+            </li>
             </ul>
 
                         </section>
@@ -125,6 +137,7 @@
             in package
             <ul class="phpdocumentor-breadcrumbs">
                                     <li class="phpdocumentor-breadcrumb"><a href="packages/App.html">App</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/App-Models.html">Models</a></li>
                             </ul>
         </div>
     
@@ -139,85 +152,15 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">20</span>
+    <span class="phpdocumentor-element-found-in__line">29</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">Class Bitacoracambio</p>
+            <p class="phpdocumentor-summary">Modelo para el registro de cambios en la bitácora del sistema</p>
 
 
 
 
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="classes/App-Models-Bitacoracambio.html#tags" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">@property</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                
-                                                 <section class="phpdocumentor-description"><p>$id</p>
-</section>
-
-                                    </dd>
-                            <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">@property</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                
-                                                 <section class="phpdocumentor-description"><p>$usuario</p>
-</section>
-
-                                    </dd>
-                            <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">@property</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                
-                                                 <section class="phpdocumentor-description"><p>$tabla</p>
-</section>
-
-                                    </dd>
-                            <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">@property</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                
-                                                 <section class="phpdocumentor-description"><p>$accion</p>
-</section>
-
-                                    </dd>
-                            <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">@property</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                
-                                                 <section class="phpdocumentor-description"><p>$created_at</p>
-</section>
-
-                                    </dd>
-                            <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">@property</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                
-                                                 <section class="phpdocumentor-description"><p>$updated_at</p>
-</section>
-
-                                    </dd>
-                                                <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">mixin</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                
-                                                 <section class="phpdocumentor-description"><p>\Illuminate\Database\Eloquent\Builder</p>
-</section>
-
-                                    </dd>
-                                            </dl>
 
 
 
@@ -243,19 +186,75 @@
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
-    <a class="" href="classes/App-Models-Bitacoracambio.html#property_casts">$casts</a>
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a class="" href="classes/App-Models-Bitacoracambio.html#property_accion">$accion</a>
+    <span>
+                        &nbsp;: string            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a class="" href="classes/App-Models-Bitacoracambio.html#property_created_at">$created_at</a>
+    <span>
+                        &nbsp;: <abbr title="\DateTime">DateTime</abbr>            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a class="" href="classes/App-Models-Bitacoracambio.html#property_datos_antiguos">$datos_antiguos</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
-<dd>Los atributos que deben ser convertidos.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a class="" href="classes/App-Models-Bitacoracambio.html#property_datos_nuevos">$datos_nuevos</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a class="" href="classes/App-Models-Bitacoracambio.html#property_id">$id</a>
+    <span>
+                        &nbsp;: int            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a class="" href="classes/App-Models-Bitacoracambio.html#property_ip">$ip</a>
+    <span>
+                        &nbsp;: string            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a class="" href="classes/App-Models-Bitacoracambio.html#property_tabla">$tabla</a>
+    <span>
+                        &nbsp;: string            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a class="" href="classes/App-Models-Bitacoracambio.html#property_updated_at">$updated_at</a>
+    <span>
+                        &nbsp;: <abbr title="\DateTime">DateTime</abbr>            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a class="" href="classes/App-Models-Bitacoracambio.html#property_usuario">$usuario</a>
+    <span>
+                        &nbsp;: string            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a class="" href="classes/App-Models-Bitacoracambio.html#property_casts">$casts</a>
+    <span>
+                        &nbsp;: array&lt;string|int, string&gt;            </span>
+</dt>
+<dd>Los atributos que deben ser convertidos a fechas
+Y los que deben ser convertidos a tipos de datos específicos o nativos</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a class="" href="classes/App-Models-Bitacoracambio.html#property_fillable">$fillable</a>
     <span>
                         &nbsp;: array&lt;int, string&gt;            </span>
 </dt>
-<dd>Los atributos que son asignables en masa.</dd>
+<dd>Los atributos que son asignables en masa. Esto significa que se pueden asignar a
+través de la creación o actualización en masa.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a class="" href="classes/App-Models-Bitacoracambio.html#property_perPage">$perPage</a>
@@ -269,7 +268,7 @@
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd>The table associated with the model.</dd>
+<dd>La tabla asociada al modelo</dd>
 
     </dl>
 
@@ -282,9 +281,33 @@
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Models-Bitacoracambio.html#method_getBadgeClass">getBadgeClass()</a>
     <span>
+                                &nbsp;: string    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/App-Models-Bitacoracambio.html#method_getBadgeClass">getBadgeClass()</a>
+    <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Obtiene el tipo de badge según la acción</dd>
+<dd>Obtiene el tipo de badge según la acción (alertas)</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/App-Models-Bitacoracambio.html#method_newModelQuery">newModelQuery()</a>
+    <span>
+                                &nbsp;: <abbr title="\Illuminate\Database\Eloquent\Builder">Builder</abbr>|<a href="classes/App-Models-Bitacoracambio.html"><abbr title="\App\Models\Bitacoracambio">Bitacoracambio</abbr></a>    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/App-Models-Bitacoracambio.html#method_newQuery">newQuery()</a>
+    <span>
+                                &nbsp;: <abbr title="\Illuminate\Database\Eloquent\Builder">Builder</abbr>|<a href="classes/App-Models-Bitacoracambio.html"><abbr title="\App\Models\Bitacoracambio">Bitacoracambio</abbr></a>    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/App-Models-Bitacoracambio.html#method_query">query()</a>
+    <span>
+                                &nbsp;: <abbr title="\Illuminate\Database\Eloquent\Builder">Builder</abbr>|<a href="classes/App-Models-Bitacoracambio.html"><abbr title="\App\Models\Bitacoracambio">Bitacoracambio</abbr></a>    </span>
+</dt>
 
     </dl>
 
@@ -303,6 +326,348 @@
         class="
             phpdocumentor-element
             -property
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_accion">
+        $accion
+        <a href="classes/App-Models-Bitacoracambio.html#property_accion" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">0</span>
+
+    </aside>
+
+    
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$accion</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>Tipo de acción realizada (CREATE/UPDATE/DELETE)</p>
+</section>
+
+    
+    
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_created_at">
+        $created_at
+        <a href="classes/App-Models-Bitacoracambio.html#property_created_at" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">0</span>
+
+    </aside>
+
+    
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type"><abbr title="\DateTime">DateTime</abbr></span>
+    <span class="phpdocumentor-signature__name">$created_at</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>Fecha de creación del registro</p>
+</section>
+
+    
+    
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_datos_antiguos">
+        $datos_antiguos
+        <a href="classes/App-Models-Bitacoracambio.html#property_datos_antiguos" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">0</span>
+
+    </aside>
+
+    
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$datos_antiguos</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>Datos antes del cambio</p>
+</section>
+
+    
+    
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_datos_nuevos">
+        $datos_nuevos
+        <a href="classes/App-Models-Bitacoracambio.html#property_datos_nuevos" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">0</span>
+
+    </aside>
+
+    
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$datos_nuevos</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>Datos después del cambio</p>
+</section>
+
+    
+    
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_id">
+        $id
+        <a href="classes/App-Models-Bitacoracambio.html#property_id" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">0</span>
+
+    </aside>
+
+    
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">int</span>
+    <span class="phpdocumentor-signature__name">$id</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>Identificador único del registro</p>
+</section>
+
+    
+    
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_ip">
+        $ip
+        <a href="classes/App-Models-Bitacoracambio.html#property_ip" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">0</span>
+
+    </aside>
+
+    
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$ip</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>Dirección IP desde donde se realizó la acción</p>
+</section>
+
+    
+    
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_tabla">
+        $tabla
+        <a href="classes/App-Models-Bitacoracambio.html#property_tabla" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">0</span>
+
+    </aside>
+
+    
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$tabla</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>Tabla afectada por la acción</p>
+</section>
+
+    
+    
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_updated_at">
+        $updated_at
+        <a href="classes/App-Models-Bitacoracambio.html#property_updated_at" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">0</span>
+
+    </aside>
+
+    
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type"><abbr title="\DateTime">DateTime</abbr></span>
+    <span class="phpdocumentor-signature__name">$updated_at</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>Fecha de última actualización</p>
+</section>
+
+    
+    
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_usuario">
+        $usuario
+        <a href="classes/App-Models-Bitacoracambio.html#property_usuario" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">0</span>
+
+    </aside>
+
+    
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$usuario</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>Usuario que realizó la acción</p>
+</section>
+
+    
+    
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
             -protected
                                                         "
 >
@@ -316,16 +681,17 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">53</span>
+    <span class="phpdocumentor-element-found-in__line">64</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Los atributos que deben ser convertidos.</p>
+        <p class="phpdocumentor-summary">Los atributos que deben ser convertidos a fechas
+Y los que deben ser convertidos a tipos de datos específicos o nativos</p>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, string&gt;</span>
     <span class="phpdocumentor-signature__name">$casts</span>
      = <span class="phpdocumentor-signature__default-value">[&#039;datos_antiguos&#039; =&gt; &#039;array&#039;, &#039;datos_nuevos&#039; =&gt; &#039;array&#039;, &#039;created_at&#039; =&gt; &#039;datetime&#039;, &#039;updated_at&#039; =&gt; &#039;datetime&#039;]</span></code>
 
@@ -353,11 +719,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">39</span>
+    <span class="phpdocumentor-element-found-in__line">49</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Los atributos que son asignables en masa.</p>
+        <p class="phpdocumentor-summary">Los atributos que son asignables en masa. Esto significa que se pueden asignar a
+través de la creación o actualización en masa.</p>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -390,7 +757,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">41</span>
 
     </aside>
 
@@ -427,11 +794,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">36</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">The table associated with the model.</p>
+        <p class="phpdocumentor-summary">La tabla asociada al modelo</p>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -469,11 +836,51 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">63</span>
+    <span class="phpdocumentor-element-found-in__line">0</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Obtiene el tipo de badge según la acción</p>
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getBadgeClass</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <section class="phpdocumentor-description"><p>Obtiene la clase CSS del badge según el tipo de acción</p>
+</section>
+
+    
+    
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getBadgeClass">
+        getBadgeClass()
+        <a href="classes/App-Models-Bitacoracambio.html#method_getBadgeClass" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">74</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Obtiene el tipo de badge según la acción (alertas)</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -489,6 +896,120 @@
     
 
     
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_newModelQuery">
+        newModelQuery()
+        <a href="classes/App-Models-Bitacoracambio.html#method_newModelQuery" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">0</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">newModelQuery</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Database\Eloquent\Builder">Builder</abbr>|<a href="classes/App-Models-Bitacoracambio.html"><abbr title="\App\Models\Bitacoracambio">Bitacoracambio</abbr></a></span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Database\Eloquent\Builder">Builder</abbr>|<a href="classes/App-Models-Bitacoracambio.html"><abbr title="\App\Models\Bitacoracambio">Bitacoracambio</abbr></a></span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_newQuery">
+        newQuery()
+        <a href="classes/App-Models-Bitacoracambio.html#method_newQuery" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">0</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">newQuery</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Database\Eloquent\Builder">Builder</abbr>|<a href="classes/App-Models-Bitacoracambio.html"><abbr title="\App\Models\Bitacoracambio">Bitacoracambio</abbr></a></span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Database\Eloquent\Builder">Builder</abbr>|<a href="classes/App-Models-Bitacoracambio.html"><abbr title="\App\Models\Bitacoracambio">Bitacoracambio</abbr></a></span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_query">
+        query()
+        <a href="classes/App-Models-Bitacoracambio.html#method_query" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="app/Models/Bitacoracambio.php"><a href="files/app-models-bitacoracambio.html"><abbr title="app/Models/Bitacoracambio.php">Bitacoracambio.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">0</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">query</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Database\Eloquent\Builder">Builder</abbr>|<a href="classes/App-Models-Bitacoracambio.html"><abbr title="\App\Models\Bitacoracambio">Bitacoracambio</abbr></a></span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Database\Eloquent\Builder">Builder</abbr>|<a href="classes/App-Models-Bitacoracambio.html"><abbr title="\App\Models\Bitacoracambio">Bitacoracambio</abbr></a></span>
+            </section>
+
 </article>
             </section>
 
@@ -603,6 +1124,15 @@
                             <li class="phpdocumentor-on-this-page-section__title">Properties</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
+                                                    <li class=""><a href="classes/App-Models-Bitacoracambio.html#property_accion">$accion</a></li>
+                                                    <li class=""><a href="classes/App-Models-Bitacoracambio.html#property_created_at">$created_at</a></li>
+                                                    <li class=""><a href="classes/App-Models-Bitacoracambio.html#property_datos_antiguos">$datos_antiguos</a></li>
+                                                    <li class=""><a href="classes/App-Models-Bitacoracambio.html#property_datos_nuevos">$datos_nuevos</a></li>
+                                                    <li class=""><a href="classes/App-Models-Bitacoracambio.html#property_id">$id</a></li>
+                                                    <li class=""><a href="classes/App-Models-Bitacoracambio.html#property_ip">$ip</a></li>
+                                                    <li class=""><a href="classes/App-Models-Bitacoracambio.html#property_tabla">$tabla</a></li>
+                                                    <li class=""><a href="classes/App-Models-Bitacoracambio.html#property_updated_at">$updated_at</a></li>
+                                                    <li class=""><a href="classes/App-Models-Bitacoracambio.html#property_usuario">$usuario</a></li>
                                                     <li class=""><a href="classes/App-Models-Bitacoracambio.html#property_casts">$casts</a></li>
                                                     <li class=""><a href="classes/App-Models-Bitacoracambio.html#property_fillable">$fillable</a></li>
                                                     <li class=""><a href="classes/App-Models-Bitacoracambio.html#property_perPage">$perPage</a></li>
@@ -614,6 +1144,10 @@
             <li>
                 <ul class="phpdocumentor-list -clean">
                                             <li class=""><a href="classes/App-Models-Bitacoracambio.html#method_getBadgeClass">getBadgeClass()</a></li>
+                                            <li class=""><a href="classes/App-Models-Bitacoracambio.html#method_getBadgeClass">getBadgeClass()</a></li>
+                                            <li class=""><a href="classes/App-Models-Bitacoracambio.html#method_newModelQuery">newModelQuery()</a></li>
+                                            <li class=""><a href="classes/App-Models-Bitacoracambio.html#method_newQuery">newQuery()</a></li>
+                                            <li class=""><a href="classes/App-Models-Bitacoracambio.html#method_query">query()</a></li>
                                     </ul>
             </li>
                     </ul>

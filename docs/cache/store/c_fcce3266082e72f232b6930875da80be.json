@@ -1,0 +1,79 @@
+{
+    "name": "App\\Http\\Middleware\\Authenticate",
+    "line": 16,
+    "short_desc": "Middleware de autenticaci\u00f3n personalizado",
+    "long_desc": "Esta clase extiende el middleware de autenticaci\u00f3n base de Laravel\npara manejar las redirecciones cuando un usuario no est\u00e1 autenticado",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Middleware"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Middleware",
+    "file": "app\\Http\\Middleware\\Authenticate.php",
+    "relative_file": null,
+    "hash": "148cb2ff5e8574f46d891779abbe35e5e93630d6",
+    "parent": "Illuminate\\Auth\\Middleware\\Authenticate",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Middleware": "Illuminate\\Auth\\Middleware\\Authenticate",
+        "Request": "Illuminate\\Http\\Request"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "redirectTo": {
+            "name": "redirectTo",
+            "line": 27,
+            "short_desc": "Obtiene la ruta a la que se debe redirigir al usuario cuando no est\u00e1 autenticado",
+            "long_desc": "Este m\u00e9todo determina si la petici\u00f3n espera una respuesta JSON y redirige\napropiadamente al usuario no autenticado",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "Ruta de redirecci\u00f3n o null si la petici\u00f3n espera JSON",
+            "tags": [],
+            "see": [],
+            "modifiers": 2,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 27,
+                    "short_desc": "Objeto de la petici\u00f3n HTTP actual",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

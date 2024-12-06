@@ -89,6 +89,18 @@
                 <a href="packages/App-Http.html" class="">Http</a>
                 
             </li>
+                    <li>
+                <a href="packages/App-Models.html" class="">Models</a>
+                
+            </li>
+                    <li>
+                <a href="packages/App-Providers.html" class="">Providers</a>
+                
+            </li>
+                    <li>
+                <a href="packages/App-Traits.html" class="">Traits</a>
+                
+            </li>
             </ul>
 
                         </section>
@@ -127,6 +139,9 @@
             in package
             <ul class="phpdocumentor-breadcrumbs">
                                     <li class="phpdocumentor-breadcrumb"><a href="packages/App.html">App</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/App-Http.html">Http</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/App-Http-Controllers.html">Controllers</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/App-Http-Controllers-Auth.html">Auth</a></li>
                             </ul>
         </div>
     
@@ -144,12 +159,18 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/Auth/LoginController.php"><a href="files/app-http-controllers-auth-logincontroller.html"><abbr title="app/Http/Controllers/Auth/LoginController.php">LoginController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8</span>
+    <span class="phpdocumentor-element-found-in__line">18</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Controlador que maneja la autenticación de usuarios</p>
 
+
+    <section class="phpdocumentor-description"><p>Esta clase gestiona todo el proceso de inicio de sesión de usuarios,
+incluyendo la validación de credenciales y redirección post-login.
+Utiliza el trait AuthenticatesUsers de Laravel para proporcionar
+la funcionalidad principal de autenticación.</p>
+</section>
 
 
 
@@ -182,7 +203,7 @@
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd>Where to redirect users after login.</dd>
+<dd>Ruta de redirección después del inicio de sesión exitoso</dd>
 
     </dl>
 
@@ -197,7 +218,7 @@
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Create a new controller instance.</dd>
+<dd>Crea una nueva instancia del controlador</dd>
 
     </dl>
 
@@ -229,11 +250,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/Auth/LoginController.php"><a href="files/app-http-controllers-auth-logincontroller.html"><abbr title="app/Http/Controllers/Auth/LoginController.php">LoginController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">42</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Where to redirect users after login.</p>
+        <p class="phpdocumentor-summary">Ruta de redirección después del inicio de sesión exitoso</p>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -242,7 +263,10 @@
     <span class="phpdocumentor-signature__name">$redirectTo</span>
      = <span class="phpdocumentor-signature__default-value">&#039;/home&#039;</span></code>
 
-    
+        <section class="phpdocumentor-description"><p>Esta propiedad define la ruta a la que será redirigido el usuario
+después de iniciar sesión correctamente en la aplicación.</p>
+</section>
+
     
     
 
@@ -271,11 +295,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/Auth/LoginController.php"><a href="files/app-http-controllers-auth-logincontroller.html"><abbr title="app/Http/Controllers/Auth/LoginController.php">LoginController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">35</span>
+    <span class="phpdocumentor-element-found-in__line">56</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Create a new controller instance.</p>
+        <p class="phpdocumentor-summary">Crea una nueva instancia del controlador</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -284,7 +308,14 @@
     <div class="phpdocumentor-label-line">
         </div>
     
-    
+        <section class="phpdocumentor-description"><p>El constructor aplica los middlewares necesarios para controlar el acceso:</p>
+<ul>
+<li>El middleware 'guest' se aplica a todos los métodos excepto 'logout'</li>
+<li>Esto asegura que solo los usuarios no autenticados puedan acceder
+a las rutas de login</li>
+</ul>
+</section>
+
     
     
 

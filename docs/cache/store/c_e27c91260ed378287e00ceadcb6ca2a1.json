@@ -1,0 +1,75 @@
+{
+    "name": "App\\Http\\Requests\\PagodetallRequest",
+    "line": 17,
+    "short_desc": "Request personalizado para la validaci\u00f3n de detalles de pago",
+    "long_desc": "Esta clase maneja la validaci\u00f3n de datos para los detalles de pago,\nincluyendo la informaci\u00f3n sobre el pago principal, la membres\u00eda asociada,\ncantidad y subtotal de cada detalle.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Requests"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Requests",
+    "file": "app\\Http\\Requests\\PagodetallRequest.php",
+    "relative_file": null,
+    "hash": "a87914b2b016315fd86a2ebec17d9842052568de",
+    "parent": "Illuminate\\Foundation\\Http\\FormRequest",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "FormRequest": "Illuminate\\Foundation\\Http\\FormRequest"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "authorize": {
+            "name": "authorize",
+            "line": 27,
+            "short_desc": "Determina si el usuario est\u00e1 autorizado para realizar esta solicitud",
+            "long_desc": "Por defecto permite todas las solicitudes. Si se requiere una\nvalidaci\u00f3n m\u00e1s espec\u00edfica, sobrescribir este m\u00e9todo.",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "Siempre retorna true",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "rules": {
+            "name": "rules",
+            "line": 43,
+            "short_desc": "Obtiene las reglas de validaci\u00f3n aplicables a la solicitud",
+            "long_desc": "Define las reglas de validaci\u00f3n para los campos del detalle de pago:\n- pago_id: identificador del pago principal (requerido)\n- membresia_id: identificador de la membres\u00eda (requerido)\n- cantidad: n\u00famero de items en el detalle (requerido)\n- subtotal: monto parcial del detalle (requerido)",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

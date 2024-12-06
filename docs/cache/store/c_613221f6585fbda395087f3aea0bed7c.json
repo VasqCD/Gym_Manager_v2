@@ -1,0 +1,65 @@
+{
+    "name": "App\\Http\\Controllers\\Auth\\ResetPasswordController",
+    "line": 18,
+    "short_desc": "Controlador para el restablecimiento de contrase\u00f1as",
+    "long_desc": "Esta clase maneja las solicitudes de restablecimiento de contrase\u00f1a,\nincluyendo la validaci\u00f3n del token, actualizaci\u00f3n de la contrase\u00f1a\ny redirecci\u00f3n del usuario. Utiliza el trait ResetsPasswords de\nLaravel para proporcionar la funcionalidad principal.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Controllers\\Auth"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Controllers\\Auth",
+    "file": "app\\Http\\Controllers\\Auth\\ResetPasswordController.php",
+    "relative_file": null,
+    "hash": "e8ad18f714c74055c86d214e9f0810e6be05e88c",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Controller": "App\\Http\\Controllers\\Controller",
+        "ResetsPasswords": "Illuminate\\Foundation\\Auth\\ResetsPasswords"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": {
+        "Illuminate\\Foundation\\Auth\\ResetsPasswords": "Illuminate\\Foundation\\Auth\\ResetsPasswords"
+    },
+    "properties": {
+        "redirectTo": {
+            "name": "redirectTo",
+            "line": 42,
+            "short_desc": "Ruta de redirecci\u00f3n despu\u00e9s del restablecimiento de contrase\u00f1a",
+            "long_desc": "Esta propiedad define la ruta a la que ser\u00e1 redirigido el usuario\ndespu\u00e9s de restablecer exitosamente su contrase\u00f1a.",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_String",
+                "attributes": {
+                    "startLine": 42,
+                    "endLine": 42,
+                    "kind": 1,
+                    "rawValue": "'\/home'"
+                },
+                "value": "\/home"
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        }
+    },
+    "methods": [],
+    "constants": []
+}

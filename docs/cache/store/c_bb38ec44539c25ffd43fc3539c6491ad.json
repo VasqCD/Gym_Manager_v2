@@ -1,0 +1,81 @@
+{
+    "name": "App\\Http\\Controllers\\Auth\\ConfirmPasswordController",
+    "line": 8,
+    "short_desc": null,
+    "long_desc": null,
+    "hint": null,
+    "tags": [],
+    "namespace": "App\\Http\\Controllers\\Auth",
+    "file": "app\\Http\\Controllers\\Auth\\ConfirmPasswordController.php",
+    "relative_file": null,
+    "hash": "f8fdf53ae6078fe2cf1d0b73997ff7170bef7b53",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Controller": "App\\Http\\Controllers\\Controller",
+        "ConfirmsPasswords": "Illuminate\\Foundation\\Auth\\ConfirmsPasswords"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": {
+        "Illuminate\\Foundation\\Auth\\ConfirmsPasswords": "Illuminate\\Foundation\\Auth\\ConfirmsPasswords"
+    },
+    "properties": {
+        "redirectTo": {
+            "name": "redirectTo",
+            "line": 28,
+            "short_desc": "Donde redirigir a los usuarios cuando la url prevista falla.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_String",
+                "attributes": {
+                    "startLine": 28,
+                    "endLine": 28,
+                    "kind": 1,
+                    "rawValue": "'\/home'"
+                },
+                "value": "\/home"
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        }
+    },
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 36,
+            "short_desc": "Crear una nueva instancia de controlador. en este caso, el middleware de autenticaci\u00f3n.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

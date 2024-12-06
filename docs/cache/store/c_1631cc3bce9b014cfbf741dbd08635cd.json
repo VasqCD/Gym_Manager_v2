@@ -1,0 +1,75 @@
+{
+    "name": "App\\Http\\Requests\\BitacoracambioRequest",
+    "line": 16,
+    "short_desc": "Request personalizado para la validaci\u00f3n de bit\u00e1cora de cambios",
+    "long_desc": "Esta clase maneja la validaci\u00f3n de datos para el registro de cambios\nen la bit\u00e1cora del sistema, incluyendo informaci\u00f3n sobre el usuario,\nla tabla afectada y la acci\u00f3n realizada.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Requests"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Requests",
+    "file": "app\\Http\\Requests\\BitacoracambioRequest.php",
+    "relative_file": null,
+    "hash": "b79b81182f82d576d714b0ae2f7b3eb7e9d8fd88",
+    "parent": "Illuminate\\Foundation\\Http\\FormRequest",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "FormRequest": "Illuminate\\Foundation\\Http\\FormRequest"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "authorize": {
+            "name": "authorize",
+            "line": 26,
+            "short_desc": "Determina si el usuario est\u00e1 autorizado para realizar esta solicitud",
+            "long_desc": "Por defecto permite todas las solicitudes. Si se requiere una\nvalidaci\u00f3n m\u00e1s espec\u00edfica, sobrescribir este m\u00e9todo.",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "Siempre retorna true",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "rules": {
+            "name": "rules",
+            "line": 41,
+            "short_desc": "Obtiene las reglas de validaci\u00f3n aplicables a la solicitud",
+            "long_desc": "Define las reglas de validaci\u00f3n para los campos requeridos:\n- usuario: nombre o identificador del usuario que realiza la acci\u00f3n\n- tabla: nombre de la tabla afectada por el cambio\n- accion: tipo de operaci\u00f3n realizada (crear, actualizar, eliminar)",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

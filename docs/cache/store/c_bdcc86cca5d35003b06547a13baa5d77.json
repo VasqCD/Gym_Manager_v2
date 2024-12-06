@@ -1,0 +1,37 @@
+{
+    "name": "App\\Http\\Controllers\\Controller",
+    "line": 15,
+    "short_desc": "Este controlador es la clase base de todos los controladores de la aplicaci\u00f3n\naportando funcionalidades comunes a todos ellos",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Controllers"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Controllers",
+    "file": "app\\Http\\Controllers\\Controller.php",
+    "relative_file": null,
+    "hash": "076e1f75dc11dccca11c25800fc0d8c26dfe77cc",
+    "parent": "Illuminate\\Routing\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "AuthorizesRequests": "Illuminate\\Foundation\\Auth\\Access\\AuthorizesRequests",
+        "ValidatesRequests": "Illuminate\\Foundation\\Validation\\ValidatesRequests",
+        "BaseController": "Illuminate\\Routing\\Controller"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": {
+        "Illuminate\\Foundation\\Auth\\Access\\AuthorizesRequests": "Illuminate\\Foundation\\Auth\\Access\\AuthorizesRequests",
+        "Illuminate\\Foundation\\Validation\\ValidatesRequests": "Illuminate\\Foundation\\Validation\\ValidatesRequests"
+    },
+    "properties": [],
+    "methods": [],
+    "constants": []
+}

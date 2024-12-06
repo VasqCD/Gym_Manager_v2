@@ -1,0 +1,316 @@
+{
+    "name": "App\\Http\\Controllers\\RolporpermisoController",
+    "line": 23,
+    "short_desc": "Controlador para la gesti\u00f3n de los roles por permisos de usuario en la aplicaci\u00f3n",
+    "long_desc": "Esta clase maneja las operaciones CRUD y l\u00f3gica de negocio\nrelacionada con los roles por permisos de usuario",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Controllers"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Controllers",
+    "file": "app\\Http\\Controllers\\RolporpermisoController.php",
+    "relative_file": null,
+    "hash": "cf1c5d9f55a4c6a88daecbfd75048592044e8549",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Rolporpermiso": "App\\Models\\Rolporpermiso",
+        "RedirectResponse": "Illuminate\\Http\\RedirectResponse",
+        "Request": "Illuminate\\Http\\Request",
+        "RolporpermisoRequest": "App\\Http\\Requests\\RolporpermisoRequest",
+        "Redirect": "Illuminate\\Support\\Facades\\Redirect",
+        "View": "Illuminate\\View\\View",
+        "Rol": "App\\Models\\Rol",
+        "Permiso": "App\\Models\\Permiso",
+        "Log": "Illuminate\\Support\\Facades\\Log"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "index": {
+            "name": "index",
+            "line": 39,
+            "short_desc": "La funci\u00f3n index obtiene y pagina los datos de Rolporpermiso con manejo de errores y logging.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "La funci\u00f3n `index` devuelve una vista llamada 'rolporpermiso.index' con los datos\nde la variable `rolporpermisos` pasados como compact. Adem\u00e1s, calcula el desplazamiento de la paginaci\u00f3n\nbasado en el n\u00famero de p\u00e1gina actual de la entrada de la solicitud. Si ocurre una excepci\u00f3n durante\nel proceso, registra el mensaje de error y redirige a la ruta 'rolporpermiso.index' con un\nmensaje de error",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 39,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "create": {
+            "name": "create",
+            "line": 60,
+            "short_desc": "La funci\u00f3n `create` recupera todos los roles y permisos y devuelve una vista con los datos.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Se devuelve una vista llamada 'rolporpermiso.create' con las variables `roles` y\n`permisos` pasadas a ella utilizando la funci\u00f3n compact.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "store": {
+            "name": "store",
+            "line": 79,
+            "short_desc": "La funci\u00f3n `store` almacena un nuevo recurso en la base de datos.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "La funci\u00f3n `store` redirige a la ruta 'rolporpermisos.index' con un mensaje\nde \u00e9xito si el permiso se asigna correctamente al rol. Si el permiso ya est\u00e1 asignado al rol, se\nredirige a la ruta anterior con un mensaje de error.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 79,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "show": {
+            "name": "show",
+            "line": 117,
+            "short_desc": "La funci\u00f3n `show` recupera un modelo Rolporpermiso espec\u00edfico por su ID y luego devuelve una vista\ncon los datos recuperados.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Se devuelve una vista de la funci\u00f3n `show`. La vista que se devuelve es\n'rolporpermiso.show' y se pasa a ella los datos de la variable utilizando la funci\u00f3n\n\nThe function \"show\" retrieves a specific Rolporpermiso model by its ID and then returns a view\nwith the retrieved data.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [
+                "The \"id\" parameter of the method \"show\" is missing a @param tag"
+            ],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 117,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "edit": {
+            "name": "edit",
+            "line": 136,
+            "short_desc": "La funci\u00f3n `edit` recupera un modelo Rolporpermiso espec\u00edfico por su ID y luego devuelve una vista\ncon los datos recuperados.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Se devuelve una vista de la funci\u00f3n `edit`. La vista que se devuelve es\n'rolporpermiso.edit' y se pasa a ella los datos de la variable utilizando la funci\u00f3n",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [
+                "The \"id\" parameter of the method \"edit\" is missing a @param tag"
+            ],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 136,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "update": {
+            "name": "update",
+            "line": 161,
+            "short_desc": "La funci\u00f3n `update` actualiza los datos de un recurso en la base de datos.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "La funci\u00f3n `update` redirige a la ruta 'rolporpermisos.index' con un mensaje\nde \u00e9xito si el rol por permiso se actualiza correctamente. Si ocurre un error durante el proceso, se\nredirige a la ruta anterior con un mensaje de error.",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 161,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Http\\Requests\\RolporpermisoRequest",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "rolporpermiso": {
+                    "name": "rolporpermiso",
+                    "line": 161,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Models\\Rolporpermiso",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "destroy": {
+            "name": "destroy",
+            "line": 169,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 169,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

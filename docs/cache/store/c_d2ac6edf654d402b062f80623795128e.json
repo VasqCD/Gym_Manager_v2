@@ -1,0 +1,310 @@
+{
+    "name": "App\\Http\\Controllers\\UserController",
+    "line": 23,
+    "short_desc": "Controlador para la gesti\u00f3n de usuarios",
+    "long_desc": "Esta clase maneja las operaciones CRUD relacionadas con los usuarios\ndel sistema y su asignaci\u00f3n de roles",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Controllers"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Controllers",
+    "file": "app\\Http\\Controllers\\UserController.php",
+    "relative_file": null,
+    "hash": "24229bff7441ca46036726f8c57b6f1731b46733",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "User": "App\\Models\\User",
+        "Rol": "App\\Models\\Rol",
+        "Request": "Illuminate\\Http\\Request",
+        "Hash": "Illuminate\\Support\\Facades\\Hash",
+        "Rule": "Illuminate\\Validation\\Rule",
+        "Rolporpermiso": "App\\Models\\Rolporpermiso",
+        "RedirectResponse": "Illuminate\\Http\\RedirectResponse"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "index": {
+            "name": "index",
+            "line": 30,
+            "short_desc": "Muestra el listado de usuarios con sus roles asociados",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\App\\Http\\Controllers\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Vista con el listado de usuarios y roles paginado",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "create": {
+            "name": "create",
+            "line": 42,
+            "short_desc": "Muestra el formulario para crear un nuevo usuario",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\App\\Http\\Controllers\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Vista con el formulario de creaci\u00f3n",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "store": {
+            "name": "store",
+            "line": 55,
+            "short_desc": "Almacena un nuevo usuario en la base de datos",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Redirecci\u00f3n con mensaje de \u00e9xito o error",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\Illuminate\\Validation\\ValidationException",
+                    "Si los datos no pasan la validaci\u00f3n"
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 55,
+                    "short_desc": "Datos del formulario de creaci\u00f3n",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "show": {
+            "name": "show",
+            "line": 81,
+            "short_desc": "Muestra los datos de un usuario",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\App\\Http\\Controllers\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Vista con los datos del usuario",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 81,
+                    "short_desc": "ID del usuario a mostrar",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "edit": {
+            "name": "edit",
+            "line": 92,
+            "short_desc": "Muestra el formulario para editar un usuario",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\App\\Http\\Controllers\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Vista con el formulario de edici\u00f3n",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "user": {
+                    "name": "user",
+                    "line": 92,
+                    "short_desc": "Usuario a editar",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Models\\User",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "update": {
+            "name": "update",
+            "line": 105,
+            "short_desc": "Actualiza los datos de un usuario",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Redirecci\u00f3n con mensaje de \u00e9xito o error",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 105,
+                    "short_desc": "Datos del formulario de edici\u00f3n",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "user": {
+                    "name": "user",
+                    "line": 105,
+                    "short_desc": "Usuario a actualizar",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Models\\User",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "destroy": {
+            "name": "destroy",
+            "line": 131,
+            "short_desc": "Elimina un usuario de la base de datos",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Redirecci\u00f3n con mensaje de \u00e9xito",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "user": {
+                    "name": "user",
+                    "line": 131,
+                    "short_desc": "Usuario a eliminar",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Models\\User",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

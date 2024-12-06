@@ -1,0 +1,80 @@
+{
+    "name": "App\\Http\\Controllers\\HomeController",
+    "line": 20,
+    "short_desc": "Controlador para la p\u00e1gina de inicio del sistema",
+    "long_desc": "Esta clase maneja las operaciones y l\u00f3gica de negocio relacionadas con la\np\u00e1gina de inicio del sistema, mostrando datos y estad\u00edsticas generales",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Controllers"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Controllers",
+    "file": "app\\Http\\Controllers\\HomeController.php",
+    "relative_file": null,
+    "hash": "eee105787e13875aaffd482002a2b3d533367101",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Request": "Illuminate\\Http\\Request",
+        "Cliente": "App\\Models\\Cliente",
+        "Membresia": "App\\Models\\Membresia",
+        "Pago": "App\\Models\\Pago",
+        "View": "Illuminate\\View\\View",
+        "DB": "Illuminate\\Support\\Facades\\DB"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 27,
+            "short_desc": "Muestra la p\u00e1gina de inicio del sistema",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Vista con los datos de la p\u00e1gina de inicio",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "index": {
+            "name": "index",
+            "line": 37,
+            "short_desc": "Muestra la p\u00e1gina de inicio del sistema",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "Vista con los datos de la p\u00e1gina de inicio",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

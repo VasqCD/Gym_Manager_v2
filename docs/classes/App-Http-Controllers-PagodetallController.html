@@ -89,6 +89,18 @@
                 <a href="packages/App-Http.html" class="">Http</a>
                 
             </li>
+                    <li>
+                <a href="packages/App-Models.html" class="">Models</a>
+                
+            </li>
+                    <li>
+                <a href="packages/App-Providers.html" class="">Providers</a>
+                
+            </li>
+                    <li>
+                <a href="packages/App-Traits.html" class="">Traits</a>
+                
+            </li>
             </ul>
 
                         </section>
@@ -144,7 +156,9 @@
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Este controlador es la clase base de todos los controladores de la aplicación
+aportando funcionalidades comunes a todos ellos</p>
+
 
 
 
@@ -179,48 +193,49 @@
     <span>
                                 &nbsp;: <abbr title="\Illuminate\View\View">View</abbr>    </span>
 </dt>
-<dd>Show the form for creating a new resource.</dd>
+<dd>Muestra el formulario para registrar un nuevo pagodetall</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-PagodetallController.html#method_destroy">destroy()</a>
     <span>
                                 &nbsp;: <abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr>    </span>
 </dt>
+<dd>La función destroy elimina el pagodetall especificado por id</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-PagodetallController.html#method_edit">edit()</a>
     <span>
                                 &nbsp;: <abbr title="\Illuminate\View\View">View</abbr>    </span>
 </dt>
-<dd>Show the form for editing the specified resource.</dd>
+<dd>La función edit muestra el formulario para editar el pagodetall especificado por id</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-PagodetallController.html#method_index">index()</a>
     <span>
                                 &nbsp;: <abbr title="\Illuminate\View\View">View</abbr>    </span>
 </dt>
-<dd>Display a listing of the resource.</dd>
+<dd>La función index muestra el listado de pagodetalls</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-PagodetallController.html#method_show">show()</a>
     <span>
                                 &nbsp;: <abbr title="\Illuminate\View\View">View</abbr>    </span>
 </dt>
-<dd>Display the specified resource.</dd>
+<dd>La función show muestra el recurso especificado por id</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-PagodetallController.html#method_store">store()</a>
     <span>
                                 &nbsp;: <abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr>    </span>
 </dt>
-<dd>Store a newly created resource in storage.</dd>
+<dd>La función store almacena un nuevo pagodetall en la base de datos</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-PagodetallController.html#method_update">update()</a>
     <span>
                                 &nbsp;: <abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr>    </span>
 </dt>
-<dd>Update the specified resource in storage.</dd>
+<dd>La función update actualiza los datos del pagodetall en la base de datos</dd>
 
     </dl>
 
@@ -250,11 +265,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/PagodetallController.php"><a href="files/app-http-controllers-pagodetallcontroller.html"><abbr title="app/Http/Controllers/PagodetallController.php">PagodetallController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">36</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Show the form for creating a new resource.</p>
+        <p class="phpdocumentor-summary">Muestra el formulario para registrar un nuevo pagodetall</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -272,6 +287,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\View\View">View</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Vista con el formulario de creación</p>
+</section>
+
             </section>
 
 </article>
@@ -289,14 +308,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/PagodetallController.php"><a href="files/app-http-controllers-pagodetallcontroller.html"><abbr title="app/Http/Controllers/PagodetallController.php">PagodetallController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">77</span>
+    <span class="phpdocumentor-element-found-in__line">106</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">La función destroy elimina el pagodetall especificado por id</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">destroy</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">destroy</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -306,10 +326,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$id</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Identificador del pagodetall a eliminar</p>
+</section>
+
             </dd>
             </dl>
 
@@ -320,6 +342,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Redirección a la lista de pagodetalls con un mensaje de éxito</p>
+</section>
+
             </section>
 
 </article>
@@ -337,15 +363,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/PagodetallController.php"><a href="files/app-http-controllers-pagodetallcontroller.html"><abbr title="app/Http/Controllers/PagodetallController.php">PagodetallController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">59</span>
+    <span class="phpdocumentor-element-found-in__line">79</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Show the form for editing the specified resource.</p>
+        <p class="phpdocumentor-summary">La función edit muestra el formulario para editar el pagodetall especificado por id</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">edit</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\View\View">View</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">edit</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\View\View">View</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -355,10 +381,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$id</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Identificador del pagodetall a editar</p>
+</section>
+
             </dd>
             </dl>
 
@@ -369,6 +397,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\View\View">View</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Vista con el formulario de edición del pagodetall</p>
+</section>
+
             </section>
 
 </article>
@@ -386,11 +418,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/PagodetallController.php"><a href="files/app-http-controllers-pagodetallcontroller.html"><abbr title="app/Http/Controllers/PagodetallController.php">PagodetallController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Display a listing of the resource.</p>
+        <p class="phpdocumentor-summary">La función index muestra el listado de pagodetalls</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -399,7 +431,10 @@
     <div class="phpdocumentor-label-line">
         </div>
     
-    
+        <section class="phpdocumentor-description"><p>Obtiene los pagodetalls con sus relaciones (pago y membresia)
+ordenados por fecha de pago de forma descendente</p>
+</section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -407,7 +442,9 @@
                 : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Illuminate\Http\Request">Request</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Objeto con los datos de la petición HTTP</p>
+</section>
+
             </dd>
             </dl>
 
@@ -418,6 +455,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\View\View">View</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Vista con el listado de pagodetalls paginado</p>
+</section>
+
             </section>
 
 </article>
@@ -435,15 +476,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/PagodetallController.php"><a href="files/app-http-controllers-pagodetallcontroller.html"><abbr title="app/Http/Controllers/PagodetallController.php">PagodetallController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">49</span>
+    <span class="phpdocumentor-element-found-in__line">65</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Display the specified resource.</p>
+        <p class="phpdocumentor-summary">La función show muestra el recurso especificado por id</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">show</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\View\View">View</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">show</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\View\View">View</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -453,10 +494,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$id</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Identificador del pagodetall a mostrar</p>
+</section>
+
             </dd>
             </dl>
 
@@ -467,6 +510,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\View\View">View</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Vista con los datos del pagodetall</p>
+</section>
+
             </section>
 
 </article>
@@ -484,11 +531,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/PagodetallController.php"><a href="files/app-http-controllers-pagodetallcontroller.html"><abbr title="app/Http/Controllers/PagodetallController.php">PagodetallController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">38</span>
+    <span class="phpdocumentor-element-found-in__line">51</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Store a newly created resource in storage.</p>
+        <p class="phpdocumentor-summary">La función store almacena un nuevo pagodetall en la base de datos</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -505,17 +552,38 @@
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Http-Requests-PagodetallRequest.html"><abbr title="\App\Http\Requests\PagodetallRequest">PagodetallRequest</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Objeto con los datos de la petición HTTP</p>
+</section>
+
             </dd>
             </dl>
 
     
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/App-Http-Controllers-PagodetallController.html#method_store#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Illuminate\Validation\ValidationException">ValidationException</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                                            </dl>
 
     
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Redirección a la lista de pagodetalls con un mensaje de éxito</p>
+</section>
+
             </section>
 
 </article>
@@ -533,11 +601,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/PagodetallController.php"><a href="files/app-http-controllers-pagodetallcontroller.html"><abbr title="app/Http/Controllers/PagodetallController.php">PagodetallController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">69</span>
+    <span class="phpdocumentor-element-found-in__line">92</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Update the specified resource in storage.</p>
+        <p class="phpdocumentor-summary">La función update actualiza los datos del pagodetall en la base de datos</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -554,14 +622,18 @@
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Http-Requests-PagodetallRequest.html"><abbr title="\App\Http\Requests\PagodetallRequest">PagodetallRequest</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Objeto con los datos de la petición HTTP</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$pagodetall</span>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Models-Pagodetall.html"><abbr title="\App\Models\Pagodetall">Pagodetall</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Objeto con los datos del pagodetall a actualizar</p>
+</section>
+
             </dd>
             </dl>
 

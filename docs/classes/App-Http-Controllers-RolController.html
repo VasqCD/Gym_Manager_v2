@@ -89,6 +89,18 @@
                 <a href="packages/App-Http.html" class="">Http</a>
                 
             </li>
+                    <li>
+                <a href="packages/App-Models.html" class="">Models</a>
+                
+            </li>
+                    <li>
+                <a href="packages/App-Providers.html" class="">Providers</a>
+                
+            </li>
+                    <li>
+                <a href="packages/App-Traits.html" class="">Traits</a>
+                
+            </li>
             </ul>
 
                         </section>
@@ -204,9 +216,10 @@ del sistema y su relación con los permisos</p>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-RolController.html#method_update">update()</a>
     <span>
-                                &nbsp;: <abbr title="\Illuminate\View\View">View</abbr>    </span>
+                                &nbsp;: <abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr>    </span>
 </dt>
-<dd>Muestra el formulario para editar un rol existente</dd>
+<dd>La funcion `update` en PHP maneja la actualización de una entidad de rol, incluyendo la verificación
+de cambios en nombre, descripción y permisos, y el registro de cualquier error que ocurra.</dd>
 
     </dl>
 
@@ -236,7 +249,7 @@ del sistema y su relación con los permisos</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/RolController.php"><a href="files/app-http-controllers-rolcontroller.html"><abbr title="app/Http/Controllers/RolController.php">RolController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">148</span>
+    <span class="phpdocumentor-element-found-in__line">158</span>
 
     </aside>
 
@@ -406,15 +419,16 @@ del sistema y su relación con los permisos</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/RolController.php"><a href="files/app-http-controllers-rolcontroller.html"><abbr title="app/Http/Controllers/RolController.php">RolController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">69</span>
+    <span class="phpdocumentor-element-found-in__line">79</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Muestra el formulario para editar un rol existente</p>
+        <p class="phpdocumentor-summary">La funcion `update` en PHP maneja la actualización de una entidad de rol, incluyendo la verificación
+de cambios en nombre, descripción y permisos, y el registro de cualquier error que ocurra.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">update</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Illuminate\Http\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Models-Rol.html"><abbr title="\App\Models\Rol">Rol</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$rol</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\View\View">View</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">update</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Illuminate\Http\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Models-Rol.html"><abbr title="\App\Models\Rol">Rol</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$rol</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -427,14 +441,20 @@ del sistema y su relación con los permisos</p>
                 : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Illuminate\Http\Request">Request</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>El parámetro <code class="prettyprint">Request</code> en la función <code class="prettyprint">update</code> representa la solicitud HTTP
+que se está realizando para actualizar un rol específico. Contiene todos los datos enviados en la
+solicitud, como los valores de entrada del formulario.</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$rol</span>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Models-Rol.html"><abbr title="\App\Models\Rol">Rol</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Rol a editar</p>
+                    <section class="phpdocumentor-description"><p>El fragmento de código que proporcionaste es una función PHP que maneja la operación
+de actualización para una entidad &quot;Rol&quot;. La función toma dos parámetros: un objeto Request y un objeto Rol.
+Aquí tienes un desglose de los parámetros:</p>
 </section>
 
             </dd>
@@ -446,9 +466,12 @@ del sistema y su relación con los permisos</p>
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\View\View">View</abbr></span>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr></span>
                     &mdash;
-                <section class="phpdocumentor-description"><p>Vista con el formulario de edición</p>
+                <section class="phpdocumentor-description"><p>Se devuelve un RedirectResponse desde la función update. Si la operación de
+actualización es exitosa, redirige a la ruta 'roles.index' con un mensaje de éxito indicando que el rol
+se actualizó correctamente. Si ocurre un error durante el proceso de actualización, redirige a la ruta
+'roles.index' con un mensaje de error detallando el problema encontrado durante la actualización.</p>
 </section>
 
             </section>
