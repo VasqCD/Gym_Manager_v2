@@ -28,6 +28,7 @@
                         <!-- Campos ocultos -->
                         <input type="hidden" name="subtotal" id="subtotal_hidden" value="0">
                         <input type="hidden" name="impuesto" id="impuesto_hidden" value="0">
+                        <input type="hidden" name="descuento_monto" id="descuento_monto_hidden" value="0">
 
                         <div class="row">
                             <!-- Información del Cliente -->
@@ -178,7 +179,7 @@
         </div>
     </div>
 </section>
-// modal de creacion cliente
+
 @include('pago.modals.create-cliente')
 
 @push('scripts')
@@ -186,13 +187,14 @@
 function calcularTotal() {
     const membresia = document.getElementById('membresia_id');
     const cantidad = parseInt(document.getElementById('cantidad').value) || 0;
-    const descuento = parseFloat(document.getElementById('descuento').value) || 0;
+    const descuentoPorcentaje = parseFloat(document.getElementById('descuento').value) || 0;
     const precio = parseFloat(membresia.options[membresia.selectedIndex].dataset.precio) || 0;
 
+    // Cálculos
     const subtotal = precio * cantidad;
-    const descuentoMonto = (subtotal * descuento) / 100;
+    const isv = subtotal * 0.15;
+    const descuentoMonto = (subtotal * descuentoPorcentaje) / 100;
     const subtotalConDescuento = subtotal - descuentoMonto;
-    const isv = subtotalConDescuento * 0.15;
     const total = subtotalConDescuento + isv;
 
     // Actualizar campos visibles y ocultos
@@ -200,10 +202,18 @@ function calcularTotal() {
     document.getElementById('subtotal_hidden').value = subtotal.toFixed(2);
     document.getElementById('isv').value = isv.toFixed(2);
     document.getElementById('impuesto_hidden').value = isv.toFixed(2);
+    document.getElementById('descuento_monto_hidden').value = descuentoMonto.toFixed(2);
     document.getElementById('total').value = total.toFixed(2);
 }
 
-document.addEventListener('DOMContentLoaded', calcularTotal);
+// Agregar listeners para todos los campos que afectan el cálculo
+document.addEventListener('DOMContentLoaded', function() {
+    calcularTotal();
+    
+    document.getElementById('membresia_id').addEventListener('change', calcularTotal);
+    document.getElementById('cantidad').addEventListener('input', calcularTotal);
+    document.getElementById('descuento').addEventListener('input', calcularTotal);
+});
 </script>
 @endpush
 

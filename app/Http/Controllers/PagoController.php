@@ -95,7 +95,7 @@ class PagoController extends Controller
                 'membresia_id' => $request->membresia_id,
                 'cantidad' => $request->cantidad,
                 'subtotal' => $request->subtotal,
-                'descuento' => $request->descuento ?? 0,
+                'descuento' => $request->descuento_monto ?? 0,
                 'impuesto' => $request->impuesto
             ]);
 
@@ -189,7 +189,7 @@ class PagoController extends Controller
                     'membresia_id' => $request->membresia_id,
                     'cantidad' => $request->cantidad,
                     'subtotal' => $request->subtotal,
-                    'descuento' => $request->descuento ?? 0,
+                    'descuento' => $request->descuento_monto ?? 0,
                     'impuesto' => $request->impuesto
                 ]);
             }

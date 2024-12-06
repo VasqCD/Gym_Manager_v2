@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\InformacionEmpresa;
 use Illuminate\Support\Facades\Storage;
+
 /**
  * Controlador para la gestión de la información de la empresa
  * 
@@ -67,46 +68,53 @@ class InformacionEmpresaController extends Controller
      * Actualiza los datos de la empresa en la base de datos
      */
     public function update(Request $request)
-    {
-        $request->validate([
-            'nombre' => 'required|string|max:100',
-            'direccion' => 'nullable|string|max:255',
-            'telefono' => 'nullable|string|max:15',
-            'email' => 'nullable|email|max:100',
-            'rtn' => 'nullable|string|max:50',
-            'logo' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
-            'descripcion' => 'nullable|string',
-            'horario' => 'nullable|string|max:100',
-            'redes_sociales' => 'nullable|string|max:255'
-        ]);
+{
+    $request->validate([
+        'nombre' => 'required|string|max:100',
+        'direccion' => 'nullable|string|max:255',
+        'telefono' => 'nullable|string|max:15',
+        'email' => 'nullable|email|max:100',
+        'rtn' => 'nullable|string|max:50',
+        'logo' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+        'descripcion' => 'nullable|string',
+        'horario' => 'nullable|string|max:100',
+        'redes_sociales' => 'nullable|string|max:255'
+    ]);
 
-        $empresa = InformacionEmpresa::first();
-        if (!$empresa) {
-            $empresa = new InformacionEmpresa();
-        }
-
-        $empresa->fill($request->except('logo'));
-
-        if ($request->hasFile('logo')) {
-            try {
-                // Eliminar logo anterior
-                if ($empresa->logo && file_exists(public_path($empresa->logo))) {
-                    unlink(public_path($empresa->logo));
-                }
-
-                $fileName = time() . '_' . $request->file('logo')->getClientOriginalName();
-                $request->file('logo')->move(public_path('images/logo'), $fileName);
-
-                $empresa->logo = 'images/logo/' . $fileName;
-            } catch (\Exception $e) {
-                return redirect()->back()->with('error', 'Error al subir el logo: ' . $e->getMessage());
-            }
-        }
-
-        $empresa->save();
-
-        return redirect()->route('empresa.index')->with('success', 'Información actualizada correctamente');
+    $empresa = InformacionEmpresa::first();
+    if (!$empresa) {
+        $empresa = new InformacionEmpresa();
     }
+
+    // Manejamos primero los datos que no son el logo
+    $datosActualizados = $request->except('logo');
+    
+    // Manejo específico del logo
+    if ($request->hasFile('logo')) {
+        try {
+            // Eliminar logo anterior si existe
+            if ($empresa->logo && file_exists(public_path($empresa->logo))) {
+                unlink(public_path($empresa->logo));
+            }
+
+            // Generar nombre único para el archivo
+            $fileName = time() . '_' . $request->file('logo')->getClientOriginalName();
+            
+            // Mover el archivo y guardar la ruta relativa
+            $request->file('logo')->move(public_path('images/logo'), $fileName);
+            $datosActualizados['logo'] = 'images/logo/' . $fileName;
+            
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error al subir el logo: ' . $e->getMessage());
+        }
+    }
+
+    // Actualizar los datos
+    $empresa->fill($datosActualizados);
+    $empresa->save();
+
+    return redirect()->route('empresa.index')->with('success', 'Información actualizada correctamente');
+}
 
 
     /**
