@@ -223,7 +223,7 @@
     "namespace": "App\\Models",
     "file": "app\\Models\\Cliente.php",
     "relative_file": null,
-    "hash": "bc7bac8ebc2215cf7114ce7b71a9ec5f8db0b0a4",
+    "hash": "ef502e5561bd349dfc690408c159167b82c590a9",
     "parent": "Illuminate\\Database\\Eloquent\\Model",
     "modifiers": 0,
     "is_trait": false,
@@ -1139,6 +1139,27 @@
             "hint": [
                 [
                     "\\Illuminate\\Database\\Eloquent\\Relations\\HasMany",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "membresias": {
+            "name": "membresias",
+            "line": 109,
+            "short_desc": "Relaci\u00f3n con las membres\u00edas a trav\u00e9s de los detalles de pago",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\Database\\Eloquent\\Relations\\HasManyThrough",
                     false
                 ]
             ],

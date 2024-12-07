@@ -1,6 +1,6 @@
 {
     "name": "App\\Models\\Empleado",
-    "line": 39,
+    "line": 40,
     "short_desc": "Modelo para la gesti\u00f3n de empleados del gimnasio",
     "long_desc": "",
     "hint": null,
@@ -227,7 +227,7 @@
     "namespace": "App\\Models",
     "file": "app\\Models\\Empleado.php",
     "relative_file": null,
-    "hash": "991fb47c5e297358d6408ef18c4e106f47522dc7",
+    "hash": "36b23f8d60c3531a68ab5cd7c9ca8a027213d189",
     "parent": "Illuminate\\Database\\Eloquent\\Model",
     "modifiers": 0,
     "is_trait": false,
@@ -236,18 +236,20 @@
     "aliases": {
         "Model": "Illuminate\\Database\\Eloquent\\Model",
         "SoftDeletes": "Illuminate\\Database\\Eloquent\\SoftDeletes",
-        "RegistraBitacora": "App\\Traits\\RegistraBitacora"
+        "RegistraBitacora": "App\\Traits\\RegistraBitacora",
+        "HasFactory": "Illuminate\\Database\\Eloquent\\Factories\\HasFactory"
     },
     "errors": [],
     "interfaces": [],
     "traits": {
         "Illuminate\\Database\\Eloquent\\SoftDeletes": "Illuminate\\Database\\Eloquent\\SoftDeletes",
-        "App\\Traits\\RegistraBitacora": "App\\Traits\\RegistraBitacora"
+        "App\\Traits\\RegistraBitacora": "App\\Traits\\RegistraBitacora",
+        "Illuminate\\Database\\Eloquent\\Factories\\HasFactory": "Illuminate\\Database\\Eloquent\\Factories\\HasFactory"
     },
     "properties": {
         "perPage": {
             "name": "perPage",
-            "line": 43,
+            "line": 44,
             "short_desc": null,
             "long_desc": null,
             "hint": null,
@@ -257,8 +259,8 @@
             "default": {
                 "nodeType": "Scalar_LNumber",
                 "attributes": {
-                    "startLine": 43,
-                    "endLine": 43,
+                    "startLine": 44,
+                    "endLine": 44,
                     "rawValue": "10",
                     "kind": 10
                 },
@@ -271,7 +273,7 @@
         },
         "fillable": {
             "name": "fillable",
-            "line": 51,
+            "line": 52,
             "short_desc": "Los atributos que son asignables en masa. Esto significa que se pueden asignar a\ntrav\u00e9s de la creaci\u00f3n o actualizaci\u00f3n en masa.",
             "long_desc": "",
             "hint": [
@@ -286,31 +288,11 @@
             "default": {
                 "nodeType": "Expr_Array",
                 "attributes": {
-                    "startLine": 51,
-                    "endLine": 66,
+                    "startLine": 52,
+                    "endLine": 67,
                     "kind": 2
                 },
                 "items": [
-                    {
-                        "nodeType": "Expr_ArrayItem",
-                        "attributes": {
-                            "startLine": 52,
-                            "endLine": 52
-                        },
-                        "key": null,
-                        "value": {
-                            "nodeType": "Scalar_String",
-                            "attributes": {
-                                "startLine": 52,
-                                "endLine": 52,
-                                "kind": 1,
-                                "rawValue": "'nombre_completo'"
-                            },
-                            "value": "nombre_completo"
-                        },
-                        "byRef": false,
-                        "unpack": false
-                    },
                     {
                         "nodeType": "Expr_ArrayItem",
                         "attributes": {
@@ -324,9 +306,9 @@
                                 "startLine": 53,
                                 "endLine": 53,
                                 "kind": 1,
-                                "rawValue": "'dni'"
+                                "rawValue": "'nombre_completo'"
                             },
-                            "value": "dni"
+                            "value": "nombre_completo"
                         },
                         "byRef": false,
                         "unpack": false
@@ -344,9 +326,9 @@
                                 "startLine": 54,
                                 "endLine": 54,
                                 "kind": 1,
-                                "rawValue": "'telefono'"
+                                "rawValue": "'dni'"
                             },
-                            "value": "telefono"
+                            "value": "dni"
                         },
                         "byRef": false,
                         "unpack": false
@@ -364,9 +346,9 @@
                                 "startLine": 55,
                                 "endLine": 55,
                                 "kind": 1,
-                                "rawValue": "'direccion'"
+                                "rawValue": "'telefono'"
                             },
-                            "value": "direccion"
+                            "value": "telefono"
                         },
                         "byRef": false,
                         "unpack": false
@@ -384,9 +366,9 @@
                                 "startLine": 56,
                                 "endLine": 56,
                                 "kind": 1,
-                                "rawValue": "'email'"
+                                "rawValue": "'direccion'"
                             },
-                            "value": "email"
+                            "value": "direccion"
                         },
                         "byRef": false,
                         "unpack": false
@@ -404,9 +386,9 @@
                                 "startLine": 57,
                                 "endLine": 57,
                                 "kind": 1,
-                                "rawValue": "'cargo'"
+                                "rawValue": "'email'"
                             },
-                            "value": "cargo"
+                            "value": "email"
                         },
                         "byRef": false,
                         "unpack": false
@@ -424,9 +406,9 @@
                                 "startLine": 58,
                                 "endLine": 58,
                                 "kind": 1,
-                                "rawValue": "'salario'"
+                                "rawValue": "'cargo'"
                             },
-                            "value": "salario"
+                            "value": "cargo"
                         },
                         "byRef": false,
                         "unpack": false
@@ -444,9 +426,9 @@
                                 "startLine": 59,
                                 "endLine": 59,
                                 "kind": 1,
-                                "rawValue": "'fecha_contratacion'"
+                                "rawValue": "'salario'"
                             },
-                            "value": "fecha_contratacion"
+                            "value": "salario"
                         },
                         "byRef": false,
                         "unpack": false
@@ -464,9 +446,9 @@
                                 "startLine": 60,
                                 "endLine": 60,
                                 "kind": 1,
-                                "rawValue": "'horario_trabajo'"
+                                "rawValue": "'fecha_contratacion'"
                             },
-                            "value": "horario_trabajo"
+                            "value": "fecha_contratacion"
                         },
                         "byRef": false,
                         "unpack": false
@@ -484,9 +466,9 @@
                                 "startLine": 61,
                                 "endLine": 61,
                                 "kind": 1,
-                                "rawValue": "'tipo_contrato'"
+                                "rawValue": "'horario_trabajo'"
                             },
-                            "value": "tipo_contrato"
+                            "value": "horario_trabajo"
                         },
                         "byRef": false,
                         "unpack": false
@@ -504,9 +486,9 @@
                                 "startLine": 62,
                                 "endLine": 62,
                                 "kind": 1,
-                                "rawValue": "'numero_seguro_social'"
+                                "rawValue": "'tipo_contrato'"
                             },
-                            "value": "numero_seguro_social"
+                            "value": "tipo_contrato"
                         },
                         "byRef": false,
                         "unpack": false
@@ -524,9 +506,9 @@
                                 "startLine": 63,
                                 "endLine": 63,
                                 "kind": 1,
-                                "rawValue": "'contacto_emergencia'"
+                                "rawValue": "'numero_seguro_social'"
                             },
-                            "value": "contacto_emergencia"
+                            "value": "numero_seguro_social"
                         },
                         "byRef": false,
                         "unpack": false
@@ -544,9 +526,9 @@
                                 "startLine": 64,
                                 "endLine": 64,
                                 "kind": 1,
-                                "rawValue": "'telefono_emergencia'"
+                                "rawValue": "'contacto_emergencia'"
                             },
-                            "value": "telefono_emergencia"
+                            "value": "contacto_emergencia"
                         },
                         "byRef": false,
                         "unpack": false
@@ -564,6 +546,26 @@
                                 "startLine": 65,
                                 "endLine": 65,
                                 "kind": 1,
+                                "rawValue": "'telefono_emergencia'"
+                            },
+                            "value": "telefono_emergencia"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 66,
+                            "endLine": 66
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 66,
+                                "endLine": 66,
+                                "kind": 1,
                                 "rawValue": "'estado'"
                             },
                             "value": "estado"
@@ -580,7 +582,7 @@
         },
         "dates": {
             "name": "dates",
-            "line": 74,
+            "line": 75,
             "short_desc": "Los atributos que deben ser convertidos a fechas\nY los que deben ser convertidos a tipos de datos espec\u00edficos o nativos",
             "long_desc": "",
             "hint": [
@@ -595,31 +597,11 @@
             "default": {
                 "nodeType": "Expr_Array",
                 "attributes": {
-                    "startLine": 74,
-                    "endLine": 79,
+                    "startLine": 75,
+                    "endLine": 80,
                     "kind": 2
                 },
                 "items": [
-                    {
-                        "nodeType": "Expr_ArrayItem",
-                        "attributes": {
-                            "startLine": 75,
-                            "endLine": 75
-                        },
-                        "key": null,
-                        "value": {
-                            "nodeType": "Scalar_String",
-                            "attributes": {
-                                "startLine": 75,
-                                "endLine": 75,
-                                "kind": 1,
-                                "rawValue": "'fecha_contratacion'"
-                            },
-                            "value": "fecha_contratacion"
-                        },
-                        "byRef": false,
-                        "unpack": false
-                    },
                     {
                         "nodeType": "Expr_ArrayItem",
                         "attributes": {
@@ -633,9 +615,9 @@
                                 "startLine": 76,
                                 "endLine": 76,
                                 "kind": 1,
-                                "rawValue": "'deleted_at'"
+                                "rawValue": "'fecha_contratacion'"
                             },
-                            "value": "deleted_at"
+                            "value": "fecha_contratacion"
                         },
                         "byRef": false,
                         "unpack": false
@@ -653,9 +635,9 @@
                                 "startLine": 77,
                                 "endLine": 77,
                                 "kind": 1,
-                                "rawValue": "'created_at'"
+                                "rawValue": "'deleted_at'"
                             },
-                            "value": "created_at"
+                            "value": "deleted_at"
                         },
                         "byRef": false,
                         "unpack": false
@@ -673,6 +655,26 @@
                                 "startLine": 78,
                                 "endLine": 78,
                                 "kind": 1,
+                                "rawValue": "'created_at'"
+                            },
+                            "value": "created_at"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 79,
+                            "endLine": 79
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 79,
+                                "endLine": 79,
+                                "kind": 1,
                                 "rawValue": "'updated_at'"
                             },
                             "value": "updated_at"
@@ -689,7 +691,7 @@
         },
         "casts": {
             "name": "casts",
-            "line": 86,
+            "line": 87,
             "short_desc": "Los atributos que deben ser convertidos a tipos de datos espec\u00edficos o nativos",
             "long_desc": "",
             "hint": [
@@ -704,40 +706,11 @@
             "default": {
                 "nodeType": "Expr_Array",
                 "attributes": {
-                    "startLine": 86,
-                    "endLine": 90,
+                    "startLine": 87,
+                    "endLine": 91,
                     "kind": 2
                 },
                 "items": [
-                    {
-                        "nodeType": "Expr_ArrayItem",
-                        "attributes": {
-                            "startLine": 87,
-                            "endLine": 87
-                        },
-                        "key": {
-                            "nodeType": "Scalar_String",
-                            "attributes": {
-                                "startLine": 87,
-                                "endLine": 87,
-                                "kind": 1,
-                                "rawValue": "'fecha_contratacion'"
-                            },
-                            "value": "fecha_contratacion"
-                        },
-                        "value": {
-                            "nodeType": "Scalar_String",
-                            "attributes": {
-                                "startLine": 87,
-                                "endLine": 87,
-                                "kind": 1,
-                                "rawValue": "'datetime'"
-                            },
-                            "value": "datetime"
-                        },
-                        "byRef": false,
-                        "unpack": false
-                    },
                     {
                         "nodeType": "Expr_ArrayItem",
                         "attributes": {
@@ -750,9 +723,9 @@
                                 "startLine": 88,
                                 "endLine": 88,
                                 "kind": 1,
-                                "rawValue": "'salario'"
+                                "rawValue": "'fecha_contratacion'"
                             },
-                            "value": "salario"
+                            "value": "fecha_contratacion"
                         },
                         "value": {
                             "nodeType": "Scalar_String",
@@ -760,9 +733,9 @@
                                 "startLine": 88,
                                 "endLine": 88,
                                 "kind": 1,
-                                "rawValue": "'decimal:2'"
+                                "rawValue": "'datetime'"
                             },
-                            "value": "decimal:2"
+                            "value": "datetime"
                         },
                         "byRef": false,
                         "unpack": false
@@ -779,6 +752,35 @@
                                 "startLine": 89,
                                 "endLine": 89,
                                 "kind": 1,
+                                "rawValue": "'salario'"
+                            },
+                            "value": "salario"
+                        },
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 89,
+                                "endLine": 89,
+                                "kind": 1,
+                                "rawValue": "'decimal:2'"
+                            },
+                            "value": "decimal:2"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 90,
+                            "endLine": 90
+                        },
+                        "key": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 90,
+                                "endLine": 90,
+                                "kind": 1,
                                 "rawValue": "'activo'"
                             },
                             "value": "activo"
@@ -786,8 +788,8 @@
                         "value": {
                             "nodeType": "Scalar_String",
                             "attributes": {
-                                "startLine": 89,
-                                "endLine": 89,
+                                "startLine": 90,
+                                "endLine": 90,
                                 "kind": 1,
                                 "rawValue": "'boolean'"
                             },
@@ -805,7 +807,7 @@
         },
         "id": {
             "name": "id",
-            "line": 39,
+            "line": 40,
             "short_desc": "Identificador \u00fanico del empleado",
             "long_desc": null,
             "hint": [
@@ -825,7 +827,7 @@
         },
         "nombre_completo": {
             "name": "nombre_completo",
-            "line": 39,
+            "line": 40,
             "short_desc": "Nombre completo del empleado",
             "long_desc": null,
             "hint": [
@@ -845,7 +847,7 @@
         },
         "dni": {
             "name": "dni",
-            "line": 39,
+            "line": 40,
             "short_desc": "Documento de identidad del empleado",
             "long_desc": null,
             "hint": [
@@ -865,7 +867,7 @@
         },
         "telefono": {
             "name": "telefono",
-            "line": 39,
+            "line": 40,
             "short_desc": "N\u00famero de tel\u00e9fono del empleado",
             "long_desc": null,
             "hint": [
@@ -885,7 +887,7 @@
         },
         "direccion": {
             "name": "direccion",
-            "line": 39,
+            "line": 40,
             "short_desc": "Direcci\u00f3n f\u00edsica del empleado",
             "long_desc": null,
             "hint": [
@@ -905,7 +907,7 @@
         },
         "email": {
             "name": "email",
-            "line": 39,
+            "line": 40,
             "short_desc": "Correo electr\u00f3nico del empleado",
             "long_desc": null,
             "hint": [
@@ -925,7 +927,7 @@
         },
         "cargo": {
             "name": "cargo",
-            "line": 39,
+            "line": 40,
             "short_desc": "Cargo o puesto del empleado",
             "long_desc": null,
             "hint": [
@@ -945,7 +947,7 @@
         },
         "salario": {
             "name": "salario",
-            "line": 39,
+            "line": 40,
             "short_desc": "Salario del empleado",
             "long_desc": null,
             "hint": [
@@ -965,7 +967,7 @@
         },
         "fecha_contratacion": {
             "name": "fecha_contratacion",
-            "line": 39,
+            "line": 40,
             "short_desc": "Fecha de contrataci\u00f3n del empleado",
             "long_desc": null,
             "hint": [
@@ -985,7 +987,7 @@
         },
         "horario_trabajo": {
             "name": "horario_trabajo",
-            "line": 39,
+            "line": 40,
             "short_desc": "Horario de trabajo asignado",
             "long_desc": null,
             "hint": [
@@ -1005,7 +1007,7 @@
         },
         "tipo_contrato": {
             "name": "tipo_contrato",
-            "line": 39,
+            "line": 40,
             "short_desc": "Tipo de contrato laboral",
             "long_desc": null,
             "hint": [
@@ -1025,7 +1027,7 @@
         },
         "numero_seguro_social": {
             "name": "numero_seguro_social",
-            "line": 39,
+            "line": 40,
             "short_desc": "N\u00famero de seguro social",
             "long_desc": null,
             "hint": [
@@ -1045,7 +1047,7 @@
         },
         "contacto_emergencia": {
             "name": "contacto_emergencia",
-            "line": 39,
+            "line": 40,
             "short_desc": "Nombre del contacto de emergencia",
             "long_desc": null,
             "hint": [
@@ -1065,7 +1067,7 @@
         },
         "telefono_emergencia": {
             "name": "telefono_emergencia",
-            "line": 39,
+            "line": 40,
             "short_desc": "Tel\u00e9fono del contacto de emergencia",
             "long_desc": null,
             "hint": [
@@ -1085,7 +1087,7 @@
         },
         "estado": {
             "name": "estado",
-            "line": 39,
+            "line": 40,
             "short_desc": "Estado actual del empleado (activo\/inactivo)",
             "long_desc": null,
             "hint": [
@@ -1105,7 +1107,7 @@
         },
         "created_at": {
             "name": "created_at",
-            "line": 39,
+            "line": 40,
             "short_desc": "Fecha de creaci\u00f3n del registro",
             "long_desc": null,
             "hint": [
@@ -1125,7 +1127,7 @@
         },
         "updated_at": {
             "name": "updated_at",
-            "line": 39,
+            "line": 40,
             "short_desc": "Fecha de \u00faltima actualizaci\u00f3n",
             "long_desc": null,
             "hint": [
@@ -1145,7 +1147,7 @@
         },
         "deleted_at": {
             "name": "deleted_at",
-            "line": 39,
+            "line": 40,
             "short_desc": "Fecha de eliminaci\u00f3n suave",
             "long_desc": null,
             "hint": [
@@ -1171,7 +1173,7 @@
     "methods": {
         "newModelQuery": {
             "name": "newModelQuery",
-            "line": 39,
+            "line": 40,
             "short_desc": "",
             "long_desc": null,
             "hint": [
@@ -1192,7 +1194,7 @@
         },
         "newQuery": {
             "name": "newQuery",
-            "line": 39,
+            "line": 40,
             "short_desc": "",
             "long_desc": null,
             "hint": [
@@ -1213,7 +1215,7 @@
         },
         "query": {
             "name": "query",
-            "line": 39,
+            "line": 40,
             "short_desc": "",
             "long_desc": null,
             "hint": [
@@ -1234,7 +1236,7 @@
         },
         "onlyTrashed": {
             "name": "onlyTrashed",
-            "line": 39,
+            "line": 40,
             "short_desc": "",
             "long_desc": null,
             "hint": [
@@ -1255,7 +1257,7 @@
         },
         "withTrashed": {
             "name": "withTrashed",
-            "line": 39,
+            "line": 40,
             "short_desc": "",
             "long_desc": null,
             "hint": [

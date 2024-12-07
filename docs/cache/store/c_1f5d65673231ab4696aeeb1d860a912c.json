@@ -1,6 +1,6 @@
 {
     "name": "App\\Http\\Controllers\\InformacionEmpresaController",
-    "line": 16,
+    "line": 17,
     "short_desc": "Controlador para la gesti\u00f3n de la informaci\u00f3n de la empresa",
     "long_desc": "Esta clase maneja las operaciones CRUD y l\u00f3gica de negocio\nrelacionada con la informaci\u00f3n de la empresa",
     "hint": null,
@@ -14,7 +14,7 @@
     "namespace": "App\\Http\\Controllers",
     "file": "app\\Http\\Controllers\\InformacionEmpresaController.php",
     "relative_file": null,
-    "hash": "3f0522120081b2fff7236be552760cf6a25b2566",
+    "hash": "c2b7cd0a546903e6f96b802d9c2fa1d42cc9d80a",
     "parent": "App\\Http\\Controllers\\Controller",
     "modifiers": 0,
     "is_trait": false,
@@ -32,7 +32,7 @@
     "methods": {
         "index": {
             "name": "index",
-            "line": 21,
+            "line": 22,
             "short_desc": "Muestra la informaci\u00f3n de la empresa",
             "long_desc": "",
             "hint": null,
@@ -48,7 +48,7 @@
         },
         "create": {
             "name": "create",
-            "line": 30,
+            "line": 31,
             "short_desc": "Muestra el formulario para crear un nuevo recurso.",
             "long_desc": "",
             "hint": null,
@@ -64,7 +64,7 @@
         },
         "store": {
             "name": "store",
-            "line": 38,
+            "line": 39,
             "short_desc": "Almacena un nuevo recurso en la base de datos.",
             "long_desc": "",
             "hint": null,
@@ -79,7 +79,7 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 38,
+                    "line": 39,
                     "short_desc": null,
                     "long_desc": null,
                     "hint": [
@@ -100,7 +100,7 @@
         },
         "show": {
             "name": "show",
-            "line": 46,
+            "line": 47,
             "short_desc": "Muestra el recurso especificado.",
             "long_desc": "",
             "hint": null,
@@ -115,7 +115,7 @@
             "parameters": {
                 "id": {
                     "name": "id",
-                    "line": 46,
+                    "line": 47,
                     "short_desc": null,
                     "long_desc": null,
                     "hint": [
@@ -136,7 +136,7 @@
         },
         "edit": {
             "name": "edit",
-            "line": 54,
+            "line": 55,
             "short_desc": "Muestra el formulario para editar el recurso especificado.",
             "long_desc": "",
             "hint": null,
@@ -151,7 +151,7 @@
             "parameters": {
                 "id": {
                     "name": "id",
-                    "line": 54,
+                    "line": 55,
                     "short_desc": null,
                     "long_desc": null,
                     "hint": [
@@ -172,7 +172,7 @@
         },
         "__construct": {
             "name": "__construct",
-            "line": 59,
+            "line": 60,
             "short_desc": null,
             "long_desc": null,
             "hint": null,
@@ -188,7 +188,7 @@
         },
         "update": {
             "name": "update",
-            "line": 69,
+            "line": 70,
             "short_desc": "Actualiza los datos de la empresa en la base de datos",
             "long_desc": "",
             "hint": null,
@@ -203,7 +203,7 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 69,
+                    "line": 70,
                     "short_desc": null,
                     "long_desc": null,
                     "hint": [
@@ -224,7 +224,7 @@
         },
         "destroy": {
             "name": "destroy",
-            "line": 115,
+            "line": 123,
             "short_desc": "Elimina el recurso especificado de la base de datos.",
             "long_desc": "",
             "hint": null,
@@ -239,7 +239,7 @@
             "parameters": {
                 "id": {
                     "name": "id",
-                    "line": 115,
+                    "line": 123,
                     "short_desc": null,
                     "long_desc": null,
                     "hint": [

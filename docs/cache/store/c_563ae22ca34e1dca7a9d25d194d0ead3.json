@@ -1,0 +1,107 @@
+{
+    "name": "App\\Http\\Controllers\\ReporteController",
+    "line": 27,
+    "short_desc": "Controlador para la generaci\u00f3n de reportes PDF del sistema.",
+    "long_desc": "Este controlador maneja la generaci\u00f3n de diferentes tipos de reportes:\n- Membres\u00edas activas\n- Clientes VIP\n- Membres\u00edas pr\u00f3ximas a vencer\n- Reporte de ingresos\n- Planilla de empleados",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Controllers"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Controllers",
+    "file": "app\\Http\\Controllers\\ReporteController.php",
+    "relative_file": null,
+    "hash": "431b8048146d7ac4c26d94c02fb7524cedaf12e9",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Cliente": "App\\Models\\Cliente",
+        "Membresia": "App\\Models\\Membresia",
+        "Request": "Illuminate\\Http\\Request",
+        "Controller": "App\\Http\\Controllers\\Controller",
+        "PDF": "Barryvdh\\DomPDF\\Facade\\Pdf",
+        "InformacionEmpresa": "App\\Models\\InformacionEmpresa",
+        "Pago": "App\\Models\\Pago",
+        "Empleado": "App\\Models\\Empleado"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "index": {
+            "name": "index",
+            "line": 34,
+            "short_desc": "Muestra la vista principal para la generaci\u00f3n de reportes.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "generar": {
+            "name": "generar",
+            "line": 56,
+            "short_desc": "Genera un reporte PDF seg\u00fan el tipo especificado.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "Stream del archivo PDF generado",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [
+                [
+                    "\\Illuminate\\Validation\\ValidationException",
+                    "Cuando las fechas son inv\u00e1lidas"
+                ]
+            ],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 56,
+                    "short_desc": "Solicitud HTTP con los par\u00e1metros del reporte\n@type string $tipo Tipo de reporte a generar:\n    - membresias-activas\n    - clientes-vip\n    - proximos-vencer\n    - ingresos-mes\n    - planilla-empleados\n@type string $fecha_inicio Fecha inicial para reporte de ingresos\n@type string $fecha_fin Fecha final para reporte de ingresos",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

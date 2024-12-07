@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Traits\RegistraBitacora;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * Modelo para la gestión de empleados del gimnasio
@@ -38,7 +39,7 @@ use App\Traits\RegistraBitacora;
  */
 class Empleado extends Model
 {
-    use SoftDeletes, RegistraBitacora;
+    use SoftDeletes, RegistraBitacora, HasFactory;
     
     protected $perPage = 10;
 

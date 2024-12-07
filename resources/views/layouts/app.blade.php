@@ -182,6 +182,13 @@
                                 </a>
 
                                 <div class="dropdown-divider"></div>
+                                <!-- Documentacion -->
+                                <a class="dropdown-item" href="https://documentacion.gymmanager.icu/"
+                                    target="_blank">
+                                    <i class="fas fa-book me-2"></i> {{ __('Documentación') }}
+                                </a>
+                                
+                                <div class="dropdown-divider"></div>
 
                                 <!-- Cerrar Sesión -->
                                 <a class="dropdown-item text-danger" href="{{ route('logout') }}"

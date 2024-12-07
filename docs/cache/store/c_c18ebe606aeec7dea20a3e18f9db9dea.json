@@ -14,7 +14,7 @@
     "namespace": "App\\Http\\Controllers",
     "file": "app\\Http\\Controllers\\PagoController.php",
     "relative_file": null,
-    "hash": "c5f19b5f9231a167110d79b818c3855dc08f2be9",
+    "hash": "7ace6c3da9af38600733bcae40918771c04b6e91",
     "parent": "App\\Http\\Controllers\\Controller",
     "modifiers": 0,
     "is_trait": false,
@@ -332,11 +332,11 @@
             "long_desc": "",
             "hint": [
                 [
-                    "mixed",
+                    "\\App\\Http\\Controllers\\un",
                     false
                 ]
             ],
-            "hint_desc": "Comprobante de pago en formato PDF",
+            "hint_desc": "archivo Comprobante de pago en formato PDF",
             "tags": [],
             "see": [],
             "modifiers": 1,

@@ -9,7 +9,6 @@ $iterator = Finder::create()
 
 return new Doctum($iterator, [
     'title' => 'Documentación del Sistema de Gym Manager Pro',
-    'languages' => ['es'],
     'source_dir' => 'app',
     'build_dir' => 'docs/api',
     'cache_dir' => 'docs/cache',
