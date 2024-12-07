@@ -51,7 +51,7 @@
                             </div>
                             <div class="form-group mb-3">
                                 <strong>Estado:</strong>
-                                @if($cliente->activo)
+                                @if($cliente->estado)
                                 <span class="badge bg-success">Activo</span>
                                 @else
                                 <span class="badge bg-danger">Inactivo</span>
