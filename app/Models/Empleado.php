@@ -63,7 +63,7 @@ class Empleado extends Model
         'numero_seguro_social',
         'contacto_emergencia',
         'telefono_emergencia',
-        'estado'
+        'activo'
     ];
 
     /**

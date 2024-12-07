@@ -119,7 +119,8 @@ class EmpleadoController extends Controller
             'tipo_contrato' => 'required|in:Tiempo Completo,Medio Tiempo,Por Horas',
             'numero_seguro_social' => 'nullable|string|max:20',
             'contacto_emergencia' => 'nullable|string|max:100',
-            'telefono_emergencia' => 'nullable|string|max:15'
+            'telefono_emergencia' => 'nullable|string|max:15',
+            'activo' => 'required|boolean'
         ]);
 
         $empleado = Empleado::findOrFail($id);
