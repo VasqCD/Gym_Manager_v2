@@ -168,7 +168,8 @@ class PagoController extends Controller
             'cliente_id' => 'required|exists:clientes,id',
             'metodo_pago' => 'required|in:efectivo,tarjeta,transferencia',
             'observaciones' => 'nullable|string|max:500',
-            'total' => 'required|numeric|min:0'
+            'total' => 'required|numeric|min:0',
+            'fecha_pago' => 'required|date'
         ]);
 
         try {
@@ -177,6 +178,7 @@ class PagoController extends Controller
             // Actualizar tabla pagos
             $pago->update([
                 'cliente_id' => $request->cliente_id,
+                'fecha_pago' => $request->fecha_pago,
                 'total' => $request->total,
                 'metodo_pago' => $request->metodo_pago,
                 'observaciones' => $request->observaciones
