@@ -42,7 +42,7 @@ class Cliente extends Model
     use SoftDeletes, RegistraBitacora;
     use HasFactory;
     use RegistraBitacora;
-    
+
     protected $perPage = 10;
 
     /**
@@ -100,5 +100,23 @@ class Cliente extends Model
     public function pagos()
     {
         return $this->hasMany(Pago::class);
+    }
+
+    /**
+     * Relación con las membresías a través de los detalles de pago
+     * @return \Illuminate\Database\Eloquent\Relations\HasManyThrough
+     */
+    public function membresias()
+    {
+        return $this->hasManyThrough(
+            Membresia::class,
+            Pagodetall::class,
+            'pago_id', // Llave foránea en pagodetalls
+            'id', // Llave primaria en membresias
+            'id', // Llave primaria en clientes
+            'membresia_id' // Llave foránea en pagodetalls
+        )->whereHas('pago', function ($query) {
+            $query->where('cliente_id', $this->id);
+        });
     }
 }

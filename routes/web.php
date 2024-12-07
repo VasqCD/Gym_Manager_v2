@@ -119,4 +119,10 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/empresa', [InformacionEmpresaController::class, 'index'])->name('empresa.index');
         Route::put('/empresa', [InformacionEmpresaController::class, 'update'])->name('empresa.update');
     });
+
+    // Rutas de reportes
+    Route::middleware(['auth', 'check.permiso:generar-reportes'])->group(function () {
+        Route::get('reportes', [App\Http\Controllers\ReporteController::class, 'index'])->name('reportes.index');
+        Route::get('reportes/generar', [App\Http\Controllers\ReporteController::class, 'generar'])->name('reportes.generar');
+    });
 });

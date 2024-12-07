@@ -133,6 +133,15 @@
                         </li>
                         @endif
 
+                        <!-- Reportes -->
+                        @if(auth()->user()->hasPermiso('generar-reportes'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('reportes.index') }}">
+                                <i class="fas fa-file-alt"></i> Reportes
+                            </a>
+                        </li>
+                        @endif
+
                         <!-- Bitácora -->
                         @if(auth()->user()->hasPermiso('ver-bitacora'))
                         <li class="nav-item">
