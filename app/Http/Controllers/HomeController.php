@@ -37,7 +37,7 @@ class HomeController extends Controller
     public function index(): View
     {
         // Clientes activos
-        $clientesActivos = Cliente::where('estado', true)->count();
+        $clientesActivos = Cliente::count();
 
         // Membresías activas usando join
         $membresiasActivas = DB::table('pagos')
