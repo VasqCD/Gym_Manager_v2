@@ -30,22 +30,51 @@
         }
 
         .header {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+            width: 100%;
+            display: table;
         }
 
         .empresa-info {
-            text-align: center;
-            margin-bottom: 15px;
+            display: table-row;
+        }
+
+        .logo-container {
+            display: table-cell;
+            vertical-align: middle;
+            width: 20%;
+            padding-right: 15px;
+        }
+
+        .info-container {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: left;
         }
 
         .empresa-logo {
-            max-width: 100px;
-            /* Logo más pequeño */
+            max-width: 80px;
+        }
+
+        .empresa-info h2 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+        }
+
+        .empresa-info p {
+            margin: 2px 0;
+            font-size: 11px;
         }
 
         .reporte-titulo {
             text-align: center;
-            margin: 15px 0;
+            margin: 10px 0;
+            clear: both;
+        }
+
+        .reporte-titulo h1 {
+            font-size: 14px;
+            margin: 5px 0;
         }
     </style>
 </head>
@@ -53,13 +82,16 @@
 <body>
     <div class="header">
         <div class="empresa-info">
-            @if($empresa->logo)
-            <img src="{{ public_path($empresa->logo) }}" class="empresa-logo" alt="Logo">
-            @endif
-            <h2>{{ $empresa->nombre }}</h2>
-            <p>{{ $empresa->direccion }}</p>
-            <p>Tel: {{ $empresa->telefono }}</p>
-            <p>RTN: {{ $empresa->rtn }}</p>
+            <div class="logo-container">
+                @if($empresa->logo)
+                <img src="{{ public_path($empresa->logo) }}" class="empresa-logo" alt="Logo">
+                @endif
+            </div>
+            <div class="info-container">
+                <h2>{{ $empresa->nombre }}</h2>
+                <p>{{ $empresa->direccion }} | Tel: {{ $empresa->telefono }}</p>
+                <p>Email: {{ $empresa->email }} | RTN: {{ $empresa->rtn }}</p>
+            </div>
         </div>
     </div>
 

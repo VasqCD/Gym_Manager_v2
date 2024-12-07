@@ -53,6 +53,10 @@ class ReporteController extends Controller
                     })->get();
                 $view = 'reportes.clientes-vip';
                 $titulo = 'Clientes VIP';
+
+                $pdf = PDF::loadView($view, $data);
+                $pdf->setPaper('a4', 'landscape'); // Configurar orientación horizontal
+                return $pdf->stream($titulo . '.pdf');
                 break;
 
             case 'proximos-vencer':
@@ -92,17 +96,17 @@ class ReporteController extends Controller
                 $titulo = 'Reporte de Ingresos';
                 break;
 
-                case 'planilla-empleados':
-                    $data['empleados'] = Empleado::where('activo', true)
-                        ->orderBy('cargo')
-                        ->get();
-                    $view = 'reportes.planilla-empleados';
-                    $titulo = 'Planilla de Empleados';
-                    
-                    $pdf = PDF::loadView($view, $data);
-                    $pdf->setPaper('a4', 'landscape'); // Configurar orientación horizontal
-                    return $pdf->stream($titulo . '.pdf');
-                    break;
+            case 'planilla-empleados':
+                $data['empleados'] = Empleado::where('activo', true)
+                    ->orderBy('cargo')
+                    ->get();
+                $view = 'reportes.planilla-empleados';
+                $titulo = 'Planilla de Empleados';
+
+                $pdf = PDF::loadView($view, $data);
+                $pdf->setPaper('a4', 'landscape'); // Configurar orientación horizontal
+                return $pdf->stream($titulo . '.pdf');
+                break;
         }
 
         $pdf = PDF::loadView($view, $data);
