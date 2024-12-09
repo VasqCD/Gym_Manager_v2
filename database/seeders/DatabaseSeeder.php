@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         $recepcionistaRol = Rol::where('nombre', 'Recepcionista')->first()->id;
         $entrenadorRol = Rol::where('nombre', 'Entrenador')->first()->id;
 
-        // Crear SuperAdmin
+        /** Crear SuperAdmin
         User::firstOrCreate(
             ['email' => 'superadmin@gymflow.com'],
             [
@@ -71,6 +71,7 @@ class DatabaseSeeder extends Seeder
                 'rol_id' => $entrenadorRol,
             ]
         );
+        */
 
         // Ejecutar otros seeders 
         $this->call([
